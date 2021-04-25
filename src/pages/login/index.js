@@ -10,10 +10,12 @@ const Login = (props) => {
         <h1>Login</h1>
         <hr />
         <p>
-          It is necessary to perform User Registration to use My List. <br />
+          It is necessary to perform User Registration to Order a product.{' '}
+          <br />
           For the users who have already performed User Registration, enter the
           e-mail address and password to login. <br />
-          For new users, perform User Registration to be able to use My List.
+          For new users, perform User Registration to be able to Order a
+          product..
         </p>
       </div>
 

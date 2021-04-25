@@ -6,10 +6,10 @@ const Footer = (props) => {
   return (
     <footer className="footer">
       <img src={Logo} alt="acrotech logo" />
-      <div className="site-map">
+      <Link className="site-map">
         <p style={{ marginTop: '15px' }}>+</p>
         <p>Sitemap</p>
-      </div>
+      </Link>
       <section className="links">
         <div className="categories">
           <p>About Us</p>
@@ -75,34 +75,36 @@ const Footer = (props) => {
       <section className="about">
         <h5>About Acrotech Sales Industrial Corp.</h5>
         <p>
-          Shoketsu SMC Corporation is a 100% subsidiary of SMC Corporation, the
-          world’s largest pneumatic automation products manufacturer which was
-          established in Japan and now has more than 50 years of experience.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
+          quidem aut mollitia harum perspiciatis delectus laborum deserunt
+          fugiat? Natus, placeat? Cumque hic sed iure labore pariatur sit et
+          dolorem debitis.
         </p>
         <p>
-          The Philippine subsidiary was established in 2003 and its headquarters
-          is located at Lot 9E First Philippine Industrial Park II (FPIP II)
-          Sto. Tomas Batangas with-five local distributors all over the country.
-          While production facility is provided to produce customized cylinders,
-          the main objective is to offer a wide range of high quality advanced
-          pneumatic automation products to suit the exacting needs of industries
-          from a myriad of fields and sectors, including semiconductor,
-          automotive, medical, and petrochemical, just to name a few. Products
-          offered range from valves like process valve and water valve, to
-          thermo equipment like thermo chiller and heat exchanger to air dryers
-          and a variety of static eliminators and pneumatic systems.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vitae,
+          modi perspiciatis quis eaque at fugiat dignissimos quaerat a tempore
+          natus nesciunt saepe, quod, iure cumque optio fugit reprehenderit
+          obcaecati libero aliquid dolore dolores suscipit! Et repudiandae id
+          error quisquam sequi voluptates, ducimus optio ea, illum expedita amet
+          culpa sapiente ex assumenda molestias quas! Impedit, odit! Fuga
+          recusandae quos a nostrum, voluptatum iste id, velit corporis
+          laudantium cupiditate accusamus error soluta placeat illo! Tempore at,
+          quod ipsa excepturi veritatis iure.
         </p>
         <p>
-          Striving to maintain high standards not only in products but also in
-          customer service, Shoketsu SMC Corporation works hard to ensure that
-          existing machines in the Philippines containing SMC products installed
-          are readily supported with technical assistance, and with reasonable
-          quantity of spare parts, in stores stocked with around 15,000 product
-          variations.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+          corporis excepturi repellat aliquam et, pariatur placeat expedita aut,
+          itaque, necessitatibus optio sequi? Odit quae aliquid deserunt natus
+          facere minima deleniti consectetur. Sequi quo ipsum explicabo debitis,
+          amet dolores officia obcaecati provident ab modi asperiores quam,
+          ullam recusandae exercitationem enim repellendus aspernatur corrupti
+          optio mollitia quasi! Corporis minus atque quae ducimus?
         </p>
         <p>
-          The company also provides technology updates by offering technical
-          seminars, and projects to help customers increase their productivity.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+          veniam incidunt corrupti dolorum quos eum minima iste ab! Consequuntur
+          quaerat consequatur eligendi blanditiis obcaecati inventore sequi
+          soluta id facilis vitae.
         </p>
       </section>
     </footer>

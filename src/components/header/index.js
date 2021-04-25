@@ -41,20 +41,24 @@ const Header = (props) => {
 
         <div className="callToActions">
           <Link to="/">home</Link>
-          <Link to="/login">about us</Link>
+          <Link to="/">about us</Link>
           <Link to="/products">products & services</Link>
           <Link to="/admin">support</Link>
           <Link to="/" onClick={signOut}>
             news & events
           </Link>
           <div className="menu">
-            <span>Home</span> |
-            <select id="region">
-              <option value="Select Your Region">Select Your Region</option>
-              <option value="Philippines">Philippines</option>
-            </select>
+            <Link to="/login">Login</Link> |{' '}
+            <Link to="/registration">register</Link>
             <br />
-            <span>Locate Us</span> | <span>Costumer Enquiry Portal (CEP)</span>
+            <span>Locate Us : </span>
+            <a
+              href="https://www.google.com/maps/place/Acrotect+Industrial+Sales+Corp./@8.4908966,124.6382007,17z/data=!3m1!4b1!4m5!3m4!1s0x32fff31fcf49851f:0xc9263f3b77dfdac0!8m2!3d8.490894!4d124.6403783"
+              target="_blank"
+              className="locate"
+            >
+              Google Map
+            </a>
             <br />
             <span>CONTACT TEL: </span> +123 4567 8910
           </div>

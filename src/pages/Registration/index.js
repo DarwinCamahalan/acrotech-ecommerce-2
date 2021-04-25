@@ -11,7 +11,7 @@ const Registration = (props) => {
         <div className="hint">Entry of customer information</div>
         <p>
           If you would like to register as a user, please be sure to enter all
-          the necessary items (*), and click the Send button.
+          the necessary items, and click the Register button.
         </p>
       </div>
 
