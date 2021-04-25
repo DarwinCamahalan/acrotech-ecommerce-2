@@ -40,40 +40,25 @@ const Header = (props) => {
         </div>
 
         <div className="callToActions">
-          {!currentUser && [
-            <Link to="/login">
-              <p style={{ marginTop: '19px', marginLeft: '20px' }}> Login</p>
-            </Link>,
-          ]}
+          <Link to="/">home</Link>
+          <Link to="/login">about us</Link>
+          <Link to="/products">products & services</Link>
+          <Link to="/admin">support</Link>
+          <Link to="/" onClick={signOut}>
+            news & events
+          </Link>
           <div className="menu">
-            {currentUser && [
-              <p style={{ marginBottom: '5px' }}> {displayName}</p>,
-
-              <span>
-                {isAdmin ? (
-                  <Link to="/admin" style={{ color: '#ff0000' }}>
-                    Admin Settings
-                  </Link>
-                ) : (
-                  <Link to="/">
-                    <span>My Page</span>
-                  </Link>
-                )}
-              </span>,
-              <span style={{ color: '#000' }}> | </span>,
-              <Link>
-                <span onClick={() => signOut()}>Logout</span>
-              </Link>,
-            ]}
+            <span>Home</span> |
+            <select id="region">
+              <option value="Select Your Region">Select Your Region</option>
+              <option value="Philippines">Philippines</option>
+            </select>
+            <br />
+            <span>Locate Us</span> | <span>Costumer Enquiry Portal (CEP)</span>
+            <br />
+            <span>CONTACT TEL: </span> +123 4567 8910
           </div>
         </div>
-      </div>
-
-      <div className="second-header">
-        <Link to="/">HOME</Link>
-        <Link to="/">Product Information</Link>
-        <Link to="/">About Acrotech</Link>
-        <Link to="/">Support / Contact Us</Link>
       </div>
     </header>
   )

@@ -19,11 +19,12 @@ import Login from './pages/login'
 import Recovery from './pages/Recovery'
 import Dashboard from './pages/Dashboard'
 import Admin from './pages/Admin'
-import ProductDetails from './pages/ProductDetails'
 import Cart from './pages/Cart'
 import Payment from './pages/Payment'
 import Order from './pages/Order'
 import './default.scss'
+import Products from './pages/Products/index'
+import ProductDetails from './pages/ProductDetails/index'
 
 const App = (props) => {
   const dispatch = useDispatch()
@@ -46,10 +47,11 @@ const App = (props) => {
         />
 
         <Route
-          path="/search/:filterType"
+          exact
+          path="/products"
           render={() => (
             <MainLayout>
-              <Home />
+              <Products />
             </MainLayout>
           )}
         />

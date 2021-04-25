@@ -1,10 +1,10 @@
 import React from 'react'
-import ProductResults from '../../components/ProductResults'
+import HomePage from './../../components/HomePage/index'
 
 const Home = ({}) => {
   return (
     <div className="searchPage">
-      <ProductResults />
+      <HomePage />
     </div>
   )
 }

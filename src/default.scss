@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 html {
   font-size: 10px;
 }
@@ -25,8 +26,7 @@ body,
 }
 
 body {
-  font-family: 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic',
-    'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', sans-serif, Osaka;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1;
@@ -81,7 +81,7 @@ a:hover {
   display: inline-block;
   width: 100%;
   min-height: 100%;
-  padding: 3rem 0 6rem 25rem;
+  // padding: 3rem 0 6rem 25rem;
   border-bottom: 1px solid #d3d3d3;
 
   .sidebar {

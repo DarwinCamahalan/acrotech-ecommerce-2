@@ -1,12 +1,12 @@
-import React from 'react';
-import Checkout from './../../components/Checkout';
-
+import React from 'react'
+import Checkout from './../../components/Checkout'
+import './styles.scss'
 const Cart = ({}) => {
   return (
-    <div>
+    <div className="cart">
       <Checkout />
     </div>
-  );
+  )
 }
 
-export default Cart;
+export default Cart

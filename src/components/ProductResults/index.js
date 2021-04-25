@@ -5,7 +5,6 @@ import { fetchProductsStart } from './../../redux/Products/products.actions'
 import Product from './Product'
 import LoadMore from './../LoadMore'
 import './styles.scss'
-import Slider from '../slider/Slider'
 
 const mapState = ({ productsData }) => ({
   products: productsData.products,
@@ -48,7 +47,6 @@ const ProductResults = ({}) => {
 
   return (
     <div className="products">
-      <Slider />
       <div className="productResults">
         {data.map((product, pos) => {
           const { productThumbnail, productName, productPrice } = product
