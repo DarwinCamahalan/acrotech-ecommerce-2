@@ -6,10 +6,14 @@ const Footer = (props) => {
   return (
     <footer className="footer">
       <img src={Logo} alt="acrotech logo" />
-      <Link className="site-map">
+      <a
+        className="site-map"
+        href="https://www.google.com/maps/place/Acrotect+Industrial+Sales+Corp./@8.4908966,124.6382007,17z/data=!3m1!4b1!4m5!3m4!1s0x32fff31fcf49851f:0xc9263f3b77dfdac0!8m2!3d8.490894!4d124.6403783"
+        target="_blank"
+      >
         <p style={{ marginTop: '15px' }}>+</p>
         <p>Sitemap</p>
-      </Link>
+      </a>
       <section className="links">
         <div className="categories">
           <p>About Us</p>

@@ -1,0 +1,40 @@
+.sidebar {
+  width: 28rem;
+  .search-bar {
+    input {
+      border: solid 1px #dfdddd;
+      border-radius: 0.5rem;
+      height: 2.7rem;
+    }
+    button {
+      border: none;
+      background-color: transparent;
+    }
+  }
+  .categories {
+    margin-top: 3.9rem;
+    h2 {
+      color: #4c4c4c;
+      text-transform: capitalize;
+      font-size: 1.3rem;
+      text-align: left;
+      font-weight: 400;
+      border-bottom: 1px solid #ddd;
+      margin-top: 0;
+      line-height: 3.5rem;
+    }
+    a {
+      display: block;
+      color: #4c4c4c;
+      font-size: 1.3rem;
+      padding-bottom: 0.5rem;
+      padding-left: 1.2rem;
+      line-height: 30px;
+      width: 19.8rem;
+      transition: 0s;
+      &:hover {
+        color: #0074bf;
+      }
+    }
+  }
+}

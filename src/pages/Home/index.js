@@ -3,7 +3,7 @@ import HomePage from './../../components/HomePage/index'
 
 const Home = ({}) => {
   return (
-    <div className="searchPage">
+    <div>
       <HomePage />
     </div>
   )

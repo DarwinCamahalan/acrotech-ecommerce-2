@@ -50,10 +50,10 @@ const HomePage = () => {
         <div className="separator"></div>
         <div className="info">
           <ul>
-            <li>Lot 9-E Main St.,</li>
-            <li>First Philippine Industrial Park II (FPIP II),</li>
-            <li>Sta. Anastacia, Sto. Tomas,</li>
-            <li>4234 Batangas</li>
+            <li>Lorem ipsum dolor sit..,</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.,</li>
+            <li>Lorem ipsum dolor sit amet.,</li>
+            <li>Lorem, ipsum.</li>
           </ul>
           <ul>
             <li>Tel : +12 (34) 5678-91011</li>
@@ -64,6 +64,15 @@ const HomePage = () => {
             <a href="emailto:acrotech@gmail.com">acrotech@example.com</a>
           </ul>
         </div>
+        <div className="btn">
+          <button>SEND ENQUIRY</button>
+        </div>
+      </div>
+      <div className="copy-right">
+        <p>
+          Copyright © {new Date().getFullYear()} Acrotech Sales Industrial Corp.
+          All rights reserved.
+        </p>
       </div>
     </div>
   )

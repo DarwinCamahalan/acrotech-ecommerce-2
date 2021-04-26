@@ -1,5 +1,5 @@
 .home-container {
-  margin: 12.8rem 14% 0 12.8%;
+  margin: 12.8rem 19rem 20rem 17rem;
   height: 100%;
   display: flex;
   .sidebar {
@@ -92,6 +92,68 @@
     }
     li {
       margin: 0.4rem 0;
+    }
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      border: none;
+      margin-top: 2rem;
+      button {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        background: #1886c7 url(../../assets/btn-gra.png) repeat-x;
+        border-radius: 3px;
+        border: #77bfe9 1px solid;
+        padding: 6px 15px;
+        font-size: 1.4rem;
+        cursor: pointer;
+        &:hover {
+          background: #09354e url(../../assets/btn-gra.png) repeat-x;
+        }
+      }
+    }
+  }
+  .copy-right {
+    position: absolute;
+    bottom: -65%;
+    right: 0%;
+    margin: 30px auto;
+    width: 100%;
+    background: url(../../assets/gradient-line.png) no-repeat top center;
+    padding-top: 30px;
+    text-align: center;
+    p {
+      color: #838383;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .home-container {
+    margin: 12.8rem 0 0 0;
+    flex-wrap: wrap;
+    .hero {
+      order: 1;
+      margin: 0;
+      padding: 0 2rem;
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    .sidebar {
+      order: 2;
+      padding: 2rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .copy-right {
+      position: unset;
+      order: 3;
     }
   }
 }

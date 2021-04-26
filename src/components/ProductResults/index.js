@@ -5,6 +5,7 @@ import { fetchProductsStart } from './../../redux/Products/products.actions'
 import Product from './Product'
 import LoadMore from './../LoadMore'
 import './styles.scss'
+import SideBar from './../sidebar/index'
 
 const mapState = ({ productsData }) => ({
   products: productsData.products,
@@ -47,6 +48,7 @@ const ProductResults = ({}) => {
 
   return (
     <div className="products">
+      <SideBar />
       <div className="productResults">
         {data.map((product, pos) => {
           const { productThumbnail, productName, productPrice } = product
@@ -63,9 +65,8 @@ const ProductResults = ({}) => {
 
           return <Product key={pos} {...configProduct} />
         })}
+        {!isLastPage && <LoadMore {...configLoadMore} />}
       </div>
-
-      {!isLastPage && <LoadMore {...configLoadMore} />}
     </div>
   )
 }
