@@ -1,9 +1,10 @@
 .product {
+  width: 100%;
   .thumb {
-    width: 100%;
-    img {
-      object-fit: contain;
-      width: 10px;
+    a {
+      img {
+        width: 100%;
+      }
     }
   }
 }

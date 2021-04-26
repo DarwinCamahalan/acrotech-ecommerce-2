@@ -41,16 +41,14 @@ const Product = (product) => {
               <Link to={`/product/${documentID}`}>{productName}</Link>
             </span>
           </li>
-          <li>
-            <span className="price">₱{productPrice}</span>
-          </li>
+
           <li>
             <div className="addToCart">
               <Button
                 {...configAddToCartBtn}
                 onClick={() => handleAddToCart(product)}
               >
-                Add to cart
+                View
               </Button>
             </div>
           </li>

@@ -25,6 +25,8 @@ import Order from './pages/Order'
 import './default.scss'
 import Products from './pages/Products/index'
 import ProductDetails from './pages/ProductDetails/index'
+import ContactPage from './components/ContactPage'
+import AboutPage from './components/AboutPage'
 
 const App = (props) => {
   const dispatch = useDispatch()
@@ -72,11 +74,21 @@ const App = (props) => {
           )}
         />
         <Route
-          path="/payment"
+          path="/contact"
           render={() => (
             <WithAuth>
               <MainLayout>
-                <Payment />
+                <ContactPage />
+              </MainLayout>
+            </WithAuth>
+          )}
+        />
+        <Route
+          path="/about"
+          render={() => (
+            <WithAuth>
+              <MainLayout>
+                <AboutPage />
               </MainLayout>
             </WithAuth>
           )}

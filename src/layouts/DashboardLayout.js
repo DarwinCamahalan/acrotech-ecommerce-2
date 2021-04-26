@@ -7,6 +7,7 @@ import Header from './../components/header'
 import VerticalNav from './../components/VerticalNav'
 import Footer from './../components/footer'
 
+import './styles.scss'
 const DashBoardLayout = (props) => {
   const dispatch = useDispatch()
 

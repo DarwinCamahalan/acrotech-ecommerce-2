@@ -1,0 +1,20 @@
+.dashboardLayout {
+  margin-top: 9rem;
+  height: 100%;
+  .content {
+    margin-left: 25rem;
+    margin-top: 3.8rem;
+  }
+}
+
+.adminLayout {
+  margin-top: 11.3rem;
+}
+
+@media (max-width: 900px) {
+  .dashboardLayout {
+    .content {
+      margin-left: 0;
+    }
+  }
+}
