@@ -20,7 +20,7 @@ import Recovery from './pages/Recovery'
 import Dashboard from './pages/Dashboard'
 import Admin from './pages/Admin'
 import Cart from './pages/Cart'
-import Payment from './pages/Payment'
+
 import Order from './pages/Order'
 import './default.scss'
 import Products from './pages/Products/index'
@@ -47,7 +47,24 @@ const App = (props) => {
             </MainLayout>
           )}
         />
-
+        <Route
+          exact
+          path="/about"
+          render={() => (
+            <MainLayout>
+              <AboutPage />
+            </MainLayout>
+          )}
+        />
+        <Route
+          exact
+          path="/contact"
+          render={() => (
+            <MainLayout>
+              <ContactPage />
+            </MainLayout>
+          )}
+        />
         <Route
           exact
           path="/products"
@@ -73,26 +90,7 @@ const App = (props) => {
             </MainLayout>
           )}
         />
-        <Route
-          path="/contact"
-          render={() => (
-            <WithAuth>
-              <MainLayout>
-                <ContactPage />
-              </MainLayout>
-            </WithAuth>
-          )}
-        />
-        <Route
-          path="/about"
-          render={() => (
-            <WithAuth>
-              <MainLayout>
-                <AboutPage />
-              </MainLayout>
-            </WithAuth>
-          )}
-        />
+
         <Route
           path="/registration"
           render={() => (
