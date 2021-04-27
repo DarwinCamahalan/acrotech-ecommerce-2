@@ -46,7 +46,7 @@ const HomePage = () => {
           <Link>Home</Link> {'> '}
           <Link>Home</Link> {'> '}
         </div>
-        <h1>Acrotech Sales Industrial Corp.</h1>
+        <h1>Acrotech Industrial Sales Corp.</h1>
         <div className="separator"></div>
         <div className="info">
           <ul>
@@ -70,7 +70,7 @@ const HomePage = () => {
       </div>
       <div className="copy-right">
         <p>
-          Copyright © {new Date().getFullYear()} Acrotech Sales Industrial Corp.
+          Copyright © {new Date().getFullYear()} Acrotech Industrial Sales Corp.
           All rights reserved.
         </p>
       </div>

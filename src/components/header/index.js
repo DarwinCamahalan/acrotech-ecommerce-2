@@ -8,6 +8,7 @@ import './styles.scss'
 import Logo from './../../assets/acrotech-logo-compress.png'
 
 import { checkUserIsAdmin } from '../../Utils'
+
 const mapState = (state) => ({
   currentUser: state.user.currentUser,
   totalNumCartItems: selectCartItemsCount(state),
@@ -16,6 +17,7 @@ const mapState = (state) => ({
 const Header = (props) => {
   const [confirm, setConfirm] = useState(false)
   const location = useLocation()
+
   const [activeMenu, setActiveMenu] = useState(false)
   const dispatch = useDispatch()
   const { currentUser, totalNumCartItems } = useSelector(mapState)
@@ -67,6 +69,12 @@ const Header = (props) => {
         <div></div>
       )}
 
+      <div className="mobile-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
       <div className="wrap">
         <div className="logo">
           <Link to="/">
@@ -78,6 +86,7 @@ const Header = (props) => {
             Admin Settings
           </Link>
         )}
+
         <div className="callToActions">
           <Link to="/">home</Link>
           <Link to="/products">products </Link>

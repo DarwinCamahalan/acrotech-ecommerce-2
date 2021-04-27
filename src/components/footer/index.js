@@ -77,7 +77,7 @@ const Footer = (props) => {
         </div>
       </section>
       <section className="about">
-        <h5>About Acrotech Sales Industrial Corp.</h5>
+        <h5>About Acrotech Industrial Sales Corp.</h5>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
           quidem aut mollitia harum perspiciatis delectus laborum deserunt
