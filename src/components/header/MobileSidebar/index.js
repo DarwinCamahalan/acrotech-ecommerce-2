@@ -1,21 +1,21 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { signOutUserStart } from '../../redux/User/user.actions'
+import { signOutUserStart } from '../../../redux/User/user.actions'
+import { selectCartItemsCount } from '../../../redux/Cart/cart.selectors'
 import './styles.scss'
-import Logo from './../../assets/acrotech-logo-compress.png'
-import { checkUserIsAdmin } from '../../Utils'
-import MobileSidebar from './MobileSidebar/index'
+
+import { checkUserIsAdmin } from '../../../Utils'
 
 const mapState = (state) => ({
   currentUser: state.user.currentUser,
+  totalNumCartItems: selectCartItemsCount(state),
 })
-
-const Header = (props) => {
+const MobileSidebar = ({ openMenu, setOpenMenu }) => {
   const [confirm, setConfirm] = useState(false)
+
   const dispatch = useDispatch()
   const { currentUser } = useSelector(mapState)
-  const [openMenu, setOpenMenu] = useState(false)
   if (currentUser) {
     var { displayName } = currentUser
   }
@@ -23,21 +23,26 @@ const Header = (props) => {
 
   const signOut = () => {
     dispatch(signOutUserStart())
+    setOpenMenu(!openMenu)
     setConfirm(!confirm)
     history.push('/')
   }
   const showConfirmation = () => {
     setConfirm(!confirm)
   }
+
+  const close = () => {
+    setOpenMenu(!openMenu)
+  }
   const history = useHistory()
   return (
-    <header className="header">
+    <div>
       {confirm ? (
         <div
           onClick={() => {
             setConfirm(!confirm)
           }}
-          className="overlay"
+          className="overlay-logout"
         >
           <div className="confirmation">
             <p>Log out</p>
@@ -62,36 +67,12 @@ const Header = (props) => {
         <div></div>
       )}
 
-      <div
-        className="mobile-menu"
-        onClick={() => {
-          setOpenMenu(!openMenu)
-        }}
-      >
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-
-      {openMenu ? (
-        <MobileSidebar openMenu={openMenu} setOpenMenu={setOpenMenu} />
-      ) : (
-        <> </>
-      )}
-
-      <div className="wrap">
-        <div className="logo">
-          <Link to="/">
-            <img src={Logo} alt="Acrotech Logo" />
-          </Link>
-        </div>
-        {isAdmin && (
-          <Link to="/admin" className="admin-settings">
-            Admin Settings
-          </Link>
-        )}
-
-        <div className="callToActions">
+      <div className="overlay" onClick={close}>
+        <div className="sidebar">
+          <div className="x" onClick={close}>
+            <div className="x1"></div>
+            <div className="x2"></div>
+          </div>
           <Link to="/">home</Link>
           <Link to="/products">products </Link>
           <Link to="/about">about us</Link>
@@ -100,7 +81,7 @@ const Header = (props) => {
           <div className="menu">
             {currentUser && (
               <>
-                <Link onClick={showConfirmation}>Logout</Link> |{' '}
+                <Link onMouseEnter={showConfirmation}>Logout</Link> |{' '}
                 {isAdmin && <Link to="/">{displayName}</Link>}
                 {!isAdmin && <Link to="/dashboard">{displayName}</Link>}
               </>
@@ -125,12 +106,8 @@ const Header = (props) => {
           </div>
         </div>
       </div>
-    </header>
+    </div>
   )
 }
 
-Header.defaultProps = {
-  currentUser: null,
-}
-
-export default Header
+export default MobileSidebar

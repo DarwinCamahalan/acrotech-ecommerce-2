@@ -135,17 +135,13 @@
       }
     }
   }
-  .mobile-menu,
-  .sidebar {
+  .mobile-menu {
     display: none;
   }
 }
 
 @media (max-width: 1000px) {
   .header {
-    .sidebar {
-      display: block;
-    }
     .mobile-menu {
       display: block;
       position: absolute;

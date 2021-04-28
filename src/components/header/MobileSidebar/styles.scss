@@ -1,0 +1,152 @@
+.overlay-logout {
+  background-color: rgba(0, 0, 0, 0.466);
+  position: absolute;
+  position: fixed;
+  z-index: 100;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .confirmation {
+    background-color: rgba(255, 255, 255, 0.925);
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 1.7rem;
+    width: 26rem;
+    height: auto;
+
+    line-height: 1.2;
+    border-radius: 0.8rem;
+    text-align: center;
+
+    p {
+      margin: 2rem 0 0 0;
+      padding: 0;
+      font-weight: bolder;
+    }
+    h6 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      margin: 0.5rem 3rem 2rem 3rem;
+    }
+    hr {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      height: 1px;
+      color: #dad8d8;
+      background-color: #dad8d8;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-evenly;
+      text-align: center;
+      a {
+        padding: 0.7rem;
+        color: #1538d8;
+        width: 100%;
+        font-weight: 400;
+        &:hover {
+          background-color: rgb(230, 230, 230);
+        }
+      }
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.904);
+
+  .sidebar {
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    width: 70%;
+    background-color: #0074bf;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .x {
+      transform: rotate(135deg);
+      position: absolute;
+      top: 3%;
+      right: 7%;
+      cursor: pointer;
+      &:hover {
+        div {
+          background-color: yellow;
+        }
+      }
+      div {
+        background-color: white;
+        height: 0.4rem;
+        width: 3.5rem;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        border-radius: 50rem;
+      }
+      .x1 {
+        transform: rotate(90deg);
+      }
+    }
+    a {
+      padding: 4rem;
+      color: #fff;
+      width: 70%;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+      text-transform: uppercase;
+      line-height: 21px;
+      transition: 0s;
+      &:hover {
+        color: yellow;
+      }
+    }
+    .menu {
+      text-align: left;
+      font-size: 1.25rem;
+      line-height: 2;
+      margin-top: 6rem;
+      span {
+        color: rgba(255, 255, 255, 0.548);
+        font-weight: normal;
+        margin: 0;
+      }
+
+      a {
+        font-weight: normal;
+        text-shadow: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .overlay {
+    .sidebar {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    .sidebar {
+      width: 70%;
+    }
+  }
+}
