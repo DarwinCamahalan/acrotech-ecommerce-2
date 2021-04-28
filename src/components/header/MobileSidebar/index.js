@@ -81,7 +81,7 @@ const MobileSidebar = ({ openMenu, setOpenMenu }) => {
           <div className="menu">
             {currentUser && (
               <>
-                <Link onMouseEnter={showConfirmation}>Logout</Link> |{' '}
+                <Link onTouchStart={showConfirmation}>Logout</Link> |{' '}
                 {isAdmin && <Link to="/">{displayName}</Link>}
                 {!isAdmin && <Link to="/dashboard">{displayName}</Link>}
               </>
