@@ -1,67 +1,36 @@
 import React, { useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
-import { signOutUserStart } from '../../redux/User/user.actions'
+import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+
 import './styles.scss'
 import Logo from './../../assets/acrotech-logo-compress.png'
 import { checkUserIsAdmin } from '../../Utils'
 import MobileSidebar from './MobileSidebar/index'
+import LogoutConfirm from './LogoutConfirm'
 
 const mapState = (state) => ({
   currentUser: state.user.currentUser,
 })
 
 const Header = (props) => {
-  const [confirm, setConfirm] = useState(false)
-  const dispatch = useDispatch()
   const { currentUser } = useSelector(mapState)
+  const [confirm, setConfirm] = useState(false)
   const [openMenu, setOpenMenu] = useState(false)
   if (currentUser) {
     var { displayName } = currentUser
   }
   const isAdmin = checkUserIsAdmin(currentUser)
 
-  const signOut = () => {
-    dispatch(signOutUserStart())
-    setConfirm(!confirm)
-    history.push('/')
-  }
   const showConfirmation = () => {
     setConfirm(!confirm)
   }
-  const history = useHistory()
   return (
     <header className="header">
       {confirm ? (
-        <div
-          onClick={() => {
-            setConfirm(!confirm)
-          }}
-          className="overlay"
-        >
-          <div className="confirmation">
-            <p>Log out</p>
-            <h6>You will be returned to the home page.</h6>
-            <hr />
-            <div className="options">
-              <a
-                onClick={() => {
-                  setConfirm(!confirm)
-                }}
-              >
-                Cancel
-              </a>
-
-              <a onClick={signOut} style={{ borderLeft: '1px solid #dad8d8' }}>
-                Log out
-              </a>
-            </div>
-          </div>
-        </div>
+        <LogoutConfirm confirm={confirm} setConfirm={setConfirm} />
       ) : (
-        <div></div>
+        ''
       )}
-
       <div
         className="mobile-menu"
         onClick={() => {
@@ -72,13 +41,13 @@ const Header = (props) => {
         <div></div>
         <div></div>
       </div>
-
-      {openMenu ? (
-        <MobileSidebar openMenu={openMenu} setOpenMenu={setOpenMenu} />
-      ) : (
-        <> </>
-      )}
-
+      <div className="mobile-sidebar">
+        {openMenu ? (
+          <MobileSidebar openMenu={openMenu} setOpenMenu={setOpenMenu} />
+        ) : (
+          <> </>
+        )}
+      </div>
       <div className="wrap">
         <div className="logo">
           <Link to="/">
