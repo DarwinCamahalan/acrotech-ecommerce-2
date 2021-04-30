@@ -95,7 +95,7 @@ const Header = (props) => {
           <Link to="/">home</Link>
           <Link to="/products">products </Link>
           <Link to="/about">about us</Link>
-          <Link to="/">Announcements</Link>
+          <Link to="/announcement">Announcements</Link>
           <Link to="/contact">Contact Us</Link>
           <div className="menu">
             {currentUser && (

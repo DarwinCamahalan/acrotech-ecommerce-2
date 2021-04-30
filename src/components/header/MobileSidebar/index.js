@@ -36,7 +36,7 @@ const MobileSidebar = ({ openMenu, setOpenMenu }) => {
   }
   const history = useHistory()
   return (
-    <div>
+    <div className="overlay" onClick={close}>
       {confirm ? (
         <div
           onClick={() => {
@@ -66,44 +66,41 @@ const MobileSidebar = ({ openMenu, setOpenMenu }) => {
       ) : (
         <div></div>
       )}
-
-      <div className="overlay" onClick={close}>
-        <div className="sidebar">
-          <div className="x" onClick={close}>
-            <div className="x1"></div>
-            <div className="x2"></div>
-          </div>
-          <Link to="/">home</Link>
-          <Link to="/products">products </Link>
-          <Link to="/about">about us</Link>
-          <Link to="/">Announcements</Link>
-          <Link to="/contact">Contact Us</Link>
-          <div className="menu">
-            {currentUser && (
-              <>
-                <Link onTouchStart={showConfirmation}>Logout</Link> |{' '}
-                {isAdmin && <Link to="/">{displayName}</Link>}
-                {!isAdmin && <Link to="/dashboard">{displayName}</Link>}
-              </>
-            )}
-            {!currentUser && (
-              <>
-                <Link to="/login">Login</Link> |{' '}
-                <Link to="/registration">register</Link>
-              </>
-            )}
-            <br />
-            <span>Locate Us : </span>
-            <a
-              href="https://www.google.com/maps/place/Acrotect+Industrial+Sales+Corp./@8.4908966,124.6382007,17z/data=!3m1!4b1!4m5!3m4!1s0x32fff31fcf49851f:0xc9263f3b77dfdac0!8m2!3d8.490894!4d124.6403783"
-              target="_blank"
-              className="locate"
-            >
-              Google Map
-            </a>
-            <br />
-            <span>CONTACT TEL: </span> +123 4567 8910
-          </div>
+      <div className="sidebar">
+        <div className="x" onClick={close}>
+          <div className="x1"></div>
+          <div className="x2"></div>
+        </div>
+        <Link to="/">home</Link>
+        <Link to="/products">products </Link>
+        <Link to="/about">about us</Link>
+        <Link to="/">Announcements</Link>
+        <Link to="/contact">Contact Us</Link>
+        <div className="menu">
+          {currentUser && (
+            <>
+              <Link onMouseDown={showConfirmation}>Logout</Link> |{' '}
+              {isAdmin && <Link to="/">{displayName}</Link>}
+              {!isAdmin && <Link to="/dashboard">{displayName}</Link>}
+            </>
+          )}
+          {!currentUser && (
+            <>
+              <Link to="/login">Login</Link> |{' '}
+              <Link to="/registration">register</Link>
+            </>
+          )}
+          <br />
+          <span>Locate Us : </span>
+          <a
+            href="https://www.google.com/maps/place/Acrotect+Industrial+Sales+Corp./@8.4908966,124.6382007,17z/data=!3m1!4b1!4m5!3m4!1s0x32fff31fcf49851f:0xc9263f3b77dfdac0!8m2!3d8.490894!4d124.6403783"
+            target="_blank"
+            className="locate"
+          >
+            Google Map
+          </a>
+          <br />
+          <span>CONTACT TEL: </span> +123 4567 8910
         </div>
       </div>
     </div>

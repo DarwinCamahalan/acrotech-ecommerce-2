@@ -27,6 +27,8 @@ import Products from './pages/Products/index'
 import ProductDetails from './pages/ProductDetails/index'
 import ContactPage from './components/ContactPage'
 import AboutPage from './components/AboutPage'
+import Popup from './components/Announcement/Popup/index'
+import Announcements from './components/Announcement/index'
 
 const App = (props) => {
   const dispatch = useDispatch()
@@ -37,6 +39,7 @@ const App = (props) => {
 
   return (
     <div className="App">
+      <Popup />
       <Switch>
         <Route
           exact
@@ -62,6 +65,15 @@ const App = (props) => {
           render={() => (
             <MainLayout>
               <ContactPage />
+            </MainLayout>
+          )}
+        />
+        <Route
+          exact
+          path="/announcement"
+          render={() => (
+            <MainLayout>
+              <Announcements />
             </MainLayout>
           )}
         />
