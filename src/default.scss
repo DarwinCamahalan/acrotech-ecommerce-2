@@ -25,6 +25,20 @@ body,
   box-sizing: border-box;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  height: 8px;
+  background-color: #0074bf;
+  border-radius: 50rem;
+}
+
 body {
   font-family: 'Noto Sans', sans-serif;
   font-size: 1.8rem;

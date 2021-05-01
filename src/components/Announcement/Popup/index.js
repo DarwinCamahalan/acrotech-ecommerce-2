@@ -3,22 +3,22 @@ import './styles.scss'
 const Popup = () => {
   const [popupStart, setPopupStart] = useState()
   useEffect(() => {
-    setTimeout(() => {
-      setPopupStart(true)
-    }, 500)
+    setPopupStart(true)
+    document.body.style.overflow = 'hidden'
   }, [])
 
+  const closeOverlay = () => {
+    document.body.style.overflow = 'unset'
+    setPopupStart(!popupStart)
+  }
   return (
     <div>
       {popupStart && (
-        <div
-          className="overlay-close"
-          onClick={() => setPopupStart(!popupStart)}
-        ></div>
+        <div className="overlay-close" onClick={closeOverlay}></div>
       )}
       {popupStart ? (
         <div className="announcement">
-          <div className="close" onClick={() => setPopupStart(!popupStart)}>
+          <div className="close" onClick={closeOverlay}>
             X
           </div>
           <div className="content">

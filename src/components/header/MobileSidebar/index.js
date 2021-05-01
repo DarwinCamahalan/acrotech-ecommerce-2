@@ -21,7 +21,13 @@ const MobileSidebar = ({ openMenu, setOpenMenu }) => {
   const isAdmin = checkUserIsAdmin(currentUser)
 
   const showConfirmation = () => {
+    document.body.style.overflow = 'hidden'
     setConfirm(!confirm)
+  }
+
+  const openSidebar = () => {
+    document.body.style.overflow = 'unset'
+    setOpenMenu(!openMenu)
   }
   return (
     <div>
@@ -32,27 +38,24 @@ const MobileSidebar = ({ openMenu, setOpenMenu }) => {
       )}
       {openMenu ? (
         <div>
-          <div
-            className="overlay-sidebar"
-            onClick={() => setOpenMenu(!openMenu)}
-          ></div>
+          <div className="overlay-sidebar" onClick={openSidebar}></div>
           <div className="callToActions">
-            <div className="close" onClick={() => setOpenMenu(!openMenu)}>
+            <div className="close" onClick={openSidebar}>
               <img src={Arrow} alt="close button" />
             </div>
-            <Link to="/" onClick={() => setOpenMenu(!openMenu)}>
+            <Link to="/" onClick={openSidebar}>
               home
             </Link>
-            <Link to="/products" onClick={() => setOpenMenu(!openMenu)}>
+            <Link to="/products" onClick={openSidebar}>
               products
             </Link>
-            <Link to="/about" onClick={() => setOpenMenu(!openMenu)}>
+            <Link to="/about" onClick={openSidebar}>
               about us
             </Link>
-            <Link to="/announcement" onClick={() => setOpenMenu(!openMenu)}>
+            <Link to="/announcement" onClick={openSidebar}>
               Announcements
             </Link>
-            <Link to="/contact" onClick={() => setOpenMenu(!openMenu)}>
+            <Link to="/contact" onClick={openSidebar}>
               Contact Us
             </Link>
             <div className="menu">
@@ -65,14 +68,11 @@ const MobileSidebar = ({ openMenu, setOpenMenu }) => {
               )}
               {!currentUser && (
                 <>
-                  <Link to="/login" onClick={() => setOpenMenu(!openMenu)}>
+                  <Link to="/login" onClick={openSidebar}>
                     Login
                   </Link>{' '}
                   |{' '}
-                  <Link
-                    to="/registration"
-                    onClick={() => setOpenMenu(!openMenu)}
-                  >
+                  <Link to="/registration" onClick={openSidebar}>
                     register
                   </Link>
                 </>

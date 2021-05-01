@@ -17,6 +17,7 @@ const LogoutConfirm = ({ confirm, setConfirm }) => {
     <div>
       <div
         onClick={() => {
+          document.body.style.overflow = 'unset'
           setConfirm(!confirm)
         }}
         className="overlay"
@@ -28,6 +29,7 @@ const LogoutConfirm = ({ confirm, setConfirm }) => {
           <div className="options">
             <a
               onClick={() => {
+                document.body.style.overflow = 'unset'
                 setConfirm(!confirm)
               }}
             >

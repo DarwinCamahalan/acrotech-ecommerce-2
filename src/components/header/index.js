@@ -22,6 +22,7 @@ const Header = (props) => {
   const isAdmin = checkUserIsAdmin(currentUser)
 
   const showConfirmation = () => {
+    document.body.style.overflow = 'hidden'
     setConfirm(!confirm)
   }
   return (
@@ -34,6 +35,7 @@ const Header = (props) => {
       <div
         className="mobile-menu"
         onClick={() => {
+          document.body.style.overflow = 'hidden'
           setOpenMenu(!openMenu)
         }}
       >
