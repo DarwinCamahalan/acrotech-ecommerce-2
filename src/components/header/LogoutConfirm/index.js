@@ -10,6 +10,7 @@ const LogoutConfirm = ({ confirm, setConfirm }) => {
   const signOut = () => {
     dispatch(signOutUserStart())
     setConfirm(!confirm)
+    document.body.style.overflow = 'unset'
     history.push('/')
   }
 
