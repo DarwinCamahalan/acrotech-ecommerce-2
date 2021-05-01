@@ -29,7 +29,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-
+    height: auto;
     .login-register {
       position: relative;
       border: 1px solid rgb(145, 145, 145);
@@ -54,16 +54,19 @@
       a {
         border: #c4c4c4 solid 1px;
         color: black;
-        padding: 0.3rem 1rem;
+        padding: 0.5rem 1rem;
         border-radius: 3px;
         text-align: center;
         margin: 0.5rem;
+        &:hover {
+          background-color: rgb(241, 241, 241);
+        }
       }
     }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .recovery {
     height: auto;
     margin: 13rem 0;
@@ -75,11 +78,17 @@
     }
     .login-register {
       margin: 5rem 0;
-      width: 100%;
+
       a {
         width: 100%;
         padding: 1rem;
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .login-register {
+    width: 100%;
   }
 }

@@ -29,7 +29,8 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-
+    align-items: unset;
+    height: auto;
     .register {
       position: relative;
       border: 1px solid rgb(145, 145, 145);
@@ -50,17 +51,29 @@
         width: 100%;
       }
       a {
-        border: #c4c4c4 solid 1px;
-        color: black;
-        padding: 0.3rem 1rem;
+        display: block;
+        width: 100%;
+        font-size: 1.8rem;
+        line-height: 1;
+        font-weight: 300;
+        color: rgb(0, 0, 0);
+        background: rgb(255, 255, 255);
+        padding: 1rem 10px;
+        margin: 0 auto;
+        border: #ccc 1px solid;
+        outline: none;
         border-radius: 3px;
+        cursor: pointer;
         text-align: center;
+        &:hover {
+          background-color: rgb(243, 243, 243);
+        }
       }
     }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .signup {
     height: auto;
     margin: 13rem 0;
@@ -72,11 +85,16 @@
     }
     .register {
       margin: 5rem 0;
-      width: 100%;
+
       a {
         width: 100%;
         padding: 1rem;
       }
     }
+  }
+}
+@media (max-width: 768px) {
+  .register {
+    width: 100%;
   }
 }

@@ -36,7 +36,7 @@
         text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
         text-transform: uppercase;
         line-height: 21px;
-        transition: 0s;
+
         &:hover {
           color: yellow;
         }
@@ -106,6 +106,7 @@
       margin: 0.6rem 1%;
       .logo {
         width: 17rem;
+        margin-left: 0.8rem;
         img {
           width: 100%;
         }

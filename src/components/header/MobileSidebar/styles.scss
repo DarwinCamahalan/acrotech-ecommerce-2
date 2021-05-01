@@ -27,7 +27,7 @@
       border-radius: 50%;
       top: 50%;
       transform: translateY(-50%);
-      right: -10%;
+      right: -5%;
       padding: 1.5rem;
       cursor: pointer;
       img {
@@ -48,7 +48,7 @@
       text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
       text-transform: uppercase;
       line-height: 21px;
-      transition: 0s;
+
       &:hover {
         color: yellow;
       }
@@ -80,6 +80,9 @@
     width: auto;
     padding: 0 5%;
     text-align: center;
+    .close {
+      right: -10%;
+    }
     a {
       width: 100%;
     }

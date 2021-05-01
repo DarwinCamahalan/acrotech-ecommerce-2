@@ -2,7 +2,7 @@ import './styles.scss'
 const AboutPage = () => {
   return (
     <div className="about-page">
-      <p>About Page - Being Built 🚧</p>
+      <p>🚧 Being Built 🚧</p>
     </div>
   )
 }

@@ -68,7 +68,13 @@ const MobileSidebar = ({ openMenu, setOpenMenu }) => {
                   <Link to="/login" onClick={() => setOpenMenu(!openMenu)}>
                     Login
                   </Link>{' '}
-                  | <Link to="/registration">register</Link>
+                  |{' '}
+                  <Link
+                    to="/registration"
+                    onClick={() => setOpenMenu(!openMenu)}
+                  >
+                    register
+                  </Link>
                 </>
               )}
               <br />

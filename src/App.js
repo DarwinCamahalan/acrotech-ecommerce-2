@@ -20,7 +20,7 @@ import Recovery from './pages/Recovery'
 import Dashboard from './pages/Dashboard'
 import Admin from './pages/Admin'
 import Cart from './pages/Cart'
-
+import ScrollToTop from './ScrollToTop'
 import Order from './pages/Order'
 import './default.scss'
 import Products from './pages/Products/index'
@@ -40,6 +40,7 @@ const App = (props) => {
   return (
     <div className="App">
       <Popup />
+      <ScrollToTop />
       <Switch>
         <Route
           exact

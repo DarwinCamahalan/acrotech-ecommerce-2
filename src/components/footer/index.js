@@ -17,18 +17,18 @@ const Footer = (props) => {
       <section className="links">
         <div className="categories">
           <p>About Us</p>
-          <Link>Corporate Overview</Link>
-          <Link>MD’s Message</Link>
-          <Link>SMC Singapore</Link>
-          <Link>SMC United Arab Emirates</Link>
-          <Link>SMC Malaysia</Link>
-          <Link>SMC Vietnam</Link>
-          <Link>SMC Indonesia</Link>
-          <Link>SMC Philippines</Link>
-          <Link>Other Regions We Serve</Link>
-          <Link>SMC Corporation Japan</Link>
-          <Link>Global Sales Network</Link>
-          <Link>Global Engineering Network</Link>
+          <Link>Lorem ipsum dolor sit amet.</Link>
+          <Link>Lorem ipsum dolor </Link>
+          <Link>Lorem ipsum dolor sit</Link>
+          <Link>Lorem ipsum dolor sit amet.</Link>
+          <Link>Lorem ipsum </Link>
+          <Link>Lorem ipsum dolor sit </Link>
+          <Link>Lorem ipsum dolor </Link>
+          <Link>Lorem ipsum dolor sit </Link>
+          <Link>Lorem ipsum </Link>
+          <Link>Lorem ipsum dolor sit </Link>
+          <Link>Lorem ipsum </Link>
+          <Link>Lorem ipsum dolor sit </Link>
         </div>
         <div className="categories">
           <p>Strategic Products</p>

@@ -1,7 +1,7 @@
 .admin {
   padding: 0 10px;
 
-  .callToActions {
+  .adminActions {
     display: inline-block;
     width: auto;
     padding: 0;
@@ -43,7 +43,7 @@
 
 @media only screen and (max-width: 980px) {
   .admin {
-    .callToActions {
+    .adminActions {
       margin-left: 0;
     }
   }
