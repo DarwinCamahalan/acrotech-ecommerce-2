@@ -63,6 +63,13 @@ a {
   cursor: pointer;
 }
 
+a,
+a:hover {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
 .main {
   width: 100%;
   padding: 0;
