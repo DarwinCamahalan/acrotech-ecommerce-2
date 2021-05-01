@@ -19,6 +19,25 @@
     justify-content: center;
     width: 50%;
     background-color: #0074bf;
+    .close {
+      position: absolute;
+      background-color: #0074bf;
+      height: 6rem;
+      width: 6rem;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -10%;
+      padding: 1.5rem;
+      cursor: pointer;
+      img {
+        margin-left: 0.5rem;
+        width: 100%;
+        filter: invert(1);
+        transform: rotate(180deg);
+      }
+    }
+
     a {
       padding: 45px 12px 21px;
       margin-bottom: 2rem;
@@ -58,6 +77,11 @@
 
 @media (max-width: 768px) {
   .callToActions {
-    width: 60%;
+    width: auto;
+    padding: 0 5%;
+    text-align: center;
+    a {
+      width: 100%;
+    }
   }
 }

@@ -6,6 +6,7 @@ import './styles.scss'
 import { checkUserIsAdmin } from '../../../Utils'
 import LogoutConfirm from '../LogoutConfirm'
 
+import Arrow from '../../../assets/arrow.png'
 const mapState = (state) => ({
   currentUser: state.user.currentUser,
 })
@@ -36,11 +37,24 @@ const MobileSidebar = ({ openMenu, setOpenMenu }) => {
             onClick={() => setOpenMenu(!openMenu)}
           ></div>
           <div className="callToActions">
-            <Link to="/">home</Link>
-            <Link to="/products">products </Link>
-            <Link to="/about">about us</Link>
-            <Link to="/announcement">Announcements</Link>
-            <Link to="/contact">Contact Us</Link>
+            <div className="close" onClick={() => setOpenMenu(!openMenu)}>
+              <img src={Arrow} alt="close button" />
+            </div>
+            <Link to="/" onClick={() => setOpenMenu(!openMenu)}>
+              home
+            </Link>
+            <Link to="/products" onClick={() => setOpenMenu(!openMenu)}>
+              products
+            </Link>
+            <Link to="/about" onClick={() => setOpenMenu(!openMenu)}>
+              about us
+            </Link>
+            <Link to="/announcement" onClick={() => setOpenMenu(!openMenu)}>
+              Announcements
+            </Link>
+            <Link to="/contact" onClick={() => setOpenMenu(!openMenu)}>
+              Contact Us
+            </Link>
             <div className="menu">
               {currentUser && (
                 <>
