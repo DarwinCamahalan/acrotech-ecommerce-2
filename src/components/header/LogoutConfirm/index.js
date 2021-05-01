@@ -21,25 +21,24 @@ const LogoutConfirm = ({ confirm, setConfirm }) => {
           setConfirm(!confirm)
         }}
         className="overlay"
-      >
-        <div className="confirmation">
-          <p>Log out</p>
-          <h6>You will be returned to the home page.</h6>
-          <hr />
-          <div className="options">
-            <a
-              onClick={() => {
-                document.body.style.overflow = 'unset'
-                setConfirm(!confirm)
-              }}
-            >
-              Cancel
-            </a>
+      ></div>
+      <div className="confirmation">
+        <p>Log out</p>
+        <h6>You will be returned to the home page.</h6>
+        <hr />
+        <div className="options">
+          <a
+            onClick={() => {
+              document.body.style.overflow = 'unset'
+              setConfirm(!confirm)
+            }}
+          >
+            Cancel
+          </a>
 
-            <a onClick={signOut} style={{ borderLeft: '1px solid #dad8d8' }}>
-              Log out
-            </a>
-          </div>
+          <a onClick={signOut} style={{ borderLeft: '1px solid #dad8d8' }}>
+            Log out
+          </a>
         </div>
       </div>
     </div>
