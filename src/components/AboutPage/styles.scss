@@ -1,7 +1,78 @@
-.about-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 9rem;
-  height: 100vh;
+#about-page {
+  padding-top:50px;
+  padding-bottom:50px;
+}
+#about-page .row
+{
+  margin-top:30px;
+}
+.col-md-4
+{
+  margin:40px auto; 
+}
+.profile
+{
+  padding: 70px;
+  background-color: #efefef;
+}
+.user
+{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.profile img
+{
+    top: -60px;
+    position: absolute;
+    left: calc(50% - 60px);;
+    border: 10px solid #fff;
+}
+.profile h4
+{
+    font-size: 20px;
+    margin-top: 15px;
+    color: #007bff;
+}
+.profile h5
+{
+    font-size: 20px;
+    margin-top: 15px;
+    color: #007bff;
+}
+#about-page h5
+{
+    font-size: 12px;
+    color: #333;
+}
+blockquote
+{
+    font-size: 16px;
+    line-height: 30px;
+}
+blockquote::before
+{
+    content: '\201C';
+    font-size: 50px;
+    color: #007bff;
+    position: relative;
+    line-height: 20px;
+    bottom: -15px;
+    right: 5px;
+}
+blockquote::after
+{
+    content: '\201D';
+    font-size: 50px;
+    color: #007bff;
+    position: relative;
+    line-height: 10px;
+    bottom: -15px;
+    left: 5px;
+}
+.profile:hover
+{
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: 0.5s;
 }
