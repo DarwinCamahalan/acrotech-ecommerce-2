@@ -39,7 +39,7 @@ const MobileSidebar = ({ openMenu, setOpenMenu }) => {
       )}
       {openMenu ? (
         <div>
-          <div className="overlay-sidebar"></div>
+          <div className="overlay-sidebar" onClick={openSidebar}></div>
           <div className="callToActions">
             <div className="close" onClick={openSidebar}>
               <img src={Arrow} alt="close button" />

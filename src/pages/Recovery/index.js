@@ -15,7 +15,7 @@ const Recovery = (props) => {
         </p>
       </div>
 
-      <div className="container">
+      <div className="recovery-container">
         <ForgotPassword />
         <div className="login-register">
           <h1>Login & Registration</h1>

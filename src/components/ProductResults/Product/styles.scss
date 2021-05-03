@@ -1,14 +1,9 @@
 .product {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-
-  .thumb {
-    a {
-      img {
-        width: 100%;
-      }
+  margin: 2rem;
+  .img {
+    img {
+      object-fit: contain;
+      width: 100%;
     }
   }
 }

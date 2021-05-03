@@ -45,19 +45,27 @@ const ProductResults = ({}) => {
 
   const configLoadMore = {
     onLoadMoreEvt: handleLoadMore,
+    searchResult: searchResult,
   }
 
   return (
-    <div className="products">
-      <SideBar searchResult={searchResult} setSearchResult={setSearchResult} />
-      <div className="productResults">
+    <div className="products-page ">
+      <div className="sidebar">
+        <SideBar
+          searchResult={searchResult}
+          setSearchResult={setSearchResult}
+        />
+      </div>
+
+      <div className="products-container">
         {data
           .filter((product) => {
-            const { productName } = product
+            const { productName, productPrice } = product
             if (searchResult == '') {
               return product
             } else if (
-              productName.toLowerCase().includes(searchResult.toLowerCase())
+              productName.toLowerCase().includes(searchResult.toLowerCase()) ||
+              productPrice.includes(searchResult)
             ) {
               return product
             }
@@ -77,7 +85,7 @@ const ProductResults = ({}) => {
 
             return <Product key={pos} {...configProduct} />
           })}
-        {!isLastPage && <LoadMore {...configLoadMore} />}
+        {!isLastPage && <LoadMore {...configLoadMore} className="btn" />}
       </div>
     </div>
   )
