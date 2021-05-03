@@ -1,11 +1,14 @@
 import './styles.scss'
 import { Link } from 'react-router-dom'
 import search from './../../assets/button_search.png'
-const SideBar = () => {
+const SideBar = ({ searchResult, setSearchResult }) => {
+  const onChangeHandler = (event) => {
+    setSearchResult(event.target.value)
+  }
   return (
     <div className="sidebar">
       <div className="search-bar">
-        <input type="text" />
+        <input type="text" onChange={onChangeHandler} value={searchResult} />
         <button>
           <img src={search} alt="" />
         </button>

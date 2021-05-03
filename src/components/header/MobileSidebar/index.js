@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-
+import { motion } from 'framer-motion'
 import './styles.scss'
 import { checkUserIsAdmin } from '../../../Utils'
 import LogoutConfirm from '../LogoutConfirm'
@@ -29,6 +29,7 @@ const MobileSidebar = ({ openMenu, setOpenMenu }) => {
     document.body.style.overflow = 'unset'
     setOpenMenu(!openMenu)
   }
+
   return (
     <div>
       {confirm ? (
@@ -38,7 +39,7 @@ const MobileSidebar = ({ openMenu, setOpenMenu }) => {
       )}
       {openMenu ? (
         <div>
-          <div className="overlay-sidebar" onClick={openSidebar}></div>
+          <div className="overlay-sidebar"></div>
           <div className="callToActions">
             <div className="close" onClick={openSidebar}>
               <img src={Arrow} alt="close button" />

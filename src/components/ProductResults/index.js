@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory, useParams } from 'react-router-dom'
 import { fetchProductsStart } from './../../redux/Products/products.actions'
@@ -12,6 +12,7 @@ const mapState = ({ productsData }) => ({
 })
 
 const ProductResults = ({}) => {
+  const [searchResult, setSearchResult] = useState('')
   const dispatch = useDispatch()
   const history = useHistory()
   const { filterType } = useParams()
@@ -48,23 +49,34 @@ const ProductResults = ({}) => {
 
   return (
     <div className="products">
-      <SideBar />
+      <SideBar searchResult={searchResult} setSearchResult={setSearchResult} />
       <div className="productResults">
-        {data.map((product, pos) => {
-          const { productThumbnail, productName, productPrice } = product
-          if (
-            !productThumbnail ||
-            !productName ||
-            typeof productPrice === 'undefined'
-          )
-            return null
+        {data
+          .filter((product) => {
+            const { productName } = product
+            if (searchResult == '') {
+              return product
+            } else if (
+              productName.toLowerCase().includes(searchResult.toLowerCase())
+            ) {
+              return product
+            }
+          })
+          .map((product, pos) => {
+            const { productThumbnail, productName, productPrice } = product
+            if (
+              !productThumbnail ||
+              !productName ||
+              typeof productPrice === 'undefined'
+            )
+              return null
 
-          const configProduct = {
-            ...product,
-          }
+            const configProduct = {
+              ...product,
+            }
 
-          return <Product key={pos} {...configProduct} />
-        })}
+            return <Product key={pos} {...configProduct} />
+          })}
         {!isLastPage && <LoadMore {...configLoadMore} />}
       </div>
     </div>
