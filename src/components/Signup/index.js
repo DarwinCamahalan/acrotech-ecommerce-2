@@ -130,8 +130,10 @@ const Signup = (props) => {
             handleChange={(e) => setConfirmPassword(e.target.value)}
           />
           <div className="show-pass" onClick={showPass}>
-            <input type="checkbox" />
-            <p>Show Password</p>
+            <label>
+              <input type="checkbox" />
+              <p> Show Password </p>
+            </label>
           </div>
           <Button type="submit" id="submit" onClick={register}>
             Register

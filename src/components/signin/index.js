@@ -87,9 +87,11 @@ const SignIn = (props) => {
             placeholder="Password"
             handleChange={(e) => setPassword(e.target.value)}
           />
-          <div className="show-pass " onClick={showPass}>
-            <input type="checkbox" className="checkPass" />
-            <p>Show Password</p>
+          <div className="show-pass ">
+            <label>
+              <input type="checkbox" onClick={showPass} />
+              <p>Show Password</p>
+            </label>
           </div>
 
           <Button type="submit" id="submit" onClick={login}>

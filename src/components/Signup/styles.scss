@@ -10,14 +10,18 @@
     font-size: 1.5rem;
   }
   .show-pass {
-    margin: 0.5rem 0 1rem 0;
-    display: flex;
-    align-items: center;
+    margin-bottom: 2rem;
 
-    p {
-      margin: 0 0.5rem;
-      padding: 0;
-      display: inline;
+    label {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      p {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        font-size: 1.4rem;
+      }
     }
   }
 }
