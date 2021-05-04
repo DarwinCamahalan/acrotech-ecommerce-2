@@ -71,6 +71,8 @@ const Signup = (props) => {
   const showPass = () => {
     const x = document.querySelector('.pass')
     const y = document.querySelector('.confirm-pass')
+    const check = document.querySelector('.checkPass')
+    check.click()
     if (x.type === 'password' && y.type === 'password') {
       x.type = 'text'
       y.type = 'text'
@@ -129,7 +131,7 @@ const Signup = (props) => {
             handleChange={(e) => setConfirmPassword(e.target.value)}
           />
           <div className="show-pass" onClick={showPass}>
-            <input type="checkbox" />
+            <input type="checkbox" className="checkPass" />
             <p>Show Password</p>
           </div>
           <Button type="submit" id="submit" onClick={register}>

@@ -59,6 +59,8 @@ const SignIn = (props) => {
   }
   const showPass = () => {
     const x = document.getElementById('pass')
+    const check = document.querySelector('.checkPass')
+    check.click()
     if (x.type === 'password') {
       x.type = 'text'
     } else {
@@ -87,7 +89,7 @@ const SignIn = (props) => {
             handleChange={(e) => setPassword(e.target.value)}
           />
           <div className="show-pass " onClick={showPass}>
-            <input type="checkbox" />
+            <input type="checkbox" className="checkPass" />
             <p>Show Password</p>
           </div>
 
