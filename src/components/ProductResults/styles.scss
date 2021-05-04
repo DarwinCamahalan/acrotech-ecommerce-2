@@ -1,7 +1,5 @@
 .products-page {
-  position: relative;
   display: flex;
-  justify-content: space-between;
   width: 100%;
   height: 100%;
   margin-top: 15rem;
@@ -10,23 +8,30 @@
     width: 20rem;
   }
   .products-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(auto, max-content);
+    gap: 1rem;
     justify-content: center;
-    margin-bottom: 5rem;
+    margin: 0 3rem 10rem 3rem;
   }
   .btn {
     position: absolute;
     width: 50%;
-    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -9rem;
   }
 }
 
 @media (max-width: 768px) {
   .products-page {
     padding: 0;
-
+    .products-container {
+      margin: 0 1rem 10rem 1rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
     .sidebar {
       display: none;
     }

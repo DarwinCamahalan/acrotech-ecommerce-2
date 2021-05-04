@@ -27,20 +27,16 @@ const Product = (product) => {
   // }
 
   return (
-    <div className="product">
+    <Link className="product" to={`/product/${documentID}`}>
       <div className="img">
-        <Link to={`/product/${documentID}`}>
-          <img src={productThumbnail} alt={productName} />
-        </Link>
+        <img src={productThumbnail} alt={productName} />
       </div>
 
       <div className="info">
-        <Link to={`/product/${documentID}`}>
-          <p>{productName}</p>
-          <p>{productPrice}</p>
-        </Link>
+        <p>{productName}</p>
+        {/* <p>{productPrice}</p> */}
       </div>
-    </div>
+    </Link>
   )
 }
 

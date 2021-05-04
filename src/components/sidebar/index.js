@@ -7,7 +7,12 @@ const SideBar = ({ searchResult, setSearchResult }) => {
   return (
     <div className="sidebar">
       <div className="search-bar">
-        <input type="text" onChange={onChangeHandler} value={searchResult} />
+        <input
+          type="text"
+          placeholder="Search Products"
+          onChange={onChangeHandler}
+          value={searchResult}
+        />
       </div>
       <div className="categories">
         <h2>Strategic Products</h2>
