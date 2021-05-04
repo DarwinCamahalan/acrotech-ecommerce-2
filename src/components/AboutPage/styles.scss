@@ -1,78 +1,57 @@
-#about-page {
-  padding-top:50px;
-  padding-bottom:50px;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap')
+;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-#about-page .row
-{
-  margin-top:30px;
+body {
+  font-family: 'Raleway', sans-serif;
 }
-.col-md-4
-{
-  margin:40px auto; 
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 3rem;
 }
-.profile
-{
-  padding: 70px;
-  background-color: #efefef;
+#testimonials .container .testimonials-box {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  min-height: 380px;
+  margin: 20rem auto 0 auto;
 }
-.user
-{
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+#testimonials .container .testimonials-box::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f88b25;
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: 10px;
 }
-.profile img
-{
-    top: -60px;
-    position: absolute;
-    left: calc(50% - 60px);;
-    border: 10px solid #fff;
+#testimonials .container .testimonials-box .testimonial-photo {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.profile h4
-{
-    font-size: 20px;
-    margin-top: 15px;
-    color: #007bff;
+#testimonials .container .testimonials-box h5 {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 10rem;
+  margin-bottom: 3rem;
+  letter-spacing: 3px;
 }
-.profile h5
-{
-    font-size: 20px;
-    margin-top: 15px;
-    color: #007bff;
-}
-#about-page h5
-{
-    font-size: 12px;
-    color: #333;
-}
-blockquote
-{
-    font-size: 16px;
-    line-height: 30px;
-}
-blockquote::before
-{
-    content: '\201C';
-    font-size: 50px;
-    color: #007bff;
-    position: relative;
-    line-height: 20px;
-    bottom: -15px;
-    right: 5px;
-}
-blockquote::after
-{
-    content: '\201D';
-    font-size: 50px;
-    color: #007bff;
-    position: relative;
-    line-height: 10px;
-    bottom: -15px;
-    left: 5px;
-}
-.profile:hover
-{
-    box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
-    cursor: pointer;
-    transition: 0.5s;
+#testimonials .container .testimonials-box p {
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 3.5rem;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 3.5rem;
 }

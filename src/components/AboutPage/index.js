@@ -1,20 +1,41 @@
 import './styles.scss'
 const AboutPage = () => {
   return (
-    <div className="about-page">
-      <div class="row">
-        <div class="col-md-4 text-center">
-          <div class="profile">
-            <img src="" class="user"></img>
-            <blockquote>Lggmrkmgrkgmrkgmdcmdkcckdmcd
-              cddcdmcdkcmd.</blockquote>
-              <h4>John R. Cruz</h4>
-              <h5>Co-Founder at ACRO TECH</h5>
+    <div id="testimonials">
+      <div class="container"> 
+        <div class="owl-carousel owl-theme">
+          <div class="testimonials-box item">
+            <div class="testimonial-photo">
+              <img src="/assets/test.jpg" alt="Client Photo"></img>
+            </div>
+            <h5>Jericho Cruz</h5> 
+            <p>
+              grgrviervmgervgmervmgerivmrev. gmirgvmgivmrivmrv
+              vmrivmrvmrvir.
+            </p>
           </div>
-        </div> 
-
-
-      </div> 
+          <div class="testimonials-box item">
+            <div class="testimonial-photo">
+              <img src="/assets/test.jpg" alt="Client Photo"></img>
+            </div>
+            <h5>George Luna</h5>
+            <p>
+              grgrviervmgervgmervmgerivmrev. gmirgvmgivmrivmrv
+              vmrivmrvmrvir.
+            </p>
+          </div>
+          <div class="testimonials-box item"> 
+            <div class="testimonial-photo">
+              <img src="/assets/test.jpg" alt="Client Photo"></img>
+            </div>
+            <h5>Jonathan Cruz</h5>
+            <p>
+              grgrviervmgervgmervmgerivmrev. gmirgvmgivmrivmrv
+              vmrivmrvmrvir.
+            </p>
+          </div>  
+        </div>
+      </div>
     </div>
   )
 }

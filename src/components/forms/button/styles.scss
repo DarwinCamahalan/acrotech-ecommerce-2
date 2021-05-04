@@ -12,4 +12,7 @@
   outline: none;
   border-radius: 3px;
   cursor: pointer;
+  &:hover {
+    background-color: rgb(243, 243, 243);
+  }
 }
