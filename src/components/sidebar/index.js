@@ -1,5 +1,6 @@
 import './styles.scss'
 import { Link } from 'react-router-dom'
+
 const SideBar = ({ searchResult, setSearchResult }) => {
   const onChangeHandler = (event) => {
     setSearchResult(event.target.value)
