@@ -44,6 +44,14 @@ const ForgotPassword = (props) => {
   const configAuthWrapper = {
     headline: 'Recover Account',
   }
+  const sendEmail = (e) => {
+    e = e || window.event
+    if (e.keyCode == 13) {
+      document.getElementById('submit').click()
+      return false
+    }
+    return true
+  }
 
   return (
     <AuthWrapper {...configAuthWrapper}>
@@ -66,7 +74,9 @@ const ForgotPassword = (props) => {
             handleChange={(e) => setEmail(e.target.value)}
           />
 
-          <Button type="submit">Send e-mail</Button>
+          <Button type="submit" id="submit" onClick={sendEmail}>
+            Send e-mail
+          </Button>
         </form>
       </div>
     </AuthWrapper>

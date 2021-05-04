@@ -60,6 +60,15 @@ const Signup = (props) => {
     headline: 'Registration',
   }
 
+  const register = (e) => {
+    e = e || window.event
+    if (e.keyCode == 13) {
+      document.getElementById('submit').click()
+      return false
+    }
+    return true
+  }
+
   return (
     <AuthWrapper {...configAuthWrapper}>
       <div className="formWrap">
@@ -108,7 +117,9 @@ const Signup = (props) => {
             handleChange={(e) => setConfirmPassword(e.target.value)}
           />
 
-          <Button type="submit">Register</Button>
+          <Button type="submit" id="submit" onClick={register}>
+            Register
+          </Button>
         </form>
 
         <div className="links">

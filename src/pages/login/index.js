@@ -19,7 +19,7 @@ const Login = (props) => {
         </p>
       </div>
 
-      <div className="container">
+      <div className="signin-container">
         <SignIn />
         <div className="register">
           <h1>New user registration</h1>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory, useParams } from 'react-router-dom'
 import { fetchProductsStart } from './../../redux/Products/products.actions'
@@ -12,6 +12,7 @@ const mapState = ({ productsData }) => ({
 })
 
 const ProductResults = ({}) => {
+  const [searchResult, setSearchResult] = useState('')
   const dispatch = useDispatch()
   const history = useHistory()
   const { filterType } = useParams()
@@ -44,28 +45,47 @@ const ProductResults = ({}) => {
 
   const configLoadMore = {
     onLoadMoreEvt: handleLoadMore,
+    searchResult: searchResult,
   }
 
   return (
-    <div className="products">
-      <SideBar />
-      <div className="productResults">
-        {data.map((product, pos) => {
-          const { productThumbnail, productName, productPrice } = product
-          if (
-            !productThumbnail ||
-            !productName ||
-            typeof productPrice === 'undefined'
-          )
-            return null
+    <div className="products-page ">
+      <div className="sidebar">
+        <SideBar
+          searchResult={searchResult}
+          setSearchResult={setSearchResult}
+        />
+      </div>
 
-          const configProduct = {
-            ...product,
-          }
+      <div className="products-container">
+        {data
+          .filter((product) => {
+            const { productName, productPrice } = product
+            if (searchResult == '') {
+              return product
+            } else if (
+              productName.toLowerCase().includes(searchResult.toLowerCase()) ||
+              productPrice.includes(searchResult)
+            ) {
+              return product
+            }
+          })
+          .map((product, pos) => {
+            const { productThumbnail, productName, productPrice } = product
+            if (
+              !productThumbnail ||
+              !productName ||
+              typeof productPrice === 'undefined'
+            )
+              return null
 
-          return <Product key={pos} {...configProduct} />
-        })}
-        {!isLastPage && <LoadMore {...configLoadMore} />}
+            const configProduct = {
+              ...product,
+            }
+
+            return <Product key={pos} {...configProduct} />
+          })}
+        {!isLastPage && <LoadMore {...configLoadMore} className="btn" />}
       </div>
     </div>
   )

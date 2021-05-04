@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import Button from './../../forms/button'
-import { useDispatch } from 'react-redux'
-import { addProduct } from './../../../redux/Cart/cart.actions'
+// import Button from './../../forms/button'
+// import { useDispatch } from 'react-redux'
+// import { addProduct } from './../../../redux/Cart/cart.actions'
 import './styles.scss'
 const Product = (product) => {
-  const dispatch = useDispatch()
-  const history = useHistory()
+  // const dispatch = useDispatch()
+  // const history = useHistory()
   const { documentID, productThumbnail, productName, productPrice } = product
   if (
     !documentID ||
@@ -16,45 +16,27 @@ const Product = (product) => {
   )
     return null
 
-  const configAddToCartBtn = {
-    type: 'button',
-  }
+  // const configAddToCartBtn = {
+  //   type: 'button',
+  // }
 
-  const handleAddToCart = (product) => {
-    if (!product) return
-    dispatch(addProduct(product))
-    // history.push('/cart')
-  }
+  // const handleAddToCart = (product) => {
+  //   if (!product) return
+  //   dispatch(addProduct(product))
+  //   history.push('/cart')
+  // }
 
   return (
-    <div className="product">
-      <div className="thumb">
-        <Link to={`/product/${documentID}`}>
-          <img src={productThumbnail} alt={productName} />
-        </Link>
+    <Link className="product" to={`/product/${documentID}`}>
+      <div className="img">
+        <img src={productThumbnail} alt={productName} />
       </div>
 
-      <div className="details">
-        <ul>
-          <li>
-            <span className="name">
-              <Link to={`/product/${documentID}`}>{productName}</Link>
-            </span>
-          </li>
-
-          <li>
-            <div className="addToCart">
-              <Button
-                {...configAddToCartBtn}
-                onClick={() => handleAddToCart(product)}
-              >
-                View
-              </Button>
-            </div>
-          </li>
-        </ul>
+      <div className="info">
+        <p>{productName}</p>
+        {/* <p>{productPrice}</p> */}
       </div>
-    </div>
+    </Link>
   )
 }
 

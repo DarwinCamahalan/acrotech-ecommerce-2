@@ -15,7 +15,7 @@ const Registration = (props) => {
         </p>
       </div>
 
-      <div className="container">
+      <div className="registration-container">
         <Signup />
         <div className="register">
           <h1>Recover Account</h1>

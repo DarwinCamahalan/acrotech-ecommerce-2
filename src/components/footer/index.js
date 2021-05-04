@@ -17,63 +17,63 @@ const Footer = (props) => {
       <section className="links">
         <div className="categories">
           <p>About Us</p>
-          <Link>Lorem ipsum dolor sit amet.</Link>
-          <Link>Lorem ipsum dolor </Link>
-          <Link>Lorem ipsum dolor sit</Link>
-          <Link>Lorem ipsum dolor sit amet.</Link>
-          <Link>Lorem ipsum </Link>
-          <Link>Lorem ipsum dolor sit </Link>
-          <Link>Lorem ipsum dolor </Link>
-          <Link>Lorem ipsum dolor sit </Link>
-          <Link>Lorem ipsum </Link>
-          <Link>Lorem ipsum dolor sit </Link>
-          <Link>Lorem ipsum </Link>
-          <Link>Lorem ipsum dolor sit </Link>
+          <Link to="#">Lorem ipsum dolor sit amet.</Link>
+          <Link to="#">Lorem ipsum dolor </Link>
+          <Link to="#">Lorem ipsum dolor sit</Link>
+          <Link to="#">Lorem ipsum dolor sit amet.</Link>
+          <Link to="#">Lorem ipsum </Link>
+          <Link to="#">Lorem ipsum dolor sit </Link>
+          <Link to="#">Lorem ipsum dolor </Link>
+          <Link to="#">Lorem ipsum dolor sit </Link>
+          <Link to="#">Lorem ipsum </Link>
+          <Link to="#">Lorem ipsum dolor sit </Link>
+          <Link to="#">Lorem ipsum </Link>
+          <Link to="#">Lorem ipsum dolor sit </Link>
         </div>
         <div className="categories">
           <p>Strategic Products</p>
-          <Link>2 Port Valve</Link>
-          <Link>Air Dryer</Link>
-          <Link>Chiller</Link>
-          <Link>Electric Actuators</Link>
-          <Link>Process Gas Equipment</Link>
-          <Link>Training Equipment</Link>
+          <Link to="#">2 Port Valve</Link>
+          <Link to="#">Air Dryer</Link>
+          <Link to="#">Chiller</Link>
+          <Link to="#">Electric Actuators</Link>
+          <Link to="#">Process Gas Equipment</Link>
+          <Link to="#">Training Equipment</Link>
           <p>Products</p>
-          <Link>All Products</Link>
-          <Link>New Products</Link>
-          <Link>Specialized Products for General Use</Link>
-          <Link>Discontinued Products</Link>
-          <Link>News & Events</Link>
+          <Link to="#">All Products</Link>
+          <Link to="#">New Products</Link>
+          <Link to="#">Specialized Products for General Use</Link>
+          <Link to="#">Discontinued Products</Link>
+          <Link to="#">News & Events</Link>
         </div>
         <div className="categories">
           <p>Services</p>
-          <Link>2 Port Valve</Link>
-          <Link>Air Dryer</Link>
-          <Link>Chiller</Link>
-          <Link>Electric Actuators</Link>
-          <Link>Process Gas Equipment</Link>
-          <Link>Training Equipment</Link>
+          <Link to="#">2 Port Valve</Link>
+          <Link to="#">Air Dryer</Link>
+          <Link to="#">Chiller</Link>
+          <Link to="#">Electric Actuators</Link>
+          <Link to="#">Process Gas Equipment</Link>
+          <Link to="#">Training Equipment</Link>
           <p>Products</p>
-          <Link>All Products</Link>
-          <Link>New Products</Link>
-          <Link>Specialized Products for General Use</Link>
-          <Link>Discontinued Products</Link>
-          <Link>News & Events</Link>
+          <Link to="#">All Products</Link>
+          <Link to="#">New Products</Link>
+          <Link to="#">Specialized Products for General Use</Link>
+          <Link to="#">Discontinued Products</Link>
+          <Link to="#">News & Events</Link>
         </div>
         <div className="categories">
           <p>Support</p>
-          <Link>2 Port Valve</Link>
-          <Link>Air Dryer</Link>
-          <Link>Chiller</Link>
-          <Link>Electric Actuators</Link>
-          <Link>Process Gas Equipment</Link>
-          <Link>Training Equipment</Link>
+          <Link to="#">2 Port Valve</Link>
+          <Link to="#">Air Dryer</Link>
+          <Link to="#">Chiller</Link>
+          <Link to="#">Electric Actuators</Link>
+          <Link to="#">Process Gas Equipment</Link>
+          <Link to="#">Training Equipment</Link>
           <p>Products</p>
-          <Link>All Products</Link>
-          <Link>New Products</Link>
-          <Link>Specialized Products for General Use</Link>
-          <Link>Discontinued Products</Link>
-          <Link>News & Events</Link>
+          <Link to="#">All Products</Link>
+          <Link to="#">New Products</Link>
+          <Link to="#">Specialized Products for General Use</Link>
+          <Link to="#">Discontinued Products</Link>
+          <Link to="#">News & Events</Link>
         </div>
       </section>
       <section className="about">

@@ -14,6 +14,7 @@ import Button from './../forms/button'
 
 const mapState = ({ user }) => ({
   currentUser: user.currentUser,
+  userErr: user.userErr,
 })
 
 const SignIn = (props) => {
@@ -48,6 +49,15 @@ const SignIn = (props) => {
     headline: 'Already registered users',
   }
 
+  const login = (e) => {
+    e = e || window.event
+    if (e.keyCode == 13) {
+      document.getElementById('submit').click()
+      return false
+    }
+    return true
+  }
+
   return (
     <AuthWrapper {...configAuthWrapper}>
       <div className="formWrap">
@@ -70,7 +80,9 @@ const SignIn = (props) => {
             handleChange={(e) => setPassword(e.target.value)}
           />
 
-          <Button type="submit">Login</Button>
+          <Button type="submit" id="submit" onClick={login}>
+            Login
+          </Button>
 
           <div className="socialSignin">
             <div className="row">

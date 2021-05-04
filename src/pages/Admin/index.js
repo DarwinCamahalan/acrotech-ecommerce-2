@@ -96,12 +96,12 @@ const Admin = (props) => {
               label="Category"
               options={[
                 {
-                  value: 'mens',
-                  name: 'Mens',
+                  value: 'machines',
+                  name: 'Machines',
                 },
                 {
-                  value: 'womens',
-                  name: 'Womens',
+                  value: 'tools',
+                  name: 'Tools',
                 },
               ]}
               handleChange={(e) => setProductCategory(e.target.value)}
