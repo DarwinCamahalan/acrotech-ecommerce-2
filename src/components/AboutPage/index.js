@@ -10,7 +10,8 @@ const AboutPage = () => {
           <hr />
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea,
-            aliquam.
+            aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis modi voluptatum accusantium ab minus. Iure consectetur,
           </p>
         </div>
 
