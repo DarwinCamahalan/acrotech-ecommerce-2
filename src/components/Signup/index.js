@@ -68,7 +68,17 @@ const Signup = (props) => {
     }
     return true
   }
-
+  const showPass = () => {
+    const x = document.querySelector('.pass')
+    const y = document.querySelector('.confirm-pass')
+    if (x.type === 'password' && y.type === 'password') {
+      x.type = 'text'
+      y.type = 'text'
+    } else {
+      x.type = 'password'
+      y.type = 'password'
+    }
+  }
   return (
     <AuthWrapper {...configAuthWrapper}>
       <div className="formWrap">
@@ -103,6 +113,7 @@ const Signup = (props) => {
             label="Password"
             type="password"
             name="password"
+            className="pass"
             value={password}
             placeholder="Password"
             handleChange={(e) => setPassword(e.target.value)}
@@ -112,11 +123,15 @@ const Signup = (props) => {
             label="Confirm Password"
             type="password"
             name="confirmPassword"
+            className="confirm-pass"
             value={confirmPassword}
             placeholder="Confirm Password"
             handleChange={(e) => setConfirmPassword(e.target.value)}
           />
-
+          <div className="show-pass">
+            <input type="checkbox" onClick={showPass} />
+            <p>Show Password</p>
+          </div>
           <Button type="submit" id="submit" onClick={register}>
             Register
           </Button>
