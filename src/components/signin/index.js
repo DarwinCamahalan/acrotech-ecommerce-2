@@ -59,8 +59,7 @@ const SignIn = (props) => {
   }
   const showPass = () => {
     const x = document.getElementById('pass')
-    const check = document.querySelector('.checkPass')
-    check.click()
+
     if (x.type === 'password') {
       x.type = 'text'
     } else {
