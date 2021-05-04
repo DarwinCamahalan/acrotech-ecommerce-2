@@ -21,7 +21,7 @@ const Admin = (props) => {
   const { products } = useSelector(mapState)
   const dispatch = useDispatch()
   const [hideModal, setHideModal] = useState(true)
-  const [productCategory, setProductCategory] = useState('mens')
+  const [productCategory, setProductCategory] = useState('')
   const [productName, setProductName] = useState('')
   const [productThumbnail, setProductThumbnail] = useState('')
   const [productPrice, setProductPrice] = useState(0)

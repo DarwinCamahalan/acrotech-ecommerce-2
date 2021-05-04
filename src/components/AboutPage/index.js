@@ -6,7 +6,7 @@ const AboutPage = () => {
       <div className="content">
         {/* TITLE OF THE CARDS */}
         <div className="title">
-          <h1>Testimonials</h1>
+          <h1>About Us</h1>
           <hr />
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea,
@@ -25,12 +25,12 @@ const AboutPage = () => {
             {/* CARD TEXT */}
             <div className="info">
               <h5>Jericho Cruz</h5>
-              <q>
+              <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Suscipit libero mollitia nam saepe voluptatum modi quasi iste.
                 Sunt cupiditate tenetur non ipsa, ducimus eum aperiam atque
                 libero, praesentium sequi esse.
-              </q>
+              </p>
             </div>
           </div>
 
@@ -41,12 +41,12 @@ const AboutPage = () => {
             </div>
             <div className="info">
               <h5>Jericho Cruz</h5>
-              <q>
+              <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Suscipit libero mollitia nam saepe voluptatum modi quasi iste.
                 Sunt cupiditate tenetur non ipsa, ducimus eum aperiam atque
                 libero, praesentium sequi esse.
-              </q>
+              </p>
             </div>
           </div>
 
@@ -56,12 +56,12 @@ const AboutPage = () => {
             </div>
             <div className="info">
               <h5>Jericho Cruz</h5>
-              <q>
+              <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Suscipit libero mollitia nam saepe voluptatum modi quasi iste.
                 Sunt cupiditate tenetur non ipsa, ducimus eum aperiam atque
                 libero, praesentium sequi esse.
-              </q>
+              </p>
             </div>
           </div>
         </div>
