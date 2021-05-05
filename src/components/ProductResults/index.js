@@ -72,6 +72,7 @@ const ProductResults = ({}) => {
           })
           .map((product, pos) => {
             const { productThumbnail, productName, productPrice } = product
+
             if (
               !productThumbnail ||
               !productName ||
@@ -85,6 +86,7 @@ const ProductResults = ({}) => {
 
             return <Product key={pos} {...configProduct} />
           })}
+
         {!isLastPage && <LoadMore {...configLoadMore} className="btn" />}
       </div>
     </div>

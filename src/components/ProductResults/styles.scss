@@ -15,6 +15,11 @@
     gap: 1rem;
     justify-content: center;
     margin: 0 3rem 10rem 3rem;
+    width: 100%;
+  }
+  .no-result {
+    position: absolute;
+    top: 0;
   }
   .btn {
     position: absolute;
