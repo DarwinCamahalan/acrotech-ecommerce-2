@@ -61,10 +61,17 @@
       .max {
         .flex {
           flex-direction: column;
-          padding: 3rem 1rem;
+          padding: 1rem 1rem 2rem 1rem;
           .content {
             order: 2;
             margin: 2rem 0;
+            h1 {
+              font-size: 2rem;
+            }
+            p {
+              margin: 0 0 3rem 0;
+              font-size: 1.65rem;
+            }
           }
           .slider {
             width: 100%;

@@ -4,8 +4,8 @@ import 'aos/dist/aos.css'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import { Link } from 'react-router-dom'
-
-import React, { useEffect, useState } from 'react'
+import worker2 from '../../../assets/worker2.png'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { fetchProductsStart } from '../../../redux/Products/products.actions'
@@ -15,7 +15,6 @@ const mapState = ({ productsData }) => ({
 })
 
 const ThirdSection = ({}) => {
-  const [view, setView] = useState(false)
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -60,24 +59,14 @@ const ThirdSection = ({}) => {
     )
   }
 
-  const View = () => {
-    setView(!view)
-  }
   return (
     <section className="third-section" data-aos="fade-up">
+      <img src={worker2} alt={worker2} className="img" data-aos="fade-right" />
       <div className="max">
         <div className="flex">
-          <div className="content" onMouseEnter={View} onMouseLeave={View}>
-            {view ? (
-              <div className="order">
-                <Link to="/products">
-                  <strong>Order Now</strong>
-                </Link>
-              </div>
-            ) : (
-              ''
-            )}
-            <h1>Our Products</h1>
+          <h1 className="title">Acrotech Products</h1>
+          <div className="content">
+            <p>Our Products</p>
             <Carousel
               responsive={responsive}
               infinite={true}
@@ -87,15 +76,18 @@ const ThirdSection = ({}) => {
               removeArrowOnDeviceType={['all', 'medium', 'mobile', 'small']}
             >
               {data.map((product, key) => {
-                const { productThumbnail } = product
+                const { productThumbnail, productName, documentID } = product
                 return (
-                  <div className="card" key={key}>
-                    <img src={productThumbnail} alt="" />
-                  </div>
+                  <Link to={`/product/${documentID}`} key={key}>
+                    <div className="card">
+                      <img src={productThumbnail} alt="" />
+                      <p>{productName}</p>
+                    </div>
+                  </Link>
                 )
               })}
             </Carousel>
-            <h1>We also Offers</h1>
+            <p>We also Offers</p>
             <Carousel
               responsive={responsive}
               infinite={true}
@@ -105,11 +97,14 @@ const ThirdSection = ({}) => {
               removeArrowOnDeviceType={['all', 'medium', 'mobile', 'small']}
             >
               {data.map((product, key) => {
-                const { productThumbnail } = product
+                const { productThumbnail, productName, documentID } = product
                 return (
-                  <div className="card" key={key}>
-                    <img src={productThumbnail} alt="" />
-                  </div>
+                  <Link to={`/product/${documentID}`} key={key}>
+                    <div className="card">
+                      <img src={productThumbnail} alt="" />
+                      <p>{productName}</p>
+                    </div>
+                  </Link>
                 )
               })}
             </Carousel>
