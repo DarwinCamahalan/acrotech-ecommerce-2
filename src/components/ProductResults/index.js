@@ -49,45 +49,49 @@ const ProductResults = ({}) => {
   }
 
   return (
-    <div className="products-page ">
-      <div className="sidebar">
-        <SideBar
-          searchResult={searchResult}
-          setSearchResult={setSearchResult}
-        />
-      </div>
+    <div className="max">
+      <div className="products-page ">
+        <div className="sidebar">
+          <SideBar
+            searchResult={searchResult}
+            setSearchResult={setSearchResult}
+          />
+        </div>
 
-      <div className="products-container">
-        {data
-          .filter((product) => {
-            const { productName, productPrice } = product
-            if (searchResult == '') {
-              return product
-            } else if (
-              productName.toLowerCase().includes(searchResult.toLowerCase()) ||
-              productPrice.includes(searchResult)
-            ) {
-              return product
-            }
-          })
-          .map((product, pos) => {
-            const { productThumbnail, productName, productPrice } = product
+        <div className="products-container">
+          {data
+            .filter((product) => {
+              const { productName, productPrice } = product
+              if (searchResult == '') {
+                return product
+              } else if (
+                productName
+                  .toLowerCase()
+                  .includes(searchResult.toLowerCase()) ||
+                productPrice.includes(searchResult)
+              ) {
+                return product
+              }
+            })
+            .map((product, pos) => {
+              const { productThumbnail, productName, productPrice } = product
 
-            if (
-              !productThumbnail ||
-              !productName ||
-              typeof productPrice === 'undefined'
-            )
-              return null
+              if (
+                !productThumbnail ||
+                !productName ||
+                typeof productPrice === 'undefined'
+              )
+                return null
 
-            const configProduct = {
-              ...product,
-            }
+              const configProduct = {
+                ...product,
+              }
 
-            return <Product key={pos} {...configProduct} />
-          })}
+              return <Product key={pos} {...configProduct} />
+            })}
 
-        {!isLastPage && <LoadMore {...configLoadMore} className="btn" />}
+          {!isLastPage && <LoadMore {...configLoadMore} className="btn" />}
+        </div>
       </div>
     </div>
   )
