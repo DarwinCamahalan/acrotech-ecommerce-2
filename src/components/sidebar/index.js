@@ -11,6 +11,7 @@ const SideBar = ({ searchResult, setSearchResult }) => {
   }
 
   const Search = () => {
+    setSearchResult('')
     setOpenSearch(!openSearch)
   }
   return (

@@ -49,43 +49,49 @@ const ProductResults = ({}) => {
   }
 
   return (
-    <div className="products-page ">
-      <div className="sidebar">
-        <SideBar
-          searchResult={searchResult}
-          setSearchResult={setSearchResult}
-        />
-      </div>
+    <div className="max">
+      <div className="products-page ">
+        <div className="sidebar">
+          <SideBar
+            searchResult={searchResult}
+            setSearchResult={setSearchResult}
+          />
+        </div>
 
-      <div className="products-container">
-        {data
-          .filter((product) => {
-            const { productName, productPrice } = product
-            if (searchResult == '') {
-              return product
-            } else if (
-              productName.toLowerCase().includes(searchResult.toLowerCase()) ||
-              productPrice.includes(searchResult)
-            ) {
-              return product
-            }
-          })
-          .map((product, pos) => {
-            const { productThumbnail, productName, productPrice } = product
-            if (
-              !productThumbnail ||
-              !productName ||
-              typeof productPrice === 'undefined'
-            )
-              return null
+        <div className="products-container">
+          {data
+            .filter((product) => {
+              const { productName, productPrice } = product
+              if (searchResult == '') {
+                return product
+              } else if (
+                productName
+                  .toLowerCase()
+                  .includes(searchResult.toLowerCase()) ||
+                productPrice.includes(searchResult)
+              ) {
+                return product
+              }
+            })
+            .map((product, pos) => {
+              const { productThumbnail, productName, productPrice } = product
 
-            const configProduct = {
-              ...product,
-            }
+              if (
+                !productThumbnail ||
+                !productName ||
+                typeof productPrice === 'undefined'
+              )
+                return null
 
-            return <Product key={pos} {...configProduct} />
-          })}
-        {!isLastPage && <LoadMore {...configLoadMore} className="btn" />}
+              const configProduct = {
+                ...product,
+              }
+
+              return <Product key={pos} {...configProduct} />
+            })}
+
+          {!isLastPage && <LoadMore {...configLoadMore} className="btn" />}
+        </div>
       </div>
     </div>
   )

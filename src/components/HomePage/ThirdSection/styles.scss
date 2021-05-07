@@ -1,0 +1,125 @@
+.third-section {
+  height: 100vh;
+  width: 100%;
+  background: -webkit-linear-gradient(to left, #004e92, #000428);
+  background: linear-gradient(to left, #004e92, #000428);
+  z-index: 2;
+  position: relative;
+  .img {
+    position: absolute;
+    right: 5%;
+    top: -8%;
+    width: 30rem;
+    img {
+      width: 100%;
+    }
+  }
+  .max {
+    max-width: 140.5rem;
+    .flex {
+      padding: 0 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .title {
+        color: white;
+        border-bottom: white 0.4rem solid;
+        padding-bottom: 1rem;
+        width: 30%;
+        margin: 4rem 0 1rem 0;
+        font-weight: bolder;
+        font-size: 4rem;
+      }
+      .content {
+        margin: 5rem 0;
+        .order {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          left: 0;
+          top: 0;
+          background-color: rgba(0, 4, 40, 0.418);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 3;
+          a {
+            background-color: orangered;
+            padding: 2rem 3rem;
+            color: white;
+            z-index: 4;
+          }
+        }
+        p {
+          color: white;
+        }
+        .card {
+          width: 20rem;
+          height: 15rem;
+          background-color: white;
+          color: white;
+          padding: 1rem;
+          position: relative;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+          p {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            line-height: 1.3;
+            bottom: -9%;
+            left: 0;
+            z-index: 99;
+            color: white;
+            background-color: rgba(0, 4, 40, 0.418);
+            padding: 0.5rem 0.8rem;
+            font-size: 1.4rem;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1065px) {
+  .third-section {
+    height: 100%;
+    padding-bottom: 4rem;
+    .img {
+      display: none;
+    }
+    .max {
+      .flex {
+        padding: 1rem;
+        .title {
+          width: 65%;
+          font-size: 2.5rem;
+          margin: 1rem 0 3rem 0;
+        }
+        .content {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .third-section {
+    .max {
+      .flex {
+        .content {
+          .card {
+            width: 18rem;
+          }
+        }
+      }
+    }
+  }
+}

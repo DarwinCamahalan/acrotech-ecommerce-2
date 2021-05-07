@@ -3,7 +3,7 @@ import './styles.scss'
 
 const Button = ({ children, ...otherProps }) => {
   return (
-    <button className="btn" {...otherProps} type="button" autofocus>
+    <button className="btn" {...otherProps}>
       {children}
     </button>
   )

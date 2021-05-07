@@ -59,6 +59,7 @@ const SignIn = (props) => {
   }
   const showPass = () => {
     const x = document.getElementById('pass')
+
     if (x.type === 'password') {
       x.type = 'text'
     } else {
@@ -86,9 +87,11 @@ const SignIn = (props) => {
             placeholder="Password"
             handleChange={(e) => setPassword(e.target.value)}
           />
-          <div className="show-pass">
-            <input type="checkbox" onClick={showPass} />
-            <p>Show Password</p>
+          <div className="show-pass ">
+            <label>
+              <input type="checkbox" onClick={showPass} />
+              <p>Show Password</p>
+            </label>
           </div>
 
           <Button type="submit" id="submit" onClick={login}>

@@ -5,26 +5,28 @@ import { Link } from 'react-router-dom'
 
 const Login = (props) => {
   return (
-    <div className="signin">
-      <div className="info">
-        <h1>Login</h1>
-        <hr />
-        <p>
-          It is necessary to perform User Registration to Order a product.{' '}
-          <br />
-          For the users who have already performed User Registration, enter the
-          e-mail address and password to login. <br />
-          For new users, perform User Registration to be able to Order a
-          product..
-        </p>
-      </div>
+    <div className="max">
+      <div className="signin">
+        <div className="info">
+          <h1>Login</h1>
+          <hr />
+          <p>
+            It is necessary to perform User Registration to Order a product.{' '}
+            <br />
+            For the users who have already performed User Registration, enter
+            the e-mail address and password to login. <br />
+            For new users, perform User Registration to be able to Order a
+            product..
+          </p>
+        </div>
 
-      <div className="signin-container">
-        <SignIn />
-        <div className="register">
-          <h1>New user registration</h1>
+        <div className="signin-container">
+          <SignIn />
+          <div className="register">
+            <h1>New user registration</h1>
 
-          <Link to="/registration">To new registration screen</Link>
+            <Link to="/registration">To new registration screen</Link>
+          </div>
         </div>
       </div>
     </div>
