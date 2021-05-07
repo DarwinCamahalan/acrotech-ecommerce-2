@@ -57,7 +57,14 @@ const SignIn = (props) => {
     }
     return true
   }
-
+  const showPass = () => {
+    const x = document.getElementById('pass')
+    if (x.type === 'password') {
+      x.type = 'text'
+    } else {
+      x.type = 'password'
+    }
+  }
   return (
     <AuthWrapper {...configAuthWrapper}>
       <div className="formWrap">
@@ -70,26 +77,28 @@ const SignIn = (props) => {
             placeholder="Email"
             handleChange={(e) => setEmail(e.target.value)}
           />
-
           <FormInput
             label="Password"
             type="password"
             name="password"
+            id="pass"
             value={password}
             placeholder="Password"
             handleChange={(e) => setPassword(e.target.value)}
           />
+          <div className="show-pass">
+            <input type="checkbox" onClick={showPass} />
+            <p>Show Password</p>
+          </div>
 
           <Button type="submit" id="submit" onClick={login}>
             Login
           </Button>
-
           <div className="socialSignin">
             <div className="row">
               <Button onClick={handleGoogleSignIn}>Sign in with Google</Button>
             </div>
           </div>
-
           <div className="links">
             <Link to="/recovery">Forgot Password?</Link>
           </div>

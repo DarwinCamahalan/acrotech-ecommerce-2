@@ -6,7 +6,7 @@ const AboutPage = () => {
       <div className="content">
         {/* TITLE OF THE CARDS */} 
         <div className="title">
-          <h1>Testimonials</h1>
+          <h1>About Us</h1> 
           <hr />
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea,
@@ -24,13 +24,13 @@ const AboutPage = () => {
 
             {/* CARD TEXT */}
             <div className="info">
-              <h5>Jericho Cruz</h5>
               <q>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Suscipit libero mollitia nam saepe voluptatum modi quasi iste.
                 Sunt cupiditate tenetur non ipsa, ducimus eum aperiam atque
                 libero, praesentium sequi esse.
               </q>
+              <h5>Jericho Cruz <span>Co-Founder at Acro-Tech Inc.</span></h5> 
             </div>
           </div>
 
@@ -40,13 +40,13 @@ const AboutPage = () => {
               <img src={ClientImage} alt="Client Photo" />
             </div>
             <div className="info">
-              <h5>Jericho Cruz</h5>
               <q>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Suscipit libero mollitia nam saepe voluptatum modi quasi iste.
                 Sunt cupiditate tenetur non ipsa, ducimus eum aperiam atque
                 libero, praesentium sequi esse.
               </q>
+              <h5>Jericho Cruz <span>Co-Founder at Acro-Tech Inc.</span></h5> 
             </div>
           </div>
 
@@ -55,13 +55,13 @@ const AboutPage = () => {
               <img src={ClientImage} alt="Client Photo" />
             </div>
             <div className="info">
-              <h5>Jericho Cruz</h5>
               <q>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Suscipit libero mollitia nam saepe voluptatum modi quasi iste.
                 Sunt cupiditate tenetur non ipsa, ducimus eum aperiam atque
                 libero, praesentium sequi esse.
               </q>
+              <h5>Jericho Cruz <span>Co-Founder at Acro-Tech Inc.</span></h5> 
             </div>
           </div>
         </div>

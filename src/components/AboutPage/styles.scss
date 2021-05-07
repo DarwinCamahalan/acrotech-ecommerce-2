@@ -3,19 +3,19 @@
   margin-top: 9rem;
   width: 100%;
   height: 100vh;
-  display: grid;
+  display: grid; 
   place-items: center;
   font-family: 'Raleway', sans-serif;
   .content {
     .title {
       display: block;
-      margin: 0 auto;
+      margin: 0 auto; 
       text-align: center;
       margin-bottom: 12rem;
       width: 50%;
       hr {
-        border: 2px orange solid;
-        background: orange;
+        border: 2px #f5ae5e solid;  
+        background: #f5ae5e;
         display: block;
         margin: 2rem auto;
         width: 50%;
@@ -27,7 +27,7 @@
       }
       h1 {
         font-weight: bolder;
-        color: orange;
+        color: #0074bf;
         text-align: center;
       }
     }
@@ -39,33 +39,54 @@
 
       .card {
         position: relative;
-        background-color: whitesmoke;
+        background-color: rgb(171, 240, 219);
         width: 35rem;
-        height: 30rem;
+        height: auto;
         padding: 2rem;
         cursor: pointer;
         text-align: center;
+        transition: all ease-in-out 200ms;
         &:hover {
-          box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.23);
-          -webkit-box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.23);
-          -moz-box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.23);
+          box-shadow: 0px 2px 5px 1px rgba(0, 116, 191, 0.3);
+          -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 116, 191, 0.3);
+          -moz-box-shadow: 0px 2px 5px 1px rgba(0, 116, 191, 0.3);
+          transform: scale(1.02);
         }
         .client-image {
           position: absolute;
-          top: -11rem;
+          top: -8rem;
           left: 50%;
           transform: translateX(-50%);
-          width: 15rem;
-
+          width: 12rem;
           img {
             width: 100%;
-            height: 15rem;
-            border: 1rem solid white;
+            height: 13rem;
+            object-fit: fill;
+            border: 0.8rem solid rgb(241, 235, 235);
             border-radius: 50%;
+            background-color: rgb(233, 69, 69);
           }
         }
         .info {
-          margin-top: 3rem;
+          margin-top: 5rem;
+          h5,
+          p {
+            margin: 1rem 0;
+            padding: 0;
+          }
+          h5 {
+            font-size: 2rem;
+            font-weight: bolder;
+            color: #333;
+          }
+          p {
+            font-size: 1.6rem;
+            line-height: 1.5;
+          }
+          span {
+            font-size: 13px;
+            color: #f5ae5e;
+          }
         }
       }
     }
@@ -74,36 +95,26 @@
 
 @media (max-width: 1065px) {
   .testimonials {
-    margin-top: 20rem;
-    padding: 0 5%;
+    margin-top: 15rem;
+    padding: 0 5%; 
     height: 100%;
     .content {
       .title {
-        width: 90%;
-
-        hr {
-          border: 2px orange solid;
-          background: orange;
-          display: block;
-          margin: 2rem auto;
-        }
+        width: 100%;
+        margin-bottom: 10rem;
         h1,
         p {
           margin: 0;
           padding: 0;
         }
-        h1 {
-          font-weight: bolder;
-          color: orange;
-          text-align: center;
-        }
       }
       .container {
         grid-template-columns: repeat(1, 1fr);
-
         .card {
-          margin: 5rem 0;
-          width: 100%;
+          display: block;
+
+          margin: 4rem auto;
+          width: 95%;
         }
       }
     }
