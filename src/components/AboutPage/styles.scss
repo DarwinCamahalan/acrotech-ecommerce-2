@@ -20,8 +20,8 @@
           border: 2px #0074bf solid;
           background: #0074bf;
           display: block;
-          margin: 2rem auto;
-          width: 50%;
+          margin: 1rem auto;
+          width: 15rem;
         }
         h1,
         p {
@@ -33,6 +33,10 @@
           color: #0074bf;
           text-align: center;
         }
+        p {
+          margin: 1rem 0;
+          font-weight: lighter;
+        }
       }
 
       .container {
@@ -43,7 +47,7 @@
           position: relative;
           background-color: rgb(244, 246, 248);
           width: 95%;
-          height: 100%;
+          height: auto;
           padding: 2rem;
           cursor: pointer;
           text-align: center;

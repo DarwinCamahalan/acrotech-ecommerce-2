@@ -12,6 +12,7 @@ import { useParams } from 'react-router-dom'
 import { fetchProductsStart } from '../../../redux/Products/products.actions'
 
 import acrotechLogo from '../../../assets/acrotech-logo-transparent.png'
+import bg from '../../../assets/bg.png'
 
 const mapState = ({ productsData }) => ({
   products: productsData.products,
@@ -66,6 +67,7 @@ const ThirdSection = ({}) => {
     <section className="third-section" data-aos="fade">
       <div className="max">
         <div className="flex">
+          <img src={bg} alt={bg} className="bg" />
           <div className="title">
             <img src={acrotechLogo} alt={acrotechLogo} />
             <p>Products</p>

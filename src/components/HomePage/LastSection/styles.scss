@@ -8,74 +8,13 @@
     align-items: center;
     padding: 0.5rem;
     margin-bottom: 7rem;
-    h1 {
-      text-align: center;
-      border-bottom: 0.3rem solid #0074bf;
-      padding-bottom: 0.5rem;
-      width: auto;
-      color: #0074bf;
-      font-weight: bold;
-    }
-    form {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      width: 60rem;
-      height: auto;
-      background-color: rgb(255, 255, 255);
-      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
-
-      padding: 2rem 1rem 1rem 1rem;
-
-      img {
-        position: absolute;
-        bottom: 0;
-        width: 40rem;
-        z-index: -1;
-      }
-      .img1 {
-        left: -50%;
-      }
-
-      input {
-        border: 1px solid rgb(189, 188, 188);
-        padding: 0.3rem 0.5rem;
-        height: 3rem;
-        margin: 0.1rem 0;
-        outline: none;
-      }
-      .message {
-        height: 30rem;
-        margin: 0.5rem 0;
-      }
-      button {
-        border: none;
-        background-color: #0074bf;
-        outline: none;
-        padding: 1rem 2rem;
-        margin-top: 1rem;
-        color: white;
-        cursor: pointer;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.8rem;
-
-        &:hover {
-          background-color: orangered;
-        }
-      }
-    }
   }
 }
 
-@media (max-width: 1065px) {
-  .max {
-    .last-section {
-      form {
-        width: 100%;
-        img {
-          display: none;
-        }
-      }
-    }
-  }
-}
+// @media (max-width: 1065px) {
+//   .max {
+//     .last-section {
+
+//     }
+//   }
+// }

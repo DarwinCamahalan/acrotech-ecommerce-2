@@ -29,24 +29,28 @@ const SecondSection = () => {
     'consectetur labore vitae quod quidem voluptates ipsa officiis at dolores? Natus, aspernatur, ad nam quia hic voluptatum cumque aliquam corrupti atque incidunt repellendus.'
   const Cards = [
     {
-      title: 'Best Offers',
+      title: 'About Us',
       info: `${dummyTxt}`,
       class: 'blue',
+      to: '/about',
     },
     {
       title: 'Announcements',
       info: `${dummyTxt}`,
       class: 'red',
+      to: '/announcement',
     },
     {
-      title: 'Discounts',
+      title: 'Products',
       info: `${dummyTxt}`,
       class: 'blue',
+      to: '/products',
     },
     {
-      title: 'New Products',
+      title: 'Contact Us',
       info: `${dummyTxt}`,
       class: 'red',
+      to: '/contact',
     },
   ]
   return (
@@ -68,7 +72,7 @@ const SecondSection = () => {
                 <div className={Cards.class}>
                   <h1>{Cards.title}</h1>
                   <p>{Cards.info}</p>
-                  <Link to="/announcement">Show More</Link>
+                  <Link to={Cards.to}>Explore Now</Link>
                 </div>
               </div>
             )

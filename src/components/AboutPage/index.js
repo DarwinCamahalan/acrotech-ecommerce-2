@@ -5,7 +5,7 @@ import 'react-multi-carousel/lib/styles.css'
 const AboutPage = () => {
   const responsive = {
     all: {
-      breakpoint: { max: 4000, min: 0 },
+      breakpoint: { max: 4000, min: 768 },
       items: 3,
     },
     mobile: {

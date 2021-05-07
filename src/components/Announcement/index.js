@@ -1,7 +1,10 @@
 import './styles.scss'
-
 const Announcements = () => {
-  return <div className="announcement-page">🚧 Being Built 🚧</div>
+  return (
+    <div className="max">
+      <div className="announcement-page">Being Built 🚧</div>
+    </div>
+  )
 }
 
 export default Announcements

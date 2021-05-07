@@ -17,7 +17,9 @@
 .third-section {
   height: 100vh;
   width: 100%;
-  background-color: #025dac;
+  background: #005c97;
+  background: -webkit-linear-gradient(to right, #363795, #005c97);
+  background: linear-gradient(to right, #363795, #005c97);
 
   .max {
     max-width: 140.5rem;
@@ -26,17 +28,24 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
+      .bg {
+        opacity: 0.1;
+        position: absolute;
+        transform: scaleX(-1);
+        left: 12rem;
+        top: 7rem;
+      }
       .title {
         display: flex;
         align-items: flex-end;
         width: 20rem;
-        margin: 4rem 0;
+        margin: 6rem 0 0 0;
 
         p {
           color: white;
           font-size: 2.8rem;
           margin: 0 1rem;
+          margin-bottom: 0.2rem;
         }
         img {
           width: 20rem;
@@ -48,7 +57,7 @@
         .img {
           position: absolute;
           right: 0;
-          top: -250%;
+          top: -56%;
           width: 35rem;
           img {
             width: 100%;
@@ -76,7 +85,7 @@
           color: white;
         }
         .card {
-          width: 20rem;
+          width: 20.5rem;
           height: 15rem;
           background-color: white;
           color: white;
@@ -111,18 +120,24 @@
 @media (max-width: 1065px) {
   .third-section {
     padding-bottom: 4rem;
+    height: auto;
     .max {
       .flex {
         padding: 1rem;
+        .bg {
+          top: 10%;
+          left: 0;
+          width: 100%;
+        }
         .title {
           width: 23rem;
           font-size: 2.5rem;
           margin: 1rem 0 3rem 0;
           img {
-            width: 15rem;
+            width: 18rem;
           }
           p {
-            font-size: 1.7rem;
+            font-size: 2rem;
             margin-bottom: 2px;
           }
         }
@@ -137,13 +152,27 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   .third-section {
     .max {
       .flex {
         .content {
           .card {
-            width: 18rem;
+            width: 25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .third-section {
+    .max {
+      .flex {
+        .content {
+          .card {
+            width: 18.5rem;
           }
         }
       }
