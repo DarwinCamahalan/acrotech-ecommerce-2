@@ -5,14 +5,14 @@
     position: fixed;
     height: 100vh;
     width: 100%;
-    z-index: 3;
+    z-index: 99;
   }
   .callToActions {
     position: absolute;
     top: 0;
     position: fixed;
     height: 100%;
-    z-index: 4;
+    z-index: 100;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,19 +1,24 @@
+.no-network {
+  height: 100vh;
+  background-color: #025dac;
+  width: 100%;
+  display: grid;
+  place-items: center;
+
+  p {
+    background-color: rgb(255, 208, 208);
+    border: 2px solid red;
+    border-radius: 0.5rem;
+    padding: 5rem;
+    color: red;
+  }
+}
+
 .third-section {
   height: 100vh;
   width: 100%;
-  background: -webkit-linear-gradient(to left, #004e92, #000428);
-  background: linear-gradient(to left, #004e92, #000428);
-  z-index: 2;
-  position: relative;
-  .img {
-    position: absolute;
-    right: 5%;
-    top: -8%;
-    width: 30rem;
-    img {
-      width: 100%;
-    }
-  }
+  background-color: #025dac;
+
   .max {
     max-width: 140.5rem;
     .flex {
@@ -23,16 +28,32 @@
       justify-content: space-between;
 
       .title {
-        color: white;
-        border-bottom: white 0.4rem solid;
-        padding-bottom: 1rem;
-        width: 30%;
-        margin: 4rem 0 1rem 0;
-        font-weight: bolder;
-        font-size: 4rem;
+        display: flex;
+        align-items: flex-end;
+        width: 20rem;
+        margin: 4rem 0;
+
+        p {
+          color: white;
+          font-size: 2.8rem;
+          margin: 0 1rem;
+        }
+        img {
+          width: 20rem;
+        }
       }
       .content {
         margin: 5rem 0;
+        position: relative;
+        .img {
+          position: absolute;
+          right: 0;
+          top: -250%;
+          width: 35rem;
+          img {
+            width: 100%;
+          }
+        }
         .order {
           position: absolute;
           height: 100%;
@@ -45,7 +66,7 @@
           align-items: center;
           z-index: 3;
           a {
-            background-color: orangered;
+            background-color: yellow;
             padding: 2rem 3rem;
             color: white;
             z-index: 4;
@@ -89,21 +110,27 @@
 
 @media (max-width: 1065px) {
   .third-section {
-    height: 100%;
     padding-bottom: 4rem;
-    .img {
-      display: none;
-    }
     .max {
       .flex {
         padding: 1rem;
         .title {
-          width: 65%;
+          width: 23rem;
           font-size: 2.5rem;
           margin: 1rem 0 3rem 0;
+          img {
+            width: 15rem;
+          }
+          p {
+            font-size: 1.7rem;
+            margin-bottom: 2px;
+          }
         }
         .content {
           margin: 0;
+          .img {
+            display: none;
+          }
         }
       }
     }

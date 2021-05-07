@@ -1,3 +1,16 @@
+.no-network-products {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  p {
+    background-color: rgb(255, 208, 208);
+    border: 2px solid red;
+    border-radius: 0.5rem;
+    padding: 5rem;
+    color: red;
+  }
+}
 .max {
   max-width: 140.5rem;
   .products-page {

@@ -4,13 +4,12 @@
   font-size: 1.8rem;
   line-height: 1;
   font-weight: 300;
-  color: rgb(0, 0, 0);
+  color: black;
   background: rgb(255, 255, 255);
   padding: 1rem 10px;
   margin: 0 auto;
-  border: #ccc 1px solid;
-  outline: none;
-  border-radius: 3px;
+  border: rgb(177, 177, 177) 1px solid;
+  border-radius: 0;
   cursor: pointer;
   &:hover {
     background-color: rgb(243, 243, 243);

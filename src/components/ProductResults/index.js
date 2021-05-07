@@ -27,8 +27,8 @@ const ProductResults = ({}) => {
   if (!Array.isArray(data)) return null
   if (data.length < 1) {
     return (
-      <div className="products">
-        <p>No search results.</p>
+      <div className="no-network-products">
+        <p>Something Went Wrong</p>
       </div>
     )
   }

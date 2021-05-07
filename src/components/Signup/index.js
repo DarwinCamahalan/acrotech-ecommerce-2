@@ -69,15 +69,15 @@ const Signup = (props) => {
     return true
   }
   const showPass = () => {
-    const x = document.querySelector('.pass')
-    const y = document.querySelector('.confirm-pass')
+    const pass1 = document.getElementById('pass1')
+    const pass2 = document.getElementById('pass2')
 
-    if (x.type === 'password' && y.type === 'password') {
-      x.type = 'text'
-      y.type = 'text'
+    if (pass1.type === 'password' && pass2.type === 'password') {
+      pass1.type = 'text'
+      pass2.type = 'text'
     } else {
-      x.type = 'password'
-      y.type = 'password'
+      pass1.type = 'password'
+      pass2.type = 'password'
     }
   }
   return (
@@ -114,7 +114,7 @@ const Signup = (props) => {
             label="Password"
             type="password"
             name="password"
-            className="pass"
+            id="pass1"
             value={password}
             placeholder="Password"
             handleChange={(e) => setPassword(e.target.value)}
@@ -124,15 +124,15 @@ const Signup = (props) => {
             label="Confirm Password"
             type="password"
             name="confirmPassword"
-            className="confirm-pass"
+            id="pass2"
             value={confirmPassword}
             placeholder="Confirm Password"
             handleChange={(e) => setConfirmPassword(e.target.value)}
           />
-          <div className="show-pass" onClick={showPass}>
+          <div className="show-pass ">
             <label>
-              <input type="checkbox" />
-              <p> Show Password </p>
+              <input type="checkbox" onClick={showPass} />
+              <p>Show Password</p>
             </label>
           </div>
           <Button type="submit" id="submit" onClick={register}>

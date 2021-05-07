@@ -6,70 +6,84 @@
     height: 100vh;
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 2rem;
-
-    .img {
-      width: 100%;
-      height: auto;
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
+    padding: 0 3%;
+    position: relative;
+    img {
+      width: auto;
+      height: 110vh;
     }
     .content {
-      width: 100%;
-      height: auto;
-      margin-left: 2rem;
-      background-color: #e9f6ff;
-      h1,
-      p,
-      a {
-        margin: 4rem;
-        width: auto;
+      position: absolute;
+      top: 5%;
+      right: 7%;
+      width: 50%;
+      .blue {
+        background-color: #e3f2fcde;
+        padding: 2rem 3rem 4rem 3rem;
+        h1 {
+          color: #0074bf;
+          font-weight: bolder;
+        }
+        p {
+          line-height: 1.5;
+          margin: 2rem 0 4rem 0;
+        }
+        a {
+          padding: 1rem 2rem;
+          color: white;
+          background-color: #0074bf;
+          transition: all ease-in-out 200ms;
+          &:hover {
+            background-color: orangered;
+          }
+        }
       }
-      h1 {
-        font-weight: bolder;
-      }
-      p {
-        line-height: 1.5;
-      }
-      a {
-        background-color: #0074bf;
-        color: white;
-        padding: 1rem 2rem;
+      .red {
+        background-color: rgba(253, 230, 222, 0.842);
+        padding: 2rem 3rem 4rem 3rem;
+        h1 {
+          color: orangered;
+          font-weight: bolder;
+        }
+        p {
+          line-height: 1.5;
+          margin: 2rem 0 4rem 0;
+        }
+        a {
+          padding: 1rem 2rem;
+          color: white;
+          background-color: orangered;
+          transition: all ease-in-out 200ms;
+          &:hover {
+            background-color: #0074bf;
+          }
+        }
       }
     }
   }
 }
+
 @media (max-width: 1065px) {
   .max {
     .second-section {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
       padding: 0;
-      height: 100%;
-      justify-content: unset;
-      align-items: unset;
-      margin: 1rem 0 3rem 0;
-      .img {
+      position: relative;
+      img {
         display: none;
       }
       .content {
+        background-color: #e3f2fc;
+        position: absolute;
+        top: 0;
+        right: 0;
         width: 100%;
-        height: 100%;
-        margin-left: 0;
-        background-color: #e9f6ff;
-        padding: 1rem;
-        h1,
-        p,
-        a {
-          margin: 1rem 0;
-          width: 100%;
-        }
-        p {
-          margin: 3rem 0;
-        }
+        height: 100vh;
+        padding: 5rem 2rem 2rem 2rem;
       }
     }
   }

@@ -1,14 +1,17 @@
 import './styles.scss'
+import SecondSection from './SecondSection'
+import ThirdSection from './ThirdSection/index'
+import LastSection from './LastSection/index'
+
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
+
+import image1 from '../../assets/slide-content/1.jpeg'
+import image2 from '../../assets/slide-content/2.jpeg'
+import image3 from '../../assets/slide-content/3.jpeg'
+import acrotechLogo from '../../assets/acrotech-logo-transparent.png'
 import { Link } from 'react-router-dom'
-import SecondSection from './SecondSection'
-import img1 from '../../assets/slide-content/1.jpeg'
-import img2 from '../../assets/slide-content/2.jpeg'
-import img3 from '../../assets/slide-content/3.jpeg'
-import img4 from '../../assets/slide-content/4.jpeg'
-import img5 from '../../assets/slide-content/5.jpeg'
-import ThirdSection from './ThirdSection/index'
+
 const HomePage = () => {
   const responsive = {
     all: {
@@ -16,53 +19,34 @@ const HomePage = () => {
       items: 1,
     },
   }
+
   return (
     <>
       <div className="home-container">
         <div className="slider-container">
-          <div className="max">
-            <div className="flex">
-              <div className="content">
-                <div className="info">
-                  <h1>ACROTECH INDUSTRIAL SALES CORP.</h1>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Tempore unde praesentium beatae eligendi, molestias, illo in
-                    eum cupiditate nesciunt, aperiam doloribus quod ipsum alias
-                    suscipit rem laborum corrupti consequuntur ea. Lorem ipsum
-                    dolor sit amet, consectetur adipisicing elit. Impedit aut
-                    officiis, amet exercitationem quia iure accusamus nisi ea
-                    eos. Nulla! Lorem ipsum dolor sit, amet consectetur
-                    adipisicing elit. Sint veniam quibusdam dolore temporibus
-                    eveniet sed? Nam quisquam deserunt Lorem
-                  </p>
-
-                  <Link to="/products">
-                    <strong>Order Now</strong>{' '}
-                  </Link>
-                </div>
-              </div>
-              <Carousel
-                responsive={responsive}
-                infinite={true}
-                autoPlay={true}
-                swipeable={true}
-                removeArrowOnDeviceType={['all']}
-                autoPlaySpeed={3000}
-                className="slider"
-              >
-                <img src={img1} alt={img1} />
-                <img src={img2} alt={img2} />
-                <img src={img3} alt={img3} />
-                <img src={img4} alt={img4} />
-                <img src={img5} alt={img5} />
-              </Carousel>
-            </div>
+          <Carousel
+            responsive={responsive}
+            infinite={true}
+            autoPlay={true}
+            swipeable={true}
+            autoPlaySpeed={5000}
+            removeArrowOnDeviceType={['all']}
+            className="slider"
+          >
+            <img src={image1} alt={image1} />
+            <img src={image2} alt={image2} />
+            <img src={image3} alt={image3} />
+          </Carousel>
+          <div className="content">
+            <img src={acrotechLogo} alt={acrotechLogo} />
+            <h1>Industrial Sales Corp.</h1>
+            <Link to="/products">Order Now</Link>
           </div>
         </div>
       </div>
       <SecondSection />
       <ThirdSection />
+      <LastSection />
     </>
   )
 }

@@ -30,13 +30,12 @@ body,
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #eeeeee;
+  background: #e9f6ff;
 }
 ::-webkit-scrollbar-thumb {
   width: 8px;
   height: 8px;
   background-color: #0074bf;
-  border-radius: 50rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -100,7 +99,6 @@ a {
     left: 0;
     width: 25rem;
     height: 100%;
-    z-index: 1;
     border-right: 1px solid #d3d3d3;
   }
 

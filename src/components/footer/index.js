@@ -108,6 +108,16 @@ const Footer = (props) => {
               minus atque quae ducimus?
             </p>
             <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+              corporis excepturi repellat aliquam et, pariatur placeat expedita
+              aut, itaque, necessitatibus optio sequi? Odit quae aliquid
+              deserunt natus facere minima deleniti consectetur. Sequi quo ipsum
+              explicabo debitis, amet dolores officia obcaecati provident ab
+              modi asperiores quam, ullam recusandae exercitationem enim
+              repellendus aspernatur corrupti optio mollitia quasi! Corporis
+              minus atque quae ducimus?
+            </p>
+            <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
               veniam incidunt corrupti dolorum quos eum minima iste ab!
               Consequuntur quaerat consequatur eligendi blanditiis obcaecati

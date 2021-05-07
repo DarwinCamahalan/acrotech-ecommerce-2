@@ -40,8 +40,8 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding: 0 3rem;
-        height: 15rem;
+        padding: 2rem 3rem;
+        height: 17rem;
         h1 {
           text-align: left;
           color: white;
@@ -55,14 +55,21 @@
           width: 100%;
         }
         a {
-          border: #c4c4c4 solid 1px;
+          display: block;
+          width: 100%;
+          font-size: 1.8rem;
+          line-height: 1;
+          font-weight: 300;
           color: black;
-          padding: 0.5rem 1rem;
-          border-radius: 3px;
+          background: rgb(255, 255, 255);
+          padding: 1rem 10px;
+          margin: 0.3rem auto;
           text-align: center;
-          margin: 0.5rem;
+          border: rgb(177, 177, 177) 1px solid;
+          border-radius: 0;
+          cursor: pointer;
           &:hover {
-            background-color: rgb(241, 241, 241);
+            background-color: rgb(243, 243, 243);
           }
         }
       }
