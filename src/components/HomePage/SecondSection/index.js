@@ -24,21 +24,14 @@ const SecondSection = () => {
   }, [])
   const dummyTxt =
     'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum praesentium id, eius placeat beatae tempora. A tenetur laborum delectus! Cupiditate deleniti, tempore laboriosam, dolor rem adipisci' +
-    'repudiandae consectetur labore vitae quod quidem voluptates ipsa officiis at dolores? Natus, aspernatur, ad nam quia hic voluptatum cumque aliquam corrupti atque incidunt repellendus. Lorem ipsum ' +
-    'dolor sit, amet consectetur adipisicing elit. Illum praesentium id, eius placeat beatae tempora. A tenetur laborum delectus! Cupiditate deleniti, tempore laboriosam, dolor rem adipisci repudiandae' +
-    'consectetur labore vitae quod quidem voluptates ipsa officiis at dolores? Natus, aspernatur, ad nam quia hic voluptatum cumque aliquam corrupti atque incidunt repellendus.'
+    'repudiandae consectetur labore vitae quod quidem voluptates ipsa officiis at dolores? Natus, aspernatur, ad nam quia hic voluptatum cumque aliquam corrupti atque incidunt repellendus. Lorem ipsum '
+
   const Cards = [
     {
       title: 'About Us',
       info: `${dummyTxt}`,
       class: 'blue',
       to: '/about',
-    },
-    {
-      title: 'Announcements',
-      info: `${dummyTxt}`,
-      class: 'red',
-      to: '/announcement',
     },
     {
       title: 'Products',
@@ -72,7 +65,9 @@ const SecondSection = () => {
                 <div className={Cards.class}>
                   <h1>{Cards.title}</h1>
                   <p>{Cards.info}</p>
-                  <Link to={Cards.to}>Explore Now</Link>
+                  <Link to={Cards.to}>
+                    Explore Now <i class="fas fa-arrow-right"></i>
+                  </Link>
                 </div>
               </div>
             )

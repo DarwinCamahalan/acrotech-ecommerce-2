@@ -3,61 +3,56 @@
   display: block;
   margin: 0 auto;
   .second-section {
-    height: 100vh;
+    height: 78vh;
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 0 3%;
+    padding: 0 5%;
     position: relative;
     img {
       width: auto;
-      height: 110vh;
+      height: auto;
     }
     .content {
       position: absolute;
-      top: 5%;
-      right: 7%;
-      width: 50%;
+      top: -3%;
+      right: 13%;
+      width: 40%;
+      .fas {
+        margin: 0 0.5rem;
+      }
       .blue {
-        background-color: #e3f2fcde;
-        padding: 2rem 3rem 4rem 3rem;
+        background-color: #0074bf;
+        padding: 2rem 10rem 4rem 3rem;
+        color: white;
         h1 {
-          color: #0074bf;
-          font-weight: bolder;
+          color: white;
         }
         p {
           line-height: 1.5;
           margin: 2rem 0 4rem 0;
+          font-weight: lighter;
+          font-size: 1.5rem;
         }
         a {
-          padding: 1rem 2rem;
           color: white;
-          background-color: #0074bf;
-          transition: all ease-in-out 200ms;
-          &:hover {
-            background-color: orangered;
-          }
         }
       }
       .red {
-        background-color: rgba(253, 230, 222, 0.842);
-        padding: 2rem 3rem 4rem 3rem;
+        background-color: orangered;
+        padding: 2rem 10rem 4rem 3rem;
+        color: white;
         h1 {
-          color: orangered;
-          font-weight: bolder;
+          color: white;
         }
         p {
           line-height: 1.5;
           margin: 2rem 0 4rem 0;
+          font-weight: lighter;
+          font-size: 1.5rem;
         }
         a {
-          padding: 1rem 2rem;
           color: white;
-          background-color: orangered;
-          transition: all ease-in-out 200ms;
-          &:hover {
-            background-color: #0074bf;
-          }
         }
       }
     }

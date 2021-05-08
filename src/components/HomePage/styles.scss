@@ -1,47 +1,45 @@
 .home-container {
-  margin-top: 9rem;
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: #022841;
+  background-color: black;
   .slider-container {
     .slider {
       width: 100%;
-      height: 60vh;
-      opacity: 0.35;
-      object-fit: fill;
+      height: 100vh;
+      opacity: 0.5;
+      object-fit: cover;
       img {
-        width: inherit;
+        width: 100%;
         height: 100%;
-        object-fit: fill;
+        object-fit: cover;
       }
     }
     .content {
       z-index: 1;
       position: absolute;
-      width: 50%;
+      width: 40%;
       height: 100%;
       top: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 10%;
       display: flex;
       justify-content: center;
       flex-direction: column;
-      align-items: center;
-      img {
-        width: 40rem;
+      align-items: flex-start;
+      .fas {
+        margin-left: 0.5rem;
       }
-
       h1 {
         color: white;
         font-weight: bold;
-        text-align: center;
+        font-size: 5rem;
+        line-height: 1.3;
+        text-align: left;
         margin: 1rem 0 3rem 0;
       }
       a {
         background-color: orangered;
-        padding: 1rem 2rem;
-        font-weight: bold;
+        padding: 1.5rem 2rem;
         color: white;
         font-size: 2rem;
         transition: all ease-in-out 200ms;
@@ -55,19 +53,46 @@
 
 @media (max-width: 1065px) {
   .home-container {
-    height: auto;
     .slider-container {
       .slider {
         width: 100%;
         height: 100%;
+        opacity: 0.5;
+        object-fit: cover;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
       .content {
-        width: 100%;
-        img {
-          width: 30rem;
-        }
+        z-index: 1;
+        position: absolute;
+        width: 69%;
+        height: 100%;
+        top: 12%;
+        left: 5%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+
         h1 {
+          color: white;
+          font-weight: bold;
           font-size: 2.5rem;
+          line-height: 1.3;
+          text-align: left;
+        }
+        a {
+          background-color: orangered;
+          padding: 1rem 1.5rem;
+          color: white;
+          font-size: 1.5rem;
+          transition: all ease-in-out 200ms;
+          &:hover {
+            background-color: #0074bf;
+          }
         }
       }
     }

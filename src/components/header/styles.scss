@@ -4,21 +4,25 @@
   width: 100%;
   height: 9rem;
   color: #fff;
-  background: #0074bf;
-  background: url(../../assets/top-header.jpg) repeat-x top;
+  background: transparent;
+  z-index: 50;
+  border-bottom: rgba(255, 255, 255, 0.1) 2px solid;
   .max {
     max-width: 140.5rem;
     .wrap {
       height: 9rem;
       display: flex;
       align-items: center;
-      margin: 0.7rem 0 0 17rem;
       .logo {
-        width: 20rem;
-
+        width: 25rem;
+        height: 9rem;
+        border-right: rgba(255, 255, 255, 0.1) 2px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         img {
-          width: 100%;
-          height: 100%;
+          width: 15rem;
+          height: auto;
           border: none;
         }
       }
@@ -26,41 +30,48 @@
       .callToActions {
         display: flex;
         align-items: center;
-        justify-content: center;
         width: 100%;
-
+        height: 9rem;
+        justify-content: space-evenly;
         a {
-          padding: 45px 12px 21px;
-          margin-bottom: 2rem;
+          display: flex;
+          align-items: center;
           color: #fff;
-          font-size: 12px;
-          font-weight: 600;
-          letter-spacing: 0.05em;
-          text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
-          text-transform: uppercase;
-          line-height: 21px;
-
+          font-size: 1.6rem;
+          text-transform: capitalize;
+          height: 100%;
           &:hover {
-            color: yellow;
+            border-bottom: 0.3rem solid orangered;
           }
         }
         .menu {
-          text-align: left;
-          font-size: 1.25rem;
-          line-height: 1.7;
-          margin-bottom: 3rem;
-          margin-left: 3rem;
+          display: flex;
+          align-items: center;
           span {
-            color: rgba(255, 255, 255, 0.548);
-            font-weight: normal;
-            margin: 0;
+            margin: 0 1rem;
           }
-
           a {
             font-weight: normal;
             text-shadow: none;
-            margin: 0;
-            padding: 0;
+            margin: 0 1rem;
+            padding: 1.5rem 2rem;
+            background-color: orangered;
+            color: white;
+            &:hover {
+              border: none;
+              background-color: #0074bf;
+            }
+          }
+        }
+        .number {
+          display: flex;
+          align-items: center;
+          padding-left: 3rem;
+          border-left: rgba(255, 255, 255, 0.1) 2px solid;
+          height: 9rem;
+
+          span {
+            margin: 0 1rem;
           }
         }
       }
@@ -109,10 +120,10 @@
     }
     .max {
       .wrap {
-        margin: 0.6rem 1%;
+        margin: 0;
         .logo {
           width: 17rem;
-          margin-left: 0.8rem;
+          padding: 1rem;
           img {
             width: 100%;
           }

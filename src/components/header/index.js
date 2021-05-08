@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 import './styles.scss'
-import Logo from './../../assets/acrotech-logo-compress.png'
+import Logo from './../../assets/acrotech-logo.png'
 import { checkUserIsAdmin } from '../../Utils'
 import MobileSidebar from './MobileSidebar/index'
 import LogoutConfirm from './LogoutConfirm'
@@ -67,33 +67,27 @@ const Header = (props) => {
             <Link to="/">home</Link>
             <Link to="/products">products </Link>
             <Link to="/about">about us</Link>
-            <Link to="/announcement">Announcements</Link>
+            {/* <Link to="/announcement">Announcements</Link> */}
             <Link to="/contact">Contact Us</Link>
             <div className="menu">
               {currentUser && (
                 <>
-                  <Link onClick={showConfirmation}>Logout</Link> |{' '}
+                  <Link onClick={showConfirmation}>Logout</Link>
                   {isAdmin && <Link to="/">{displayName}</Link>}
                   {!isAdmin && <Link to="/dashboard">{displayName}</Link>}
                 </>
               )}
               {!currentUser && (
                 <>
-                  <Link to="/login">Login</Link> |{' '}
-                  <Link to="/registration">register</Link>
+                  <Link to="/login">
+                    <span>Log In</span> <i class="fas fa-arrow-right"></i>
+                  </Link>
                 </>
               )}
               <br />
-              <span>Locate Us : </span>
-              <a
-                href="https://www.google.com/maps/place/Acrotect+Industrial+Sales+Corp./@8.4908966,124.6382007,17z/data=!3m1!4b1!4m5!3m4!1s0x32fff31fcf49851f:0xc9263f3b77dfdac0!8m2!3d8.490894!4d124.6403783"
-                target="_blank"
-                className="locate"
-              >
-                Google Map
-              </a>
-              <br />
-              <span>CONTACT TEL: </span> +123 4567 8910
+            </div>
+            <div className="number">
+              <i class="fas fa-phone-alt"> </i> <span>123-456-789</span>
             </div>
           </div>
         </div>

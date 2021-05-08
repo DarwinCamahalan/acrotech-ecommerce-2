@@ -1,80 +1,111 @@
 .footer {
-  background-color: #007bc2;
+  background-color: rgb(17, 17, 17);
+  height: 100%;
   width: 100%;
+  color: white;
+  .copyright {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(12, 12, 12);
+    padding: 3rem 0;
+    font-weight: lighter;
+    color: rgb(185, 185, 185);
+    font-size: 1.5rem;
+  }
   .max {
     max-width: 140.5rem;
     position: relative;
-    img {
-      width: 50%;
-      position: absolute;
-      right: 4%;
-      top: 20%;
-      opacity: 0.1;
+    p {
+      font-size: 1.3rem;
+      color: rgb(185, 185, 185);
+      line-height: 2;
     }
     .flex {
-      color: white;
       display: flex;
-      flex-direction: column;
-      padding: 0 12rem;
-
-      .site-map {
-        position: absolute;
-        top: -4.8%;
-        right: 47%;
-        background-color: #007bc2;
-        color: white;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      padding: 10rem;
+      .contacts {
+        width: 100%;
+        img {
+          width: 15rem;
+        }
         display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
         flex-direction: column;
-        align-items: center;
-        border-radius: 50%;
-        width: 10rem;
-        height: 10rem;
-        p {
-          margin: 0;
-          padding: 0;
-          font-size: 1.2rem;
+        .social-media {
+          display: flex;
+          align-items: flex-start;
+
+          width: 100%;
+          height: 100%;
+          padding: 1rem 0;
+          a {
+            color: white;
+          }
+          .fab {
+            background-color: rgb(37, 37, 37);
+            border-radius: 50%;
+            padding: 0.8rem 1rem;
+            margin: 0 0.3rem;
+          }
         }
       }
       .links {
         display: flex;
+        justify-content: center;
         align-items: center;
-        justify-content: space-evenly;
-        z-index: 2;
-        .categories {
-          display: flex;
-          flex-direction: column;
-          p {
-            font-size: 1.5rem;
-            margin: 0.5rem 0;
-            padding: 0;
-          }
-          a {
-            color: #78c2ed;
-            font-weight: normal;
-            font-size: 1.2rem;
-            line-height: 1.8rem;
-
-            &:hover {
-              color: white;
-            }
-          }
+        flex-direction: column;
+        width: 100%;
+        margin-top: -2rem;
+        p {
+          color: white;
+          font-size: 2rem;
+          font-weight: bold;
+        }
+        a {
+          color: rgb(185, 185, 185);
+          font-size: 1.3rem;
+          line-height: 2;
+          text-align: left;
         }
       }
-      .about {
-        display: block;
-        margin: 0 auto;
-        padding: 0 7.2rem;
-        h5 {
-          font-weight: normal;
-          font-size: 1.5rem;
-          margin: 0.5rem 0;
-          padding: 0;
+      .form {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+
+        h6 {
+          font-size: 2rem;
+          margin: 1rem 0;
+          font-weight: bold;
         }
         p {
-          color: #78c2ed;
-          font-weight: normal;
-          font-size: 1.2rem;
-          line-height: 2;
+          margin: 1rem 0;
+        }
+        .input {
+          position: relative;
+          width: 100%;
+          input {
+            width: 100%;
+            height: 3.5rem;
+            padding: 0.5rem 1rem;
+            outline: none;
+            border: none;
+          }
+          .fas {
+            right: 1%;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            background-color: orangered;
+            color: white;
+            padding: 0.5rem 0.7rem;
+            border-radius: 50%;
+          }
         }
       }
     }
@@ -84,41 +115,70 @@
 @media (max-width: 1065px) {
   .footer {
     .max {
-      img {
-        display: none;
-      }
+      max-width: 140.5rem;
+      position: relative;
+
       .flex {
-        padding: 2rem;
-        .site-map {
-          left: 50%;
-          transform: translateX(-50%);
-          top: -1.3%;
-        }
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 3rem;
 
         .links {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
           flex-direction: column;
-
-          .categories {
-            text-align: justify;
-            width: 100%;
-            margin: 1.5rem 0;
-            a,
-            p {
-              font-size: 1.5rem;
-            }
+          width: 100%;
+          margin-top: 1rem;
+          p {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+          }
+          a {
+            color: rgb(185, 185, 185);
+            font-size: 1.3rem;
+            line-height: 2;
+            text-align: left;
           }
         }
-
-        .about {
-          text-align: left;
-          margin: 1.5rem 0;
+        .form {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
           width: 100%;
-          padding: 0;
-          p {
-            font-size: 1.5rem;
+          margin-top: 1rem;
+          h6 {
+            font-size: 2rem;
+            margin: 1rem 0;
+            font-weight: bold;
           }
-          h5 {
-            font-size: 1.7rem;
+          p {
+            margin: 1rem 0;
+          }
+          .input {
+            position: relative;
+            width: 100%;
+            input {
+              width: 100%;
+              height: 3.5rem;
+              padding: 0.5rem 1rem;
+              outline: none;
+              border: none;
+            }
+            .fas {
+              right: 1%;
+              top: 50%;
+              transform: translateY(-50%);
+              position: absolute;
+              background-color: orangered;
+              color: white;
+              padding: 0.5rem 0.7rem;
+              border-radius: 50%;
+            }
           }
         }
       }

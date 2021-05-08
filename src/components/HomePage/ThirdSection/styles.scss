@@ -17,9 +17,13 @@
 .third-section {
   height: 100vh;
   width: 100%;
-  background: #005c97;
-  background: -webkit-linear-gradient(to right, #363795, #005c97);
-  background: linear-gradient(to right, #363795, #005c97);
+  background: rgba(170, 46, 2, 0.6);
+  background: -webkit-linear-gradient(
+    to right,
+    orangered,
+    rgba(170, 46, 2, 0.6)
+  );
+  background: linear-gradient(to right, orangered, rgba(170, 46, 2, 0.6));
 
   .max {
     max-width: 140.5rem;
@@ -42,10 +46,10 @@
         margin: 6rem 0 0 0;
 
         p {
-          color: white;
-          font-size: 2.8rem;
+          color: rgba(255, 255, 255, 0.863);
+          font-size: 3.5rem;
           margin: 0 1rem;
-          margin-bottom: 0.2rem;
+          margin-bottom: 0.9rem;
         }
         img {
           width: 20rem;
@@ -106,7 +110,7 @@
             left: 0;
             z-index: 99;
             color: white;
-            background-color: rgba(0, 4, 40, 0.418);
+            background-color: rgba(90, 24, 0, 0.459);
             padding: 0.5rem 0.8rem;
             font-size: 1.4rem;
             text-transform: capitalize;
@@ -137,8 +141,8 @@
             width: 18rem;
           }
           p {
-            font-size: 2rem;
-            margin-bottom: 2px;
+            font-size: 3.1rem;
+            margin-bottom: 0.85rem;
           }
         }
         .content {

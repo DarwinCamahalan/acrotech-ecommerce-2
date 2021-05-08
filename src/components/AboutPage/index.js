@@ -1,5 +1,5 @@
 import './styles.scss'
-import ClientImage from '../../assets/test.jpg'
+import ClientImage from '../../assets/client1.jpg'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 const AboutPage = () => {

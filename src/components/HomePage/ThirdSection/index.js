@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { fetchProductsStart } from '../../../redux/Products/products.actions'
 
-import acrotechLogo from '../../../assets/acrotech-logo-transparent.png'
+import acrotechLogo from '../../../assets/acrotech-logo.png'
 import bg from '../../../assets/bg.png'
 
 const mapState = ({ productsData }) => ({
