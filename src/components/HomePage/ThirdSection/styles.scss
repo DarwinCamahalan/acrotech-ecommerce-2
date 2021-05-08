@@ -17,13 +17,7 @@
 .third-section {
   height: 100vh;
   width: 100%;
-  background: rgba(170, 46, 2, 0.6);
-  background: -webkit-linear-gradient(
-    to right,
-    orangered,
-    rgba(170, 46, 2, 0.6)
-  );
-  background: linear-gradient(to right, orangered, rgba(170, 46, 2, 0.6));
+  background-color: #002035;
 
   .max {
     max-width: 140.5rem;
@@ -33,7 +27,7 @@
       flex-direction: column;
       justify-content: space-between;
       .bg {
-        opacity: 0.1;
+        opacity: 0.12;
         position: absolute;
         transform: scaleX(-1);
         left: 12rem;
@@ -110,7 +104,8 @@
             left: 0;
             z-index: 99;
             color: white;
-            background-color: rgba(90, 24, 0, 0.459);
+            background-color: #0020356e;
+            backdrop-filter: blur(0.5rem);
             padding: 0.5rem 0.8rem;
             font-size: 1.4rem;
             text-transform: capitalize;

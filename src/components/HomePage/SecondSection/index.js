@@ -34,7 +34,7 @@ const SecondSection = () => {
       to: '/about',
     },
     {
-      title: 'Products',
+      title: 'Our Products',
       info: `${dummyTxt}`,
       class: 'red',
       to: '/products',
@@ -44,6 +44,12 @@ const SecondSection = () => {
       info: `${dummyTxt}`,
       class: 'blue',
       to: '/contact',
+    },
+    {
+      title: 'Offers',
+      info: `${dummyTxt}`,
+      class: 'red',
+      to: '/about',
     },
   ]
   return (

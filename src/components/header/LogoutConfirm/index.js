@@ -37,7 +37,14 @@ const LogoutConfirm = ({ confirm, setConfirm }) => {
             Cancel
           </a>
 
-          <a onClick={signOut} style={{ borderLeft: '1px solid #dad8d8' }}>
+          <a
+            onClick={signOut}
+            style={{
+              borderLeft: '1px solid #bebebe',
+              backgroundColor: 'orangered',
+              color: 'white',
+            }}
+          >
             Log out
           </a>
         </div>

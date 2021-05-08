@@ -6,11 +6,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 10rem;
+    padding: 9rem 10rem 0 10rem;
     overflow: hidden;
     .title {
       position: absolute;
-      top: 6%;
+      top: 10%;
       h1 {
         text-align: center;
         color: orangered;
@@ -73,8 +73,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 0 1rem;
-      margin-bottom: 7rem;
+      padding: 10rem 1rem 0 1rem;
+
       .container {
         width: 100%;
         overflow: visible;

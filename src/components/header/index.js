@@ -24,6 +24,7 @@ const Header = (props) => {
   const showConfirmation = () => {
     document.body.style.overflow = 'hidden'
     setConfirm(!confirm)
+    setOpenMenu(!openMenu)
   }
   return (
     <header className="header">
@@ -57,26 +58,49 @@ const Header = (props) => {
               <img src={Logo} alt="Acrotech Logo" />
             </Link>
           </div>
-          {isAdmin && (
-            <Link to="/admin" className="admin-settings">
-              Admin Settings
-            </Link>
-          )}
 
           <div className="callToActions">
             <Link to="/">home</Link>
             <Link to="/products">products </Link>
             <Link to="/about">about us</Link>
-            {/* <Link to="/announcement">Announcements</Link> */}
             <Link to="/contact">Contact Us</Link>
             <div className="menu">
               {currentUser && (
                 <>
-                  <Link onClick={showConfirmation}>Logout</Link>
-                  {isAdmin && <Link to="/">{displayName}</Link>}
-                  {!isAdmin && <Link to="/dashboard">{displayName}</Link>}
+                  <Link
+                    className="user-name"
+                    onClick={() => {
+                      setOpenMenu(!openMenu)
+                    }}
+                  >
+                    {displayName}
+                    <i class="fas fa-sort-down"></i>
+                    {openMenu ? (
+                      <div
+                        className="user-menu"
+                        onMouseLeave={() => {
+                          setOpenMenu(!openMenu)
+                        }}
+                      >
+                        {isAdmin ? (
+                          <Link to="/admin" className="settings">
+                            Admin Settings
+                          </Link>
+                        ) : (
+                          <Link to="/dashboard" className="settings">
+                            My Orders
+                          </Link>
+                        )}
+
+                        <Link onClick={showConfirmation}>Logout</Link>
+                      </div>
+                    ) : (
+                      ''
+                    )}
+                  </Link>
                 </>
               )}
+
               {!currentUser && (
                 <>
                   <Link to="/login">
