@@ -36,13 +36,13 @@ const SecondSection = () => {
     {
       title: 'Products',
       info: `${dummyTxt}`,
-      class: 'blue',
+      class: 'red',
       to: '/products',
     },
     {
       title: 'Contact Us',
       info: `${dummyTxt}`,
-      class: 'red',
+      class: 'blue',
       to: '/contact',
     },
   ]
