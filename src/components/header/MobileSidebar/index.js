@@ -37,9 +37,12 @@ const MobileSidebar = ({ openMenu, setOpenMenu }) => {
       )}
       {openMenu ? (
         <div>
-          <div className="overlay-sidebar" onClick={openSidebar}></div>
+          <div className="overlay-sidebar"></div>
           <div className="callToActions">
-            <i class="fas fa-arrow-left" onClick={openSidebar}></i>
+            <div className="exit" onClick={openSidebar}>
+              <div className="right"></div>
+              <div className="left"></div>
+            </div>
             <Link to="/" onClick={openSidebar}>
               home
             </Link>
@@ -53,26 +56,28 @@ const MobileSidebar = ({ openMenu, setOpenMenu }) => {
             <Link to="/contact" onClick={openSidebar}>
               Contact Us
             </Link>
-            <div className="menu">
-              {currentUser && (
-                <>
-                  <Link onClick={showConfirmation}>Logout</Link> |{' '}
-                  {isAdmin && <Link to="/">{displayName}</Link>}
-                  {!isAdmin && <Link to="/dashboard">{displayName}</Link>}
-                </>
-              )}
-              {!currentUser && (
-                <>
-                  <Link to="/login" onClick={openSidebar}>
-                    Login
-                  </Link>{' '}
-                  |{' '}
-                  <Link to="/registration" onClick={openSidebar}>
-                    register
+            {currentUser && (
+              <>
+                {isAdmin && (
+                  <Link to="/admin" className="admin-settings">
+                    Admin Settings
                   </Link>
-                </>
-              )}
-            </div>
+                )}
+
+                {!isAdmin && <Link to="/dashboard">{displayName}</Link>}
+                <Link onClick={showConfirmation}>Logout</Link>
+              </>
+            )}
+            {!currentUser && (
+              <>
+                <Link to="/login" onClick={openSidebar}>
+                  Login
+                </Link>
+                <Link className="mobile-number">
+                  <i class="fas fa-phone-alt"> </i> <span>123-456-789</span>
+                </Link>
+              </>
+            )}
           </div>
         </div>
       ) : (

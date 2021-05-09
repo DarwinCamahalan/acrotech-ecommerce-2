@@ -7,19 +7,6 @@ const Login = (props) => {
   return (
     <div className="max">
       <div className="signin">
-        <div className="info">
-          <h1>Login</h1>
-          <hr />
-          <p>
-            It is necessary to perform User Registration to Order a product.{' '}
-            <br />
-            For the users who have already performed User Registration, enter
-            the e-mail address and password to login. <br />
-            For new users, perform User Registration to be able to Order a
-            product..
-          </p>
-        </div>
-
         <div className="signin-container">
           <SignIn />
           <div className="register">

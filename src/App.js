@@ -93,30 +93,9 @@ const App = (props) => {
           )}
         />
 
-        <Route
-          path="/registration"
-          render={() => (
-            <MainLayout>
-              <Registration />
-            </MainLayout>
-          )}
-        />
-        <Route
-          path="/login"
-          render={() => (
-            <MainLayout>
-              <Login />
-            </MainLayout>
-          )}
-        />
-        <Route
-          path="/recovery"
-          render={() => (
-            <MainLayout>
-              <Recovery />
-            </MainLayout>
-          )}
-        />
+        <Route path="/registration" render={() => <Registration />} />
+        <Route path="/login" render={() => <Login />} />
+        <Route path="/recovery" render={() => <Recovery />} />
         <Route
           path="/dashboard"
           render={() => (

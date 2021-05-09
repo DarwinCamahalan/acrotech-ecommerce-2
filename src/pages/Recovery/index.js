@@ -6,16 +6,6 @@ const Recovery = (props) => {
   return (
     <div className="max">
       <div className="recovery">
-        <div className="info">
-          <h1>Recovery</h1>
-          <hr />
-          <div className="hint">Forgot your password?</div>
-          <p>
-            If your have forgotten your password, fill in the following form. A
-            password will be sent to the registered e-mail address.
-          </p>
-        </div>
-
         <div className="recovery-container">
           <ForgotPassword />
           <div className="login-register">

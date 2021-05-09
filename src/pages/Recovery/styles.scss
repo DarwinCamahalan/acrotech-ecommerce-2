@@ -3,30 +3,9 @@
 
   .recovery {
     padding: 1rem 14%;
-    margin-top: 12rem;
-    height: 100vh;
-    h1 {
-      font-weight: bold;
 
-      color: #4d4d4d;
-      font-size: 24px;
-    }
-    .hint {
-      border-left: 1rem solid #0074bf;
-      padding: 1rem 1rem;
-      font-size: 2.2rem;
-    }
-    hr {
-      border: 0;
-      height: 1px;
-      color: #d6d6d6;
-      background-color: #c4c4c4;
-    }
-    p {
-      padding-left: 12%;
-      line-height: 1.5;
-      font-size: 1.5rem;
-    }
+    height: 100vh;
+
     .recovery-container {
       margin: 3rem 0;
       display: flex;
