@@ -71,7 +71,7 @@ const SignIn = (props) => {
       <div className="formWrap">
         <form onSubmit={handleSubmit}>
           <FormInput
-            label="E-mail address"
+            label="Email"
             type="email"
             name="email"
             value={email}

@@ -93,7 +93,7 @@ const App = (props) => {
           )}
         />
 
-        <Route path="/registration" render={() => <Registration />} />
+        <Route path="/signup" render={() => <Registration />} />
         <Route path="/login" render={() => <Login />} />
         <Route path="/recovery" render={() => <Recovery />} />
         <Route

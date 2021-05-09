@@ -1,21 +1,18 @@
 import React from 'react'
+import './styles.scss'
 import ForgotPassword from './../../components/ForgotPassword'
 import { Link } from 'react-router-dom'
-import './styles.scss'
+import WorkerImage from '../../assets/slide-content/1.jpg'
+
 const Recovery = (props) => {
   return (
     <div className="max">
       <div className="recovery">
-        <div className="recovery-container">
+        <div className="img">
+          <img src={WorkerImage} alt={WorkerImage} />
+        </div>
+        <div className="form">
           <ForgotPassword />
-          <div className="login-register">
-            <h1>Login & Registration</h1>
-
-            <Link to="/registration" style={{ marginTop: '20px' }}>
-              To new registration screen
-            </Link>
-            <Link to="/login">To login screen</Link>
-          </div>
         </div>
       </div>
     </div>

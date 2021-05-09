@@ -1,21 +1,11 @@
 .authWrapper {
   width: 100%;
   max-width: 40rem;
-  border: 1px solid rgb(145, 145, 145);
   height: fit-content;
+
   .wrap {
     h2 {
-      text-align: left;
-      color: rgb(8, 8, 8);
-      background-color: #0785da;
-      padding: 0.5rem 1rem;
-      font-size: 2.2rem;
-      line-height: 1;
-      font-weight: 400;
-      font-size: 1.7rem;
-      display: block;
-      width: 100%;
-      margin: 0 auto 3rem;
+      font-size: unset;
     }
     .children {
       padding: 0 1rem;

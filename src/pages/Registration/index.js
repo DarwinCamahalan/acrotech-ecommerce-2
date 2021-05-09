@@ -1,18 +1,17 @@
-import React, { Component } from 'react'
-import Signup from './../../components/Signup'
+import React from 'react'
 import './styles.scss'
+import Signup from './../../components/Signup'
 import { Link } from 'react-router-dom'
+import WorkerImage from '../../assets/slide-content/1.jpg'
 const Registration = (props) => {
   return (
     <div className="max">
       <div className="signup">
-        <div className="registration-container">
+        <div className="img">
+          <img src={WorkerImage} alt={WorkerImage} />
+        </div>
+        <div className="form">
           <Signup />
-          <div className="register">
-            <h1>Recover Account</h1>
-
-            <Link to="/recovery">Forgot your password?</Link>
-          </div>
         </div>
       </div>
     </div>

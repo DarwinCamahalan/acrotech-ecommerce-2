@@ -66,7 +66,7 @@ const ForgotPassword = (props) => {
 
         <form onSubmit={handleSubmit}>
           <FormInput
-            label="E-mail"
+            label="Email"
             type="email"
             name="email"
             value={email}
@@ -75,7 +75,7 @@ const ForgotPassword = (props) => {
           />
 
           <Button type="submit" id="submit" onClick={sendEmail}>
-            Send e-mail
+            Send Code
           </Button>
         </form>
       </div>
