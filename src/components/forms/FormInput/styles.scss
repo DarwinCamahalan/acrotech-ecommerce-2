@@ -9,6 +9,12 @@
     text-align: left;
     padding: 10px 5px;
     margin: 10px auto;
-    border: 1px solid #696969;
+    border: 1px solid orangered;
+    border-radius: 0;
+    outline: orangered;
+  }
+  input::placeholder {
+    color: orangered;
+    opacity: 0.7;
   }
 }

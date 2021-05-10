@@ -25,4 +25,25 @@
       }
     }
   }
+  .signup-btn {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 2rem;
+    background-color: orangered;
+    cursor: pointer;
+    border: none;
+    color: white;
+    &:hover {
+      background-color: #0074bf;
+    }
+  }
+}
+
+.links {
+  margin: 2rem 0;
+  text-align: center;
+  a {
+    color: orangered;
+    margin-left: 1rem;
+  }
 }

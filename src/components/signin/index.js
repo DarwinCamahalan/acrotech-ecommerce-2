@@ -10,7 +10,6 @@ import './styles.scss'
 
 import AuthWrapper from './../AuthWrapper'
 import FormInput from './../forms/FormInput'
-import Button from './../forms/button'
 
 const mapState = ({ user }) => ({
   currentUser: user.currentUser,
@@ -45,10 +44,6 @@ const SignIn = (props) => {
     dispatch(googleSignInStart())
   }
 
-  const configAuthWrapper = {
-    headline: 'Already registered users',
-  }
-
   const login = (e) => {
     e = e || window.event
     if (e.keyCode == 13) {
@@ -67,47 +62,60 @@ const SignIn = (props) => {
     }
   }
   return (
-    <AuthWrapper {...configAuthWrapper}>
-      <div className="formWrap">
-        <form onSubmit={handleSubmit}>
-          <FormInput
-            label="Email"
-            type="email"
-            name="email"
-            value={email}
-            placeholder="Email"
-            handleChange={(e) => setEmail(e.target.value)}
-          />
-          <FormInput
-            label="Password"
-            type="password"
-            name="password"
-            id="pass"
-            value={password}
-            placeholder="Password"
-            handleChange={(e) => setPassword(e.target.value)}
-          />
-          <div className="show-pass ">
-            <label>
-              <input type="checkbox" onClick={showPass} />
-              <p>Show Password</p>
-            </label>
-          </div>
+    <>
+      <div className="socialSignin">
+        <button className="google-btn" onClick={handleGoogleSignIn}>
+          <i class="fab fa-google"></i> Login with Google
+        </button>
 
-          <Button type="submit" id="submit" onClick={login}>
-            Login
-          </Button>
-          <div className="socialSignin">
-            <div className="row">
-              <Button onClick={handleGoogleSignIn}>Sign in with Google</Button>
-            </div>
-          </div>
-          <div className="links">
-            <Link to="/recovery">Forgot Password?</Link>
-          </div>
-        </form>
+        <div className="separator">
+          <span>or Log in with Email</span>
+        </div>
       </div>
-    </AuthWrapper>
+      <AuthWrapper>
+        <div className="formWrap">
+          <form onSubmit={handleSubmit}>
+            <FormInput
+              label="Email"
+              type="email"
+              name="email"
+              value={email}
+              placeholder="Email"
+              handleChange={(e) => setEmail(e.target.value)}
+            />
+            <FormInput
+              label="Password"
+              type="password"
+              name="password"
+              id="pass"
+              value={password}
+              placeholder="Password"
+              handleChange={(e) => setPassword(e.target.value)}
+            />
+            <div className="show-pass ">
+              <label>
+                <input type="checkbox" onClick={showPass} />
+                <p>Show Password</p>
+                <Link to="/recovery">Forgot Password?</Link>
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              id="submit"
+              onClick={login}
+              className="login-btn"
+            >
+              Login
+            </button>
+          </form>
+        </div>
+      </AuthWrapper>
+      <div className="create-acc">
+        Not Registered Yet?
+        <Link to="/signup">Create an Account</Link>
+      </div>
+    </>
   )
 }
 

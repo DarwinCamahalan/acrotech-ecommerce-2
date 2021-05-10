@@ -1,36 +1,49 @@
-.max {
-  max-width: 140.5rem;
-
-  .signin {
-    height: 100vh;
-    display: flex;
-    .img {
-      flex: 1;
+.signin {
+  height: 100vh;
+  display: flex;
+  .img {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    img {
       width: 100%;
       height: 100%;
-      background-color: black;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.5;
-        transform: scaleX(-1);
-      }
+      object-fit: cover;
+      opacity: 0.5;
+      transform: scaleX(-1);
     }
-    .form {
-      flex: 1.4;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  }
+  .form {
+    position: relative;
+    flex: 1.4;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .back {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      a {
+        color: orangered;
+      }
     }
   }
 }
 
 @media (max-width: 1065px) {
-  .max {
-    .signin {
-      flex-direction: column;
+  .signin {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    .img {
+      display: none;
+    }
+    .form {
+      flex: unset;
+      height: 100%;
     }
   }
 }

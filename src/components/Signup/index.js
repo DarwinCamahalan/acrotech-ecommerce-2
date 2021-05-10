@@ -56,10 +56,6 @@ const Signup = (props) => {
     )
   }
 
-  const configAuthWrapper = {
-    headline: 'Registration',
-  }
-
   const register = (e) => {
     e = e || window.event
     if (e.keyCode == 13) {
@@ -81,7 +77,7 @@ const Signup = (props) => {
     }
   }
   return (
-    <AuthWrapper {...configAuthWrapper}>
+    <AuthWrapper>
       <div className="formWrap">
         {errors.length > 0 && (
           <ul>
@@ -93,7 +89,7 @@ const Signup = (props) => {
 
         <form onSubmit={handleFormSubmit}>
           <FormInput
-            label="Full name"
+            label="Full Name"
             type="text"
             name="displayName"
             value={displayName}
@@ -102,7 +98,7 @@ const Signup = (props) => {
           />
 
           <FormInput
-            label="E-mail address"
+            label="Email"
             type="email"
             name="email"
             value={email}
@@ -135,13 +131,19 @@ const Signup = (props) => {
               <p>Show Password</p>
             </label>
           </div>
-          <Button type="submit" id="submit" onClick={register}>
-            Register
-          </Button>
+          <button
+            className="signup-btn"
+            type="submit"
+            id="submit"
+            onClick={register}
+          >
+            Signup
+          </button>
         </form>
 
         <div className="links">
-          <Link to="/login">Already have account?</Link>
+          <span> Already have account?</span>
+          <Link to="/login">Login</Link>
         </div>
       </div>
     </AuthWrapper>
