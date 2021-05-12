@@ -5,8 +5,8 @@ import { fetchProductsStart } from './../../redux/Products/products.actions'
 import Product from './Product'
 import LoadMore from './../LoadMore'
 import './styles.scss'
-import SideBar from './../sidebar/index'
 
+import worker from '../../assets/slide-content/1.jpg'
 const mapState = ({ productsData }) => ({
   products: productsData.products,
 })
@@ -47,17 +47,24 @@ const ProductResults = ({}) => {
     onLoadMoreEvt: handleLoadMore,
     searchResult: searchResult,
   }
-
+  const onChangeHandler = (event) => {
+    setSearchResult(event.target.value)
+  }
   return (
     <div className="max">
-      <div className="products-page ">
-        <div className="sidebar">
-          <SideBar
-            searchResult={searchResult}
-            setSearchResult={setSearchResult}
+      <div className="hero">
+        <img src={worker} alt={worker} />
+        <div className="input">
+          <input
+            type="text"
+            placeholder="Search Products..."
+            onChange={onChangeHandler}
+            value={searchResult}
           />
+          <i class="fas fa-search"></i>
         </div>
-
+      </div>
+      <div className="products-page ">
         <div className="products-container">
           {data
             .filter((product) => {
