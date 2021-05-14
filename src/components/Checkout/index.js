@@ -42,7 +42,6 @@ const Checkout = ({}) => {
                         <th>Product</th>
                         <th>Description</th>
                         <th>Quantity</th>
-                        <th>Price</th>
                         <th>Remove</th>
                       </tr>
                     </tbody>
@@ -70,19 +69,6 @@ const Checkout = ({}) => {
                 <td>
                   <table border="0" cellSpacing="0" cellPadding="0">
                     <tbody>
-                      <tr>
-                        <td>
-                          <table border="0" cellPadding="10" cellSpacing="0">
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <h3>Total: ₱{total}</h3>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
                       <tr>
                         <td>
                           <table border="0" cellPadding="10" cellSpacing="0">

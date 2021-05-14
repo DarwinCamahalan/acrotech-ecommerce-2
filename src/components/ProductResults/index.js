@@ -54,6 +54,7 @@ const ProductResults = ({}) => {
     <div className="max">
       <div className="hero">
         <img src={worker} alt={worker} />
+        <h1>Acrotech Products</h1>
         <div className="input">
           <input
             type="text"

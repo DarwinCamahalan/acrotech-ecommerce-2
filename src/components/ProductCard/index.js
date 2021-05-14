@@ -6,8 +6,8 @@ import {
   setProduct,
 } from './../../redux/Products/products.actions'
 import { addProduct } from './../../redux/Cart/cart.actions'
-import Button from './../forms/button'
 import './styles.scss'
+import worker from '../../assets/slide-content/1.jpg'
 
 const mapState = (state) => ({
   product: state.productsData.product,
@@ -40,37 +40,41 @@ const ProductCard = ({}) => {
   }
 
   return (
-    <div className="productCard">
-      <div className="hero">
-        <img src={productThumbnail} />
+    <>
+      <div className="img-product">
+        <img src={worker} alt={worker} />
       </div>
-      <div className="productDetails">
-        <ul>
-          <li>
-            <h1>{productName}</h1>
-          </li>
-          <li>
-            <span>₱{productPrice}</span>
-          </li>
-          <li>
-            <div className="addToCart">
-              <Button
-                {...configAddToCartBtn}
-                onClick={() => handleAddToCart(product)}
-              >
-                Add to cart
-              </Button>
-            </div>
-          </li>
-          <li>
-            <span
-              className="desc"
-              dangerouslySetInnerHTML={{ __html: productDesc }}
-            />
-          </li>
-        </ul>
+      <div className="max">
+        <div className="productCard">
+          <div className="product-img">
+            <img src={productThumbnail} />
+          </div>
+          <div className="productDetails">
+            <ul>
+              <li>
+                <h1>{productName}</h1>
+              </li>
+              {/* <li>
+              <span>₱{productPrice}</span>
+            </li> */}
+              <li>
+                <div className="addToCart">
+                  <button
+                    {...configAddToCartBtn}
+                    onClick={() => handleAddToCart(product)}
+                  >
+                    Add to Order
+                  </button>
+                </div>
+              </li>
+              <li className="desc">
+                <span dangerouslySetInnerHTML={{ __html: productDesc }} />
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 
