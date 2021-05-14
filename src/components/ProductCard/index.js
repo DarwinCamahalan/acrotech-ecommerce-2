@@ -8,6 +8,7 @@ import {
 import { addProduct } from './../../redux/Cart/cart.actions'
 import './styles.scss'
 import worker from '../../assets/slide-content/1.jpg'
+import MoreProducts from './MoreProducts/index'
 
 const mapState = (state) => ({
   product: state.productsData.product,
@@ -72,6 +73,10 @@ const ProductCard = ({}) => {
               </li>
             </ul>
           </div>
+        </div>
+        <div className="more">
+          <h1>More Products</h1>
+          <MoreProducts />
         </div>
       </div>
     </>

@@ -106,7 +106,7 @@ const ThirdSection = ({}) => {
               infinite={true}
               autoPlay={true}
               swipeable={true}
-              autoPlaySpeed={2000}
+              autoPlaySpeed={3000}
               removeArrowOnDeviceType={['all', 'medium', 'mobile', 'small']}
             >
               {data.map((product, key) => {

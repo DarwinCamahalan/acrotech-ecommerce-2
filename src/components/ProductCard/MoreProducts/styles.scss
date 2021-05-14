@@ -1,0 +1,40 @@
+.more-products {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(auto, max-content);
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+  .card {
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.23);
+    -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.23);
+    background-color: white;
+    width: 100%;
+    height: auto;
+    padding: 0.8rem;
+    color: black;
+    border-radius: 0.5rem;
+    &:hover {
+      transform: scale(1.01);
+    }
+    img {
+      width: 100%;
+      height: 12rem;
+      object-fit: contain;
+    }
+    p {
+      font-size: 1.4rem;
+      text-transform: capitalize;
+      line-height: 1.3;
+    }
+  }
+}
+
+@media (max-width: 1065px) {
+  .more-products {
+    margin: 0 1rem 10rem 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
