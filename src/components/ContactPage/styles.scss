@@ -61,12 +61,18 @@
     input {
       margin: 0.5rem 0;
       padding: 0.8rem 0.5rem;
+      &::placeholder {
+        font-weight: lighter;
+      }
     }
     textarea {
       margin: 0.5rem 0;
       height: 30rem;
       padding: 0.5rem;
       resize: none;
+      &::placeholder {
+        font-weight: lighter;
+      }
     }
     .contact-btn {
       cursor: pointer;
@@ -88,6 +94,16 @@
   .contact-page {
     .form {
       width: 98%;
+      input {
+        &::placeholder {
+          font-weight: unset;
+        }
+      }
+      textarea {
+        &::placeholder {
+          font-weight: unset;
+        }
+      }
       .contact-btn {
         padding: 1rem 0.3rem;
       }
