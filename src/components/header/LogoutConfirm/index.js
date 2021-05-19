@@ -24,6 +24,7 @@ const LogoutConfirm = ({ confirm, setConfirm }) => {
         className="overlay"
       ></div>
       <div className="confirmation">
+        <i class="fas fa-exclamation"></i>
         <p>Log out</p>
         <h6>You will be returned to the home page.</h6>
         <hr />
@@ -40,7 +41,7 @@ const LogoutConfirm = ({ confirm, setConfirm }) => {
           <a
             onClick={signOut}
             style={{
-              borderLeft: '1px solid #525252',
+              borderLeft: '1px solid orangered',
             }}
           >
             Log out

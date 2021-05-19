@@ -4,6 +4,8 @@ import { getUserOrderHistory } from './../../redux/Orders/orders.actions'
 import OrderHistory from './../../components/OrderHistory'
 import './styles.scss'
 
+import bg from '../../assets/slide-content/1.jpg'
+
 const mapState = ({ user, ordersData }) => ({
   currentUser: user.currentUser,
   orderHistory: ordersData.orderHistory.data,
@@ -19,6 +21,9 @@ const Dashboard = (props) => {
 
   return (
     <div>
+      <div className="dashboard-img ">
+        <img src={bg} alt={bg} />
+      </div>
       <h1>My Account</h1>
 
       <OrderHistory orders={orderHistory} />

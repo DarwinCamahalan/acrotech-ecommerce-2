@@ -10,6 +10,7 @@
     "aos": "^2.3.4",
     "axios": "^0.21.1",
     "ckeditor4-react": "^1.4.0",
+    "emailjs-com": "^2.6.4",
     "firebase": "^8.2.6",
     "framer-motion": "^3.3.0",
     "moment": "^2.29.1",
