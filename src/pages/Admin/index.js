@@ -81,9 +81,7 @@ const Admin = (props) => {
 
   return (
     <>
-      <div className="admin-img ">
-        <img src={bg} alt={bg} />
-      </div>
+      <div className="header-black-bg-admin"></div>
       <div className="admin">
         <div className="adminActions">
           <ul>

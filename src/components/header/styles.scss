@@ -109,6 +109,13 @@
           span {
             margin: 0 1rem;
           }
+          .tel {
+            margin-left: 1rem;
+            font-size: 1.8rem;
+            &:hover {
+              border-bottom: none;
+            }
+          }
         }
       }
     }

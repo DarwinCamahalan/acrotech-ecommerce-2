@@ -33,7 +33,7 @@ const ProductCard = ({}) => {
   const handleAddToCart = (product) => {
     if (!product) return
     dispatch(addProduct(product))
-    history.push('/cart')
+    history.push('/order')
   }
 
   const configAddToCartBtn = {
@@ -42,9 +42,7 @@ const ProductCard = ({}) => {
 
   return (
     <>
-      <div className="img-product">
-        <img src={worker} alt={worker} />
-      </div>
+      <div className="header-black-bg"></div>
       <div className="max">
         <div className="productCard">
           <div className="product-img">

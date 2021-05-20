@@ -1,15 +1,89 @@
 import './styles.scss'
-import bg from '../../assets/slide-content/1.jpg'
+import ClientImage from '../../assets/client1.jpg'
 const AboutPage = () => {
   return (
     <>
-      <div className="about-img">
-        <img src={bg} alt={bg} />
-      </div>
-      {/* DONT TOUCH ME FOR HEADER PURPOSES ^ */}
+      <div className="header-bg"></div>
+      <div className="testimonials">
+        {/* <div className="content">
+         
+          <div className="title">
+            <h1>About Us</h1>
+            <hr />
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea,
+              aliquam.
+            </p>
+          </div>
 
-      {/* START HERE */}
-      <div className="about-page">Being Built 🚧</div>
+          <div className="container">
+         
+            <div className="card">
+           
+              <div className="client-image">
+                <img src={ClientImage} alt="Client Photo" />
+              </div>
+
+        
+              <div className="info">
+                <q>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Suscipit libero mollitia nam saepe voluptatum modi quasi iste.
+                  Sunt cupiditate tenetur non ipsa, ducimus eum aperiam atque
+                  libero, praesentium sequi esse.
+                </q>
+                <h5>
+                  Jericho Cruz <span>Co-Founder at Acro-Tech Inc.</span>
+                </h5>
+              </div>
+
+           
+              <div className="card">
+                <div className="client-image">
+                  <img src={ClientImage} alt="Client Photo" />
+                </div>
+                <div className="info">
+                  <h5>Jericho Cruz</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Suscipit libero mollitia nam saepe voluptatum modi quasi
+                    iste. Sunt cupiditate tenetur non ipsa, ducimus eum aperiam
+                    atque libero, praesentium sequi esse.
+                  </p>
+                </div>
+              </div>
+              <div className="info">
+                <q>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Suscipit libero mollitia nam saepe voluptatum modi quasi iste.
+                  Sunt cupiditate tenetur non ipsa, ducimus eum aperiam atque
+                  libero, praesentium sequi esse.
+                </q>
+                <h5>
+                  Jericho Cruz <span>Co-Founder at Acro-Tech Inc.</span>
+                </h5>
+              </div>
+            </div>
+
+            <div className="card">
+              <div className="client-image">
+                <img src={ClientImage} alt="Client Photo" />
+              </div>
+              <div className="info">
+                <q>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Suscipit libero mollitia nam saepe voluptatum modi quasi iste.
+                  Sunt cupiditate tenetur non ipsa, ducimus eum aperiam atque
+                  libero, praesentium sequi esse.
+                </q>
+                <h5>
+                  Jericho Cruz <span>Co-Founder at Acro-Tech Inc.</span>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div> */}
+      </div>
     </>
   )
 }

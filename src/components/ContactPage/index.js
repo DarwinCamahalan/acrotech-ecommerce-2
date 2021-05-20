@@ -1,7 +1,7 @@
 import './styles.scss'
 import emailjs from 'emailjs-com'
 
-import bg from '../../assets/slide-content/1.jpg'
+import sideImage from '../../assets/worker3.jpeg'
 const ContactPage = () => {
   const sendEmail = (e) => {
     e.preventDefault()
@@ -34,24 +34,23 @@ const ContactPage = () => {
           Successfully Sent <i class="fas fa-check-circle"></i>
         </h1>
       </div>
-      <div className="contact-img">
-        <img src={bg} alt={bg} />
-      </div>
+
+      <div className="header-bg"></div>
       <div className="contact-page">
         <div className="form">
-          <h1>Contact Us</h1>
           <form onSubmit={sendEmail}>
-            <input type="text" placeholder="Full Name" name="from_name" />
-            <input type="email" placeholder="Email" name="to_name" />
-            <textarea
-              name="message"
-              id=""
-              cols="40"
-              rows="10"
-              placeholder="Your Message"
-            ></textarea>
-            <input type="submit" value="Send Enquiry" className="contact-btn" />
+            <h1>Contact Us</h1>
+            <label>Name</label>
+            <input type="text" name="from_name" required />
+            <label>Email</label>
+            <input type="email" name="to_name" required />
+            <label>Message</label>
+            <textarea name="message" id="" required></textarea>
+            <input type="submit" value="Send Message" className="contact-btn" />
           </form>
+        </div>
+        <div className="img">
+          <img src={sideImage} alt={sideImage} />
         </div>
       </div>
     </>

@@ -21,9 +21,7 @@ const Dashboard = (props) => {
 
   return (
     <div>
-      <div className="dashboard-img ">
-        <img src={bg} alt={bg} />
-      </div>
+      <div className="header-black-bg-dashboard"></div>
       <h1>My Account</h1>
 
       <OrderHistory orders={orderHistory} />

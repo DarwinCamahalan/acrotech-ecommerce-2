@@ -1,0 +1,33 @@
+.cartItem {
+  img {
+    width: 20rem;
+    height: 15rem;
+    object-fit: contain;
+  }
+  .name {
+    text-transform: capitalize;
+  }
+  i {
+    border: 3px solid orangered;
+    color: orangered;
+    padding: 0.3rem;
+    &:hover {
+      background-color: orangered;
+      color: white;
+    }
+  }
+  .quantity {
+    margin: 0 2rem;
+  }
+  .trash {
+    i {
+      border: none;
+      cursor: pointer;
+      font-size: 2rem;
+      &:hover {
+        background-color: transparent;
+        color: orangered;
+      }
+    }
+  }
+}

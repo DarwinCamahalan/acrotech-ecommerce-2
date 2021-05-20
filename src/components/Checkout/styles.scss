@@ -1,13 +1,10 @@
 .checkout {
   margin: 2rem auto;
-
+  min-height: 80vh;
+  max-height: 100%;
   h1 {
     display: block;
     width: 100%;
-  }
-
-  h1, p {
-    text-align: center;
   }
 
   .checkoutHeader {
@@ -15,7 +12,7 @@
   }
 
   .cart {
-    max-width: 100.0rem;
+    max-width: 100rem;
     margin: 0 auto;
 
     table {
@@ -49,29 +46,26 @@
   .cartBtn {
     cursor: pointer;
   }
-
 }
 
+.no-order {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  img {
+    width: 50rem;
+  }
+}
 @media only screen and (max-width: 980px) {
-
   .checkoutHeader {
     display: none;
   }
-
-  .cartItem {
-    border: 1px solid black;
-  }
-
   .checkout .cart td {
     display: block;
     width: 100%;
-  }
-
-  .checkout .cartBtn.remove {
-    display: block;
-    width: 100%;
-    padding: 1.0rem;
-    background-color: black;
-    color: white;
   }
 }

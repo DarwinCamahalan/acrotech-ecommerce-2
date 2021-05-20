@@ -6,6 +6,7 @@ import {
   reduceCartItem,
 } from './../../../redux/Cart/cart.actions'
 
+import './styles.scss'
 const Item = (product) => {
   const dispatch = useDispatch()
   const { productName, productThumbnail, productPrice, quantity, documentID } =
@@ -34,23 +35,23 @@ const Item = (product) => {
           <td>
             <img src={productThumbnail} alt={productName} />
           </td>
-          <td>{productName}</td>
+          <td className="name">{productName}</td>
           <td>
             <span className="cartBtn" onClick={() => handleReduceItem(product)}>
-              {`- `}
+              <i class="fas fa-minus"></i>
             </span>
-            <span>{quantity}</span>
+            <span className="quantity">{quantity}</span>
             <span className="cartBtn" onClick={() => handleAddProduct(product)}>
-              {` +`}
+              <i class="fas fa-plus"></i>
             </span>
           </td>
 
-          <td align="center">
+          <td>
             <span
-              className="cartBtn remove"
               onClick={() => handleRemoveCartItem(documentID)}
+              className="trash"
             >
-              X
+              <i class="fas fa-trash"></i>
             </span>
           </td>
         </tr>

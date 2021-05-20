@@ -111,7 +111,10 @@ const Header = (props) => {
               <br />
             </div>
             <div className="number">
-              <i class="fas fa-phone-alt"> </i> <span>123-456-789</span>
+              <i class="fas fa-phone-alt"> </i>
+              <a href="tel:+123-456-789" className="tel">
+                123-456-789
+              </a>
             </div>
           </div>
         </div>

@@ -1,19 +1,11 @@
-.admin-img {
+.header-black-bg-admin {
   width: 100%;
   height: 9rem;
-  overflow: hidden;
-  background-color: black;
+  background-color: #111;
   position: absolute;
-  top: -11.5rem;
+  top: -11.3rem;
   left: 0;
   right: 0;
-  img {
-    opacity: 0.5;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  z-index: -1;
 }
 
 .admin {

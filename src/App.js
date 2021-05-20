@@ -85,7 +85,7 @@ const App = (props) => {
           )}
         />
         <Route
-          path="/cart"
+          path="/order"
           render={() => (
             <MainLayout>
               <Cart />
