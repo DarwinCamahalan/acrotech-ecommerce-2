@@ -29,6 +29,7 @@ const Checkout = ({}) => {
         <div className="cart">
           {cartItems.length > 0 ? (
             <table border="0" cellPadding="0" cellSpacing="0">
+              <h1>My Orders</h1>
               <tbody>
                 <tr>
                   <td>
@@ -40,7 +41,7 @@ const Checkout = ({}) => {
                     >
                       <tbody>
                         <tr>
-                          <th>Product Iamge</th>
+                          <th>Product Image</th>
                           <th>Product Name</th>
                           <th>Quantity</th>
                           <th>Remove</th>

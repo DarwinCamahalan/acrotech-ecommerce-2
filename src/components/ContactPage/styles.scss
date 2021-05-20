@@ -53,12 +53,13 @@
     width: 80rem;
     height: auto;
     margin-top: 3rem;
+
     form {
       display: flex;
       flex-direction: column;
 
       width: 100%;
-      padding: 5rem;
+      padding: 3rem 5rem;
       color: white;
       h1 {
         color: white;
@@ -68,6 +69,7 @@
         margin: 1rem 0;
         font-size: 2rem;
         font-weight: lighter;
+        font-family: 'Roboto', sans-serif;
       }
       input,
       textarea,

@@ -4,7 +4,11 @@
   max-height: 100%;
   h1 {
     display: block;
-    width: 100%;
+    width: 16rem;
+    text-align: center;
+    margin: 3rem auto;
+    border-bottom: 0.5rem solid orangered;
+    padding-bottom: 1rem;
   }
 
   .checkoutHeader {
