@@ -14,13 +14,13 @@ const Footer = (props) => {
               esse quia magnam?
             </p>
             <div className="social-media">
-              <a href="facebook.com/acrotech" target="_blank">
+              <a href="www.facebook.com/acrotech" target="_blank">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="facebook.com/acrotech" target="_blank">
+              <a href="www.linkedin.com/acrotech" target="_blank">
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="facebook.com/acrotech" target="_blank">
+              <a href="www.instagram.com/acrotech" target="_blank">
                 <i class="fab fa-instagram"></i>
               </a>
             </div>

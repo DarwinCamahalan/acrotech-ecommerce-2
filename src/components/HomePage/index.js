@@ -33,8 +33,8 @@ const HomePage = () => {
             removeArrowOnDeviceType={['all']}
             className="slider"
           >
-            <img src={image2} alt={image2} />
             <img src={image1} alt={image1} />
+            <img src={image2} alt={image2} />
             <img src={image3} alt={image3} />
           </Carousel>
           <div className="content">
