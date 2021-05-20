@@ -4,7 +4,7 @@ const AboutPage = () => {
   return (
     <>
       <div className="header-bg"></div>
-      <div className="testimonials">
+      <div className="about-page">
         {/* <div className="content">
          
           <div className="title">

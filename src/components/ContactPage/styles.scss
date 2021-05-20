@@ -125,10 +125,20 @@
     .form {
       width: 100%;
       margin-top: 5rem;
+
       form {
         padding: 2rem;
+        h1 {
+          font-size: 2.5rem;
+        }
+        label,
+        input,
+        textarea {
+          font-size: 1.5rem;
+        }
         .contact-btn {
           width: 100%;
+          padding: 1.5rem 0;
         }
       }
     }

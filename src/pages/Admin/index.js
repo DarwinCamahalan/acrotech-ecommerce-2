@@ -174,12 +174,12 @@ const Admin = (props) => {
                           } = product
 
                           return (
-                            <tr key={index}>
+                            <tr key={index} className="product-info">
                               <td>
                                 <img className="thumb" src={productThumbnail} />
                               </td>
-                              <td>{productName}</td>
-                              <td>₱{productPrice}</td>
+                              <td className="prod-name">{productName}</td>
+                              {/* <td>₱{productPrice}</td> */}
                               <td>
                                 <Button
                                   onClick={() =>
@@ -205,7 +205,9 @@ const Admin = (props) => {
                     <tbody>
                       <tr>
                         <td>
-                          {!isLastPage && <LoadMore {...configLoadMore} />}
+                          {!isLastPage && (
+                            <LoadMore {...configLoadMore} className="seemore" />
+                          )}
                         </td>
                       </tr>
                     </tbody>

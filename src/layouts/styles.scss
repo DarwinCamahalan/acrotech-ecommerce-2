@@ -10,11 +10,40 @@
 .adminLayout {
   margin-top: 11.3rem;
 }
+.controlPanel-admin {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25rem;
+    height: 100%;
+    border-right: 1px solid #d3d3d3;
+    margin-top: -2.5rem;
+  }
 
-@media (max-width: 900px) {
+  .content {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 1065px) {
   .dashboardLayout {
     .content {
       margin-left: 0;
+      height: 100vh;
+    }
+  }
+  .controlPanel-admin {
+    padding: 0 10px;
+    height: auto;
+    .sidebar {
+      position: relative;
+      width: 100%;
+      border: none;
+      margin-bottom: 2.5rem;
     }
   }
 }
