@@ -33,12 +33,18 @@ export default function MoreProducts() {
       {data.map((product, key) => {
         const { productThumbnail, productName, documentID } = product
         return (
-          <a href={`/product/${documentID}`} key={key}>
+          <Link
+            to={`/product/${documentID}`}
+            key={key}
+            onClick={() => {
+              window.location.reload()
+            }}
+          >
             <div className="card">
               <img src={productThumbnail} alt="" />
               <p>{productName}</p>
             </div>
-          </a>
+          </Link>
         )
       })}
     </div>
