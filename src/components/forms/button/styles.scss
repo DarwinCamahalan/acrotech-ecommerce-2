@@ -4,14 +4,15 @@
   font-size: 1.8rem;
   line-height: 1;
   font-weight: 300;
-  color: black;
-  background: rgb(255, 255, 255);
+  color: white;
+  background: orangered;
   padding: 1rem 10px;
   margin: 0 auto;
-  border: rgb(177, 177, 177) 1px solid;
+  border: 0;
   border-radius: 0;
   cursor: pointer;
+  outline: none;
   &:hover {
-    background-color: rgb(243, 243, 243);
+    background-color: #1a1a1a;
   }
 }

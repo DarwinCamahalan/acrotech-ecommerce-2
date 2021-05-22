@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import './styles.scss'
 import worker from '../../../assets/worker.png'
-
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -24,13 +23,14 @@ const SecondSection = () => {
   }, [])
   const dummyTxt =
     'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum praesentium id, eius placeat beatae tempora. A tenetur laborum delectus! Cupiditate deleniti, tempore laboriosam, dolor rem adipisci' +
+    'repudiandae consectetur labore vitae quod quidem voluptates ipsa officiis at dolores? Natus, aspernatur, ad nam quia hic voluptatum cumque aliquam corrupti atque incidunt repellendus. Lorem ipsum ' +
     'repudiandae consectetur labore vitae quod quidem voluptates ipsa officiis at dolores? Natus, aspernatur, ad nam quia hic voluptatum cumque aliquam corrupti atque incidunt repellendus. Lorem ipsum '
 
   const Cards = [
     {
       title: 'About Us',
       info: `${dummyTxt}`,
-      class: 'blue',
+      class: 'black',
       to: '/about',
     },
     {
@@ -42,7 +42,7 @@ const SecondSection = () => {
     {
       title: 'Contact Us',
       info: `${dummyTxt}`,
-      class: 'blue',
+      class: 'black',
       to: '/contact',
     },
     {
