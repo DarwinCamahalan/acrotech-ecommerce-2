@@ -35,7 +35,14 @@ const Admin = (props) => {
     dispatch(fetchProductsStart())
   }, [])
 
-  const toggleModal = () => setHideModal(!hideModal)
+  const toggleModal = () => {
+    setHideModal(!hideModal)
+    {
+      hideModal
+        ? (document.body.style.overflow = 'hidden')
+        : (document.body.style.overflow = 'unset')
+    }
+  }
 
   const configModal = {
     hideModal,
@@ -53,7 +60,7 @@ const Admin = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
+    document.body.style.overflow = 'unset'
     dispatch(
       addProductStart({
         productCategory,
@@ -95,7 +102,9 @@ const Admin = (props) => {
           <div className="addNewProductForm">
             <form onSubmit={handleSubmit}>
               <h2>Add new product</h2>
-
+              <span className="close" onClick={() => toggleModal()}>
+                <i class="fas fa-times"></i>
+              </span>
               <FormSelect
                 label="Category"
                 options={[
@@ -110,37 +119,34 @@ const Admin = (props) => {
                 ]}
                 handleChange={(e) => setProductCategory(e.target.value)}
               />
-
               <FormInput
                 label="Name"
                 type="text"
+                required
                 value={productName}
                 handleChange={(e) => setProductName(e.target.value)}
               />
-
               <FormInput
                 label="Main image URL"
                 type="url"
+                required
                 value={productThumbnail}
                 handleChange={(e) => setProductThumbnail(e.target.value)}
               />
-
               <FormInput
                 label="Price"
                 type="number"
                 min="0.00"
+                required
                 max="10000.00"
                 step="0.01"
                 value={productPrice}
                 handleChange={(e) => setProductPrice(e.target.value)}
               />
-
               <CKEditor
                 onChange={(evt) => setProductDesc(evt.editor.getData())}
               />
-
               <br />
-
               <Button type="submit">Add product</Button>
             </form>
           </div>
@@ -182,9 +188,20 @@ const Admin = (props) => {
                               {/* <td>₱{productPrice}</td> */}
                               <td>
                                 <Button
+                                  // onClick={() =>
+                                  //   dispatch(deleteProductStart(documentID))
+                                  // }
+                                  className="edit"
+                                >
+                                  Edit
+                                </Button>
+                              </td>
+                              <td>
+                                <Button
                                   onClick={() =>
                                     dispatch(deleteProductStart(documentID))
                                   }
+                                  className="delete"
                                 >
                                   Delete
                                 </Button>
@@ -206,7 +223,9 @@ const Admin = (props) => {
                       <tr>
                         <td>
                           {!isLastPage && (
-                            <LoadMore {...configLoadMore} className="seemore" />
+                            <div className="seemore">
+                              <LoadMore {...configLoadMore} />
+                            </div>
                           )}
                         </td>
                       </tr>

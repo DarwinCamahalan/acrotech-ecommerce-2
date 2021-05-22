@@ -5,6 +5,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
+  z-index: 101;
 }
 
 .modalWrap {
@@ -14,9 +15,10 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
+  z-index: 101;
 
   .modal {
-    z-index: 10;
+    z-index: 101;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -24,13 +26,22 @@
     -moz-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background-color: white;
-    width: 95%;
+    width: 100%;
     padding: 2rem;
-    max-width: 100rem;
+    max-width: 70rem;
     height: auto;
     min-height: 40rem;
     pointer-events: all;
-    max-height: 95vh;
+    max-height: 100vh;
     overflow: auto;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    &::-webkit-scrollbar-track {
+      width: 0;
+    }
+    &::-webkit-scrollbar-thumb {
+      width: 0;
+    }
   }
 }

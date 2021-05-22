@@ -55,7 +55,11 @@ export default function MoreProducts() {
           </a>
         )
       })}
-      {!isLastPage && <LoadMore {...configLoadMore} className="btn" />}
+      {!isLastPage && (
+        <div className="btn-more-products">
+          <LoadMore {...configLoadMore} />
+        </div>
+      )}
     </div>
   )
 }

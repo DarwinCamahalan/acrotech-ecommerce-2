@@ -24,7 +24,7 @@ const Checkout = ({}) => {
 
   return (
     <>
-      <div className="header-bg"></div>
+      <div className="header-black-bg"></div>
       <div className="checkout">
         <div className="cart">
           {cartItems.length > 0 ? (

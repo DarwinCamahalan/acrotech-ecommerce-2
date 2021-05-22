@@ -35,7 +35,7 @@ const ContactPage = () => {
         </h1>
       </div>
 
-      <div className="header-bg"></div>
+      <div className="header-bg-contact"></div>
       <div className="contact-page">
         <div className="form">
           <form onSubmit={sendEmail}>

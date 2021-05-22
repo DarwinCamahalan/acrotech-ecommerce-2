@@ -3,7 +3,7 @@ import ClientImage from '../../assets/client1.jpg'
 const AboutPage = () => {
   return (
     <>
-      <div className="header-bg"></div>
+      <div className="header-bg-about"></div>
       <div className="about-page">
         {/* <div className="content">
          
