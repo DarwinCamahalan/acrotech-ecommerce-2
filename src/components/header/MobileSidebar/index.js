@@ -73,9 +73,10 @@ const MobileSidebar = ({ openMenu, setOpenMenu }) => {
                 <Link to="/login" onClick={openSidebar}>
                   Login
                 </Link>
-                <Link className="mobile-number">
-                  <i class="fas fa-phone-alt"> </i> <span>123-456-789</span>
-                </Link>
+
+                <a href="tel:+123-456-789" className="tel">
+                  <i class="fas fa-phone-alt"> </i> 123-456-789
+                </a>
               </>
             )}
           </div>

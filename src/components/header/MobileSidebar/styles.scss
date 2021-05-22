@@ -60,14 +60,15 @@
         background-color: orangered;
       }
     }
-    .mobile-number {
+    .tel {
       border-top: rgba(255, 255, 255, 0.1) 2px solid;
-      cursor: unset;
-      &:hover {
-        background-color: transparent;
-      }
+
+      font-size: 1.8rem;
       i {
         margin: 0 1rem;
+      }
+      &:hover {
+        background-color: transparent;
       }
     }
   }
