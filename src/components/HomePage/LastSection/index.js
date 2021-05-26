@@ -5,13 +5,10 @@ import 'aos/dist/aos.css'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
-// import client1 from '../../../assets/client1.jpg'
-// import client2 from '../../../assets/client2.jpg'
-// import client3 from '../../../assets/client3.jpg'
+import client1 from '../../../assets/client1.jpg'
+import client2 from '../../../assets/client2.jpg'
+import client3 from '../../../assets/client3.jpg'
 
-import client1 from '../../../assets/temp images/1.jpg'
-import client2 from '../../../assets/temp images/2.jpg'
-import client3 from '../../../assets/temp images/3.jpg'
 const LastSection = ({}) => {
   useEffect(() => {
     AOS.init({
@@ -33,54 +30,33 @@ const LastSection = ({}) => {
   const dummyTxt =
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga molestias veniam porro modi quod laborum ducimus facere reprehenderit obcaecati placeat.'
 
-  const info =
-    'BS TCM 3K2 University of Science and Technology of Southern Philippines'
   const Cards = [
-    // {
-    //   img: `${client1}`,
-    //   name: 'Jericho Cruz',
-    //   description: `${dummyTxt}`,
-    // },
-    // {
-    //   img: `${client2}`,
-    //   name: 'Jericho Cruz',
-    //   description: `${dummyTxt}`,
-    // },
-    // {
-    //   img: `${client3}`,
-    //   name: 'Jericho Cruz',
-    //   description: `${dummyTxt}`,
-    // },
-    // {
-    //   img: `${client2}`,
-    //   name: 'Jericho Cruz',
-    //   description: `${dummyTxt}`,
-    // },
+    {
+      img: `${client1}`,
+      name: 'Jericho Cruz',
+      description: `${dummyTxt}`,
+    },
     {
       img: `${client2}`,
-      name: 'Justine Joy Acle',
-      position: 'Head Marketing',
-      description: `${info}`,
+      name: 'Jericho Cruz',
+      description: `${dummyTxt}`,
     },
     {
       img: `${client3}`,
-      name: 'Mary Jane Calaganda',
-      position: 'HR Manager',
-      description: `${info}`,
+      name: 'Jericho Cruz',
+      description: `${dummyTxt}`,
     },
     {
-      img: `${client1}`,
-      name: 'Princess Ranada',
-      position: 'Project Manager',
-      description: `${info}`,
+      img: `${client2}`,
+      name: 'Jericho Cruz',
+      description: `${dummyTxt}`,
     },
   ]
   return (
     <div className="max">
       <section className="last-section" data-aos="fade-up">
         <div className="title">
-          {/* <h1>Testimonials</h1> */}
-          <h1>Group Members</h1>
+          <h1>Testimonials</h1>
         </div>
 
         <Carousel
@@ -98,7 +74,7 @@ const LastSection = ({}) => {
                   <img src={Cards.img} alt={Cards.img} />
                 </div>
                 <h1>{Cards.name}</h1>
-                <h5>{Cards.position}</h5>
+
                 <p>{Cards.description}</p>
               </div>
             )
