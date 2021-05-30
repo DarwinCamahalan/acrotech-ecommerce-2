@@ -1,5 +1,5 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import {
   selectCartItems,
@@ -9,7 +9,6 @@ import { createStructuredSelector } from 'reselect'
 import './styles.scss'
 import Button from './../forms/button'
 import Item from './Item'
-
 import empty from '../../assets/empty.gif'
 const mapState = createStructuredSelector({
   cartItems: selectCartItems,
@@ -19,12 +18,12 @@ const mapState = createStructuredSelector({
 const Checkout = ({}) => {
   const history = useHistory()
   const { cartItems, total } = useSelector(mapState)
-
   const errMsg = 'No Orders Available'
 
   return (
     <>
       <div className="header-black-bg"></div>
+
       <div className="checkout">
         <div className="cart">
           {cartItems.length > 0 ? (
@@ -79,6 +78,11 @@ const Checkout = ({}) => {
                                   <td>
                                     <Button onClick={() => history.goBack()}>
                                       Continue Ordering
+                                    </Button>
+                                  </td>
+                                  <td>
+                                    <Button>
+                                      <Link to="/send-order">Place Order</Link>
                                     </Button>
                                   </td>
                                 </tr>

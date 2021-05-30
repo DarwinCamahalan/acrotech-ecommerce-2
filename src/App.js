@@ -27,6 +27,7 @@ import Products from './pages/Products/index'
 import ProductDetails from './pages/ProductDetails/index'
 import ContactPage from './components/ContactPage'
 import AboutPage from './components/AboutPage'
+import { SendOrder } from './components/Checkout/SendOrder'
 
 const App = (props) => {
   const dispatch = useDispatch()
@@ -89,6 +90,14 @@ const App = (props) => {
           render={() => (
             <MainLayout>
               <Cart />
+            </MainLayout>
+          )}
+        />
+        <Route
+          path="/send-order"
+          render={() => (
+            <MainLayout>
+              <SendOrder />
             </MainLayout>
           )}
         />

@@ -1,0 +1,78 @@
+.order-page {
+  margin-top: 9rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0;
+  .labels {
+    display: flex;
+    justify-content: space-between;
+    span {
+      font-weight: bolder;
+      font-size: 1.9rem;
+      margin: 2rem 0;
+    }
+  }
+  form {
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.23);
+    -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.23);
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 70rem;
+    padding: 2rem 3rem;
+    h1 {
+      font-weight: bold;
+      margin: 1.5rem 0;
+    }
+    input,
+    label {
+      margin: 0.9rem 0;
+      outline: none;
+    }
+    input {
+      padding: 1rem 0.5rem;
+      border-radius: 0;
+      font-size: 1.9rem;
+      border: 1px solid black;
+    }
+    .display {
+      text-transform: capitalize;
+      display: flex;
+      justify-content: space-between;
+      span {
+        display: inline;
+        text-align: left;
+        margin: 1rem 0;
+      }
+    }
+    .hide {
+      display: none;
+    }
+    .number::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    textarea {
+      border: none;
+      outline: none;
+      text-transform: capitalize;
+      width: 100%;
+
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .send-btn {
+      background-color: orangered;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 2rem;
+      &:hover {
+        background-color: #1a1a1a;
+      }
+    }
+  }
+}
