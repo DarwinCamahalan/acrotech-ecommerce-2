@@ -49,7 +49,12 @@ const ContactPage = () => {
             <label>Name</label>
             <input type="text" name="from_name" required />
             <label>Email</label>
-            <input type="email" name="to_name" required />
+            <input
+              type="email"
+              name="to_name"
+              className="contact-email"
+              required
+            />
             <label>Message</label>
             <textarea name="message" id="" required></textarea>
             <input type="submit" value="Send Message" className="contact-btn" />

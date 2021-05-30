@@ -78,6 +78,9 @@
       width: 100%;
       padding: 3rem 5rem;
       color: white;
+      .contact-email {
+        text-transform: unset;
+      }
       h1 {
         color: white;
         margin-bottom: 3rem;
