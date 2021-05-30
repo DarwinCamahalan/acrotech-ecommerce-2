@@ -96,9 +96,11 @@ const App = (props) => {
         <Route
           path="/send-order"
           render={() => (
-            <MainLayout>
-              <SendOrder />
-            </MainLayout>
+            <WithAuth>
+              <MainLayout>
+                <SendOrder />
+              </MainLayout>
+            </WithAuth>
           )}
         />
 

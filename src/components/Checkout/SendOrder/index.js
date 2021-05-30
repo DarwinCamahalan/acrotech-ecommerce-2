@@ -10,6 +10,8 @@ import {
 import { createStructuredSelector } from 'reselect'
 import { useSelector } from 'react-redux'
 
+import { useHistory } from 'react-router-dom'
+
 const mapState = createStructuredSelector({
   total: selectCartTotal,
   itemCount: selectCartItemsCount,
@@ -21,6 +23,7 @@ const useState = (state) => ({
 })
 
 export const SendOrder = () => {
+  const history = useHistory()
   const sendEmail = (e) => {
     e.preventDefault()
     emailjs
@@ -39,13 +42,14 @@ export const SendOrder = () => {
         }
       )
     e.target.reset()
-    // document.querySelector('.prompt').style.display = 'block'
-    // setTimeout(() => {
-    //   document.querySelector('.prompt').style.display = 'none'
-    // }, 5000)
+    document.body.style.overflow = 'hidden'
+    document.querySelector('.prompt-order').style.display = 'block'
+    setTimeout(() => {
+      document.body.style.overflow = 'unset'
+      document.querySelector('.prompt-order').style.display = 'none'
+      history.push('/')
+    }, 3000)
   }
-
-  //  ----
 
   const { total, itemCount, cartItems } = useSelector(mapState)
   const { currentUser } = useSelector(useState)
@@ -55,6 +59,15 @@ export const SendOrder = () => {
   return (
     <>
       <div className="header-black-bg"></div>
+      <div className="prompt-order">
+        <div className="show">
+          <h3>
+            Order Sucessfully Sent <i class="fas fa-check-circle"></i>
+          </h3>
+          <img src="https://i.gifer.com/ZKZg.gif" alt="spinner" />
+          <p>Redirecting to Home Page... </p>
+        </div>
+      </div>
       <div className="order-page">
         <form onSubmit={sendEmail}>
           <h1>Contact Information</h1>
@@ -63,7 +76,7 @@ export const SendOrder = () => {
             type="text"
             name="from_name"
             value={displayName}
-            contentEditable="false"
+            readonly="true"
           />
           <label>Address</label>
           <input type="text" name="address" required />

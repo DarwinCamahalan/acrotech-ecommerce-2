@@ -1,8 +1,9 @@
 import './styles.scss'
 import emailjs from 'emailjs-com'
-
+import { useHistory } from 'react-router-dom'
 import sideImage from '../../assets/worker3.jpeg'
 const ContactPage = () => {
+  const history = useHistory()
   const sendEmail = (e) => {
     e.preventDefault()
     emailjs
@@ -21,10 +22,13 @@ const ContactPage = () => {
         }
       )
     e.target.reset()
+    document.body.style.overflow = 'hidden'
     document.querySelector('.prompt').style.display = 'block'
     setTimeout(() => {
+      document.body.style.overflow = 'unset'
       document.querySelector('.prompt').style.display = 'none'
-    }, 5000)
+      history.push('/')
+    }, 3000)
   }
 
   return (
@@ -33,6 +37,8 @@ const ContactPage = () => {
         <h1>
           Successfully Sent <i class="fas fa-check-circle"></i>
         </h1>
+        <img src="https://i.gifer.com/ZKZg.gif" alt="spinner" />
+        <p>Redirecting to Home Page... </p>
       </div>
 
       <div className="header-bg-contact"></div>
