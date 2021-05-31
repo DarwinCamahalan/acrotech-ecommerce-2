@@ -88,6 +88,11 @@ const Admin = (props) => {
 
   return (
     <>
+      <div className="added-sucess">
+        <p>
+          Product Sucessfully Added <i class="fas fa-check-circle"></i>
+        </p>
+      </div>
       <div className="header-black-bg-admin"></div>
       <div className="admin">
         <div className="adminActions">
@@ -147,7 +152,19 @@ const Admin = (props) => {
                 onChange={(evt) => setProductDesc(evt.editor.getData())}
               />
               <br />
-              <Button type="submit">Add product</Button>
+              <Button
+                type="submit"
+                onClick={() => {
+                  document.querySelector('.added-sucess').style.display =
+                    'block'
+                  setTimeout(() => {
+                    document.querySelector('.added-sucess').style.display =
+                      'none'
+                  }, 3000)
+                }}
+              >
+                Add product
+              </Button>
             </form>
           </div>
         </Modal>
@@ -189,7 +206,7 @@ const Admin = (props) => {
                               <td>
                                 <Button
                                   // onClick={() =>
-                                  //   dispatch(deleteProductStart(documentID))
+                                  //   dispatch(EditProductStart(documentID))
                                   // }
                                   className="edit"
                                 >

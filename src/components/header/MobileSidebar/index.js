@@ -64,7 +64,7 @@ const MobileSidebar = ({ openMenu, setOpenMenu }) => {
                   </Link>
                 )}
 
-                {!isAdmin && <Link to="/dashboard">{displayName}</Link>}
+                {!isAdmin && <Link to="/order">{displayName}</Link>}
                 <Link onClick={showConfirmation}>Logout</Link>
               </>
             )}

@@ -87,8 +87,8 @@ const Header = (props) => {
                             Admin Settings
                           </Link>
                         ) : (
-                          <Link to="/dashboard" className="settings">
-                            My Account     
+                          <Link to="/order" className="settings">
+                            My Orders    
                           </Link>
                         )}
 
