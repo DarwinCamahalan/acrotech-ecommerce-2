@@ -9,9 +9,14 @@ const Footer = (props) => {
           <div className="contacts">
             <img src={acrotechLogo} alt={acrotechLogo} />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-              libero eveniet eaque repudiandae accusamus perspiciatis quas harum
-              esse quia magnam?
+              We are located at Zone 3 – Near Kung Hua School, Kauswagan,
+              Cagayan de Oro City.
+            </p>
+            <p className="located">
+              <i class="fas fa-phone-alt"> </i>
+              <a href="tel:+123-456-789" className="tel">
+                123-456-789
+              </a>
             </p>
             <div className="social-media">
               <a
@@ -47,9 +52,9 @@ const Footer = (props) => {
           <div className="form">
             <h6>Sales & Offers</h6>
             <p>
-              Subcribe to know Sales and offers of acrotech Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Quas, itaque. Lorem ipsum
-              dolor sit, amet consectetur adipisicing elit. Vero, earum!
+              Subcribe to know Sales and offers of acrotech, Also to Know the
+              latest products and design from our high quality engineering
+              design made by top notch engineers.
             </p>
             <div className="input">
               <input type="email" placeholder="Your Email Address" />

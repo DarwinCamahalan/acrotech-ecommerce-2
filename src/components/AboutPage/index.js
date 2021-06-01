@@ -3,7 +3,7 @@ import './styles.scss'
 import client1 from '../../assets/1.png'
 import client2 from '../../assets/2.png'
 import client3 from '../../assets/3.jpg'
-
+import brands from '../../assets/brands.png'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
@@ -69,157 +69,18 @@ const AboutPage = () => {
         </Carousel>
         <h3>About Acrotech</h3>
         <p className="about-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque harum
-          soluta numquam ex laborum ullam placeat maxime. Illo autem praesentium
-          quasi eius vitae minus libero, saepe veniam magni aliquam molestiae
-          asperiores neque consectetur laudantium sit aut harum, id, unde natus
-          sequi sed error eaque? Laudantium temporibus ab, dignissimos ipsam
-          eaque consequuntur architecto fugit quisquam repellendus quam commodi
-          harum labore praesentium hic nam, a enim possimus dolorum illum quo
-          assumenda suscipit error. Voluptates unde distinctio nulla
-          exercitationem deleniti accusantium eum iure mollitia consequatur.
-          Necessitatibus error architecto obcaecati, quibusdam, nemo quod neque
-          ipsam fugit inventore vitae cumque magnam illum laborum qui
-          voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Neque harum soluta numquam ex laborum ullam placeat maxime. Illo autem
-          praesentium quasi eius vitae minus libero, saepe veniam magni aliquam
-          molestiae asperiores neque consectetur laudantium sit aut harum, id,
-          unde natus sequi sed error eaque? Laudantium temporibus ab,
-          dignissimos ipsam eaque consequuntur architecto fugit quisquam
-          repellendus quam commodi harum labore praesentium hic nam, a enim
-          possimus dolorum illum quo assumenda suscipit error. Voluptates unde
-          distinctio nulla exercitationem deleniti accusantium eum iure mollitia
-          consequatur. Necessitatibus error architecto obcaecati, quibusdam,
-          nemo quod neque ipsam fugit inventore vitae cumque magnam illum
-          laborum qui voluptatibus.
+          <strong>Acro-Tech Industrial Sales Corp. (the “corporation”) </strong>
+          is a third-party and a trading company that started on March 16, 2012
+          that provides the latest, good and quality products at affordable
+          price with their strategic alliance with local and international
+          supplier. They are located at Zone 3 – Near Kung Hua School,
+          Kauswagan, Cagayan de Oro City.
+          <h4>PRODUCT LINES:</h4>
         </p>
-
-        <p className="about-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque harum
-          soluta numquam ex laborum ullam placeat maxime. Illo autem praesentium
-          quasi eius vitae minus libero, saepe veniam magni aliquam molestiae
-          asperiores neque consectetur laudantium sit aut harum, id, unde natus
-          sequi sed error eaque? Laudantium temporibus ab, dignissimos ipsam
-          eaque consequuntur architecto fugit quisquam repellendus quam commodi
-          harum labore praesentium hic nam, a enim possimus dolorum illum quo
-          assumenda suscipit error. Voluptates unde distinctio nulla
-          exercitationem deleniti accusantium eum iure mollitia consequatur.
-          Necessitatibus error architecto obcaecati, quibusdam, nemo quod neque
-          ipsam fugit inventore vitae cumque magnam illum laborum qui
-          voluptatibus.
-        </p>
-        <p className="about-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque harum
-          soluta numquam ex laborum ullam placeat maxime. Illo autem praesentium
-          quasi eius vitae minus libero, saepe veniam magni aliquam molestiae
-          asperiores neque consectetur laudantium sit aut harum, id, unde natus
-          sequi sed error eaque? Laudantium temporibus ab, dignissimos ipsam
-          eaque consequuntur architecto fugit quisquam repellendus quam commodi
-          harum labore praesentium hic nam, a enim possimus dolorum illum quo
-          assumenda suscipit error. Voluptates unde distinctio nulla
-          exercitationem deleniti accusantium eum iure mollitia consequatur.
-          Necessitatibus error architecto obcaecati, quibusdam, nemo quod neque
-          ipsam fugit inventore vitae cumque magnam illum laborum qui
-          voluptatibus.
-        </p>
-        <p className="about-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque harum
-          soluta numquam ex laborum ullam placeat maxime. Illo autem praesentium
-          quasi eius vitae minus libero, saepe veniam magni aliquam molestiae
-          asperiores neque consectetur laudantium sit aut harum, id, unde natus
-          sequi sed error eaque? Laudantium temporibus ab, dignissimos ipsam
-          eaque consequuntur architecto fugit quisquam repellendus quam commodi
-          harum labore praesentium hic nam, a enim possimus dolorum illum quo
-          assumenda suscipit error. Voluptates unde distinctio nulla
-          exercitationem deleniti accusantium eum iure mollitia consequatur.
-          Necessitatibus error architecto obcaecati, quibusdam, nemo quod neque
-          ipsam fugit inventore vitae cumque magnam illum laborum qui
-          voluptatibus.
-        </p>
+        <img src={brands} alt={brands} className="brands" />
       </div>
     </>
   )
 }
 
 export default AboutPage
-
-{
-  /* <div className="content">
-         
-          <div className="title">
-            <h1>About Us</h1>
-            <hr />
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea,
-              aliquam.
-            </p>
-          </div>
-
-          <div className="container">
-         
-            <div className="card">
-           
-              <div className="client-image">
-                <img src={ClientImage} alt="Client Photo" />
-              </div>
-
-        
-              <div className="info">
-                <q>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Suscipit libero mollitia nam saepe voluptatum modi quasi iste.
-                  Sunt cupiditate tenetur non ipsa, ducimus eum aperiam atque
-                  libero, praesentium sequi esse.
-                </q>
-                <h5>
-                  Jericho Cruz <span>Co-Founder at Acro-Tech Inc.</span>
-                </h5>
-              </div>
-
-           
-              <div className="card">
-                <div className="client-image">
-                  <img src={ClientImage} alt="Client Photo" />
-                </div>
-                <div className="info">
-                  <h5>Jericho Cruz</h5>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Suscipit libero mollitia nam saepe voluptatum modi quasi
-                    iste. Sunt cupiditate tenetur non ipsa, ducimus eum aperiam
-                    atque libero, praesentium sequi esse.
-                  </p>
-                </div>
-              </div>
-              <div className="info">
-                <q>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Suscipit libero mollitia nam saepe voluptatum modi quasi iste.
-                  Sunt cupiditate tenetur non ipsa, ducimus eum aperiam atque
-                  libero, praesentium sequi esse.
-                </q>
-                <h5>
-                  Jericho Cruz <span>Co-Founder at Acro-Tech Inc.</span>
-                </h5>
-              </div>
-            </div>
-
-            <div className="card">
-              <div className="client-image">
-                <img src={ClientImage} alt="Client Photo" />
-              </div>
-              <div className="info">
-                <q>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Suscipit libero mollitia nam saepe voluptatum modi quasi iste.
-                  Sunt cupiditate tenetur non ipsa, ducimus eum aperiam atque
-                  libero, praesentium sequi esse.
-                </q>
-                <h5>
-                  Jericho Cruz <span>Co-Founder at Acro-Tech Inc.</span>
-                </h5>
-              </div>
-            </div>
-          </div>
-        </div> */
-}
