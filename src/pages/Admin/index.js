@@ -132,13 +132,13 @@ const Admin = (props) => {
                 handleChange={(e) => setProductName(e.target.value)}
               />
               <FormInput
-                label="Main image URL"
+                label="Image URL"
                 type="url"
                 required
                 value={productThumbnail}
                 handleChange={(e) => setProductThumbnail(e.target.value)}
               />
-              <FormInput
+              {/* <FormInput
                 label="Price"
                 type="number"
                 min="0.00"
@@ -147,7 +147,7 @@ const Admin = (props) => {
                 step="0.01"
                 value={productPrice}
                 handleChange={(e) => setProductPrice(e.target.value)}
-              />
+              /> */}
               <CKEditor
                 onChange={(evt) => setProductDesc(evt.editor.getData())}
               />

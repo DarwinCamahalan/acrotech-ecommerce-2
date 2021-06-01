@@ -27,36 +27,31 @@ const LastSection = ({}) => {
     },
   }
 
-  const dummyTxt =
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga molestias veniam porro modi quod laborum ducimus facere reprehenderit obcaecati placeat.'
-
   const Cards = [
     {
       img: `${client1}`,
-      name: 'Jericho Cruz',
-      description: `${dummyTxt}`,
+      name: 'Juan dela Cruz',
+      description:
+        "I like Acrotech Products, It's durable high quality and reliable at any situation also the design is so good and comforable to use",
     },
     {
       img: `${client2}`,
-      name: 'Jericho Cruz',
-      description: `${dummyTxt}`,
+      name: 'Martin Luther',
+      description:
+        "I like Acrotech Products, It's durable high quality and reliable at any situation also the design is so good and comforable to use",
     },
     {
       img: `${client3}`,
-      name: 'Jericho Cruz',
-      description: `${dummyTxt}`,
-    },
-    {
-      img: `${client2}`,
-      name: 'Jericho Cruz',
-      description: `${dummyTxt}`,
+      name: 'Kyle Joe',
+      description:
+        "I like Acrotech Products, It's durable high quality and reliable at any situation also the design is so good and comforable to use",
     },
   ]
   return (
     <div className="max">
       <section className="last-section" data-aos="fade-up">
         <div className="title">
-          <h1>Testimonials</h1>
+          <h1>Client Review</h1>
         </div>
 
         <Carousel

@@ -1,8 +1,8 @@
 import './styles.scss'
 
-import client1 from '../../assets/client1.jpg'
-import client2 from '../../assets/client2.jpg'
-import client3 from '../../assets/client3.jpg'
+import client1 from '../../assets/1.png'
+import client2 from '../../assets/2.png'
+import client3 from '../../assets/3.jpg'
 
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
@@ -25,26 +25,20 @@ const AboutPage = () => {
   const Cards = [
     {
       img: `${client1}`,
-      name: 'Jericho Cruz',
-      position: 'Co-Founder at Acro -Tech Inc.',
+      name: 'Hannah Sweet G. Pallorina ',
+      position: 'Secretary at Acro-Tech Inc.',
       description: `${dummyTxt}`,
     },
     {
       img: `${client2}`,
-      name: 'Jericho Cruz',
-      position: 'Co-Founder at Acro -Tech Inc.',
+      name: 'Mamerto A. Regis III',
+      position: 'Manager at Acro-Tech Inc.',
       description: `${dummyTxt}`,
     },
     {
       img: `${client3}`,
-      name: 'Jericho Cruz',
-      position: 'Co-Founder at Acro -Tech Inc.',
-      description: `${dummyTxt}`,
-    },
-    {
-      img: `${client2}`,
-      name: 'Jericho Cruz',
-      position: 'Co-Founder at Acro -Tech Inc.',
+      name: 'Georgin Asay',
+      position: 'Sales Engineer at Acro-Tech Inc.',
       description: `${dummyTxt}`,
     },
   ]
@@ -86,22 +80,20 @@ const AboutPage = () => {
           exercitationem deleniti accusantium eum iure mollitia consequatur.
           Necessitatibus error architecto obcaecati, quibusdam, nemo quod neque
           ipsam fugit inventore vitae cumque magnam illum laborum qui
-          voluptatibus.
+          voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Neque harum soluta numquam ex laborum ullam placeat maxime. Illo autem
+          praesentium quasi eius vitae minus libero, saepe veniam magni aliquam
+          molestiae asperiores neque consectetur laudantium sit aut harum, id,
+          unde natus sequi sed error eaque? Laudantium temporibus ab,
+          dignissimos ipsam eaque consequuntur architecto fugit quisquam
+          repellendus quam commodi harum labore praesentium hic nam, a enim
+          possimus dolorum illum quo assumenda suscipit error. Voluptates unde
+          distinctio nulla exercitationem deleniti accusantium eum iure mollitia
+          consequatur. Necessitatibus error architecto obcaecati, quibusdam,
+          nemo quod neque ipsam fugit inventore vitae cumque magnam illum
+          laborum qui voluptatibus.
         </p>
-        <p className="about-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque harum
-          soluta numquam ex laborum ullam placeat maxime. Illo autem praesentium
-          quasi eius vitae minus libero, saepe veniam magni aliquam molestiae
-          asperiores neque consectetur laudantium sit aut harum, id, unde natus
-          sequi sed error eaque? Laudantium temporibus ab, dignissimos ipsam
-          eaque consequuntur architecto fugit quisquam repellendus quam commodi
-          harum labore praesentium hic nam, a enim possimus dolorum illum quo
-          assumenda suscipit error. Voluptates unde distinctio nulla
-          exercitationem deleniti accusantium eum iure mollitia consequatur.
-          Necessitatibus error architecto obcaecati, quibusdam, nemo quod neque
-          ipsam fugit inventore vitae cumque magnam illum laborum qui
-          voluptatibus.
-        </p>
+
         <p className="about-text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque harum
           soluta numquam ex laborum ullam placeat maxime. Illo autem praesentium
