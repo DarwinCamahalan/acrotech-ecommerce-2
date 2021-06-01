@@ -51,7 +51,7 @@ const Admin = (props) => {
 
   const resetForm = () => {
     setHideModal(true)
-    setProductCategory('mens')
+    setProductCategory('machines')
     setProductName('')
     setProductThumbnail('')
     setProductPrice(0)
@@ -215,9 +215,18 @@ const Admin = (props) => {
                               </td>
                               <td>
                                 <Button
-                                  onClick={() =>
+                                  onClick={() => {
                                     dispatch(deleteProductStart(documentID))
-                                  }
+
+                                    document.querySelector(
+                                      '.del'
+                                    ).style.display = 'block'
+                                    setTimeout(() => {
+                                      document.querySelector(
+                                        '.del'
+                                      ).style.display = 'none'
+                                    }, 3000)
+                                  }}
                                   className="delete"
                                 >
                                   Delete
@@ -253,6 +262,11 @@ const Admin = (props) => {
             </tbody>
           </table>
         </div>
+      </div>
+      <div className="del">
+        <p>
+          Deleted Successfully<i class="fas fa-check-circle"></i>
+        </p>
       </div>
     </>
   )
