@@ -70,13 +70,8 @@ const ProductResults = ({}) => {
           {data
             .filter((product) => {
               const { productName, productPrice } = product
-              if (searchResult == '') {
-                return product
-              } else if (
-                productName
-                  .toLowerCase()
-                  .includes(searchResult.toLowerCase()) ||
-                productPrice.includes(searchResult)
+              if (
+                productName.toLowerCase().includes(searchResult.toLowerCase())
               ) {
                 return product
               }
