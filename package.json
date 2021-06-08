@@ -11,7 +11,7 @@
     "axios": "^0.21.1",
     "ckeditor4-react": "^1.4.0",
     "emailjs-com": "^2.6.4",
-    "firebase": "^8.2.6",
+    "firebase": "^8.6.5",
     "framer-motion": "^3.3.0",
     "moment": "^2.29.1",
     "node-sass": "^5.0.0",
